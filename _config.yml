@@ -62,8 +62,8 @@ plugins:
 # ===============================
 author:
   name   : "Md Yekra Rahman"
-  avatar : "/assets/images/profile.jpg"
-  bio    : "Graduate student (EE). Power electronics • SiC/GaN • IC design • EMI-aware converters."
+  avatar : "/assets/images/profile.JPG"
+  bio    : "PhD Student, MIzzou"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
