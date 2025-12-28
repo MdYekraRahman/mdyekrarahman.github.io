@@ -1,0 +1,15 @@
+years:
+  - year: 2025
+    items:
+      - date: "Fall 2025"
+        text: "Started PhD in Electrical Engineering at University of Missouri–Columbia (Circuits)."
+      - date: "Summer 2025"
+        text: "Completed TxACE PhD program year at UT Dallas (Circuits), GPA 3.83/4.00."
+
+  - year: 2024
+    items:
+      - date: "Fall 2024"
+        text: "Began PhD track (TxACE, UT Dallas) and TA duties (CMOS IC Design / labs)."
+      - date: "2024"
+        text: "Published ICECE 2024 paper on lead-free mixed halide double perovskite solar cell."
+        link: "https://doi.org/10.1109/ICECE64886.2024.11024609"
