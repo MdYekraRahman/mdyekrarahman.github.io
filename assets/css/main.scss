@@ -336,6 +336,8 @@ a:hover { color: #1d4ed8; }
   border-top: 1px solid #e5e7eb;
 }
 .page__footer a { color: var(--accent); }
+.page__footer-copyright .powered-by { display: none !important; }
+
 
 /* =========================================================
    (Optional) remove any leftover “glass/motion” classes
