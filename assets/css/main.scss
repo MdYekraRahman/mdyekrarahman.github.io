@@ -263,6 +263,41 @@ a:hover { color: #1d4ed8; }
   .timeline__item { grid-template-columns: 1fr; }
 }
 
+/* ============================
+   Scrollable Updates Timeline
+============================ */
+
+/* Fixed-height scroll container */
+.timeline-scroll {
+  max-height: 420px;        /* adjust: 360–500px recommended */
+  overflow-y: auto;
+  padding-right: 14px;      /* space for scrollbar */
+}
+
+/* Smooth scrolling feel */
+.timeline-scroll {
+  scroll-behavior: smooth;
+}
+
+/* Optional: subtle scrollbar styling (modern browsers) */
+.timeline-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.timeline-scroll::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+
+.timeline-scroll::-webkit-scrollbar-thumb {
+  background: #c7d2fe;      /* light blue */
+  border-radius: 4px;
+}
+
+.timeline-scroll::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;      /* accent color */
+}
+
 /* =========================================================
    SOCIAL ICONS
 ========================================================= */
