@@ -1,19 +1,29 @@
+# ===============================
+# Site Identity
+# ===============================
 title: "Md Yekra Rahman"
 email: "YOUR_EMAIL_HERE"
 description: >-
-  Graduate student in Electrical Engineering. Interests: power electronics, wide-bandgap devices (SiC/GaN), IC design, and EMI-aware converter design.
-twitter_username:
-github_username: MdYekraRahman
+  Graduate student in Electrical Engineering. Interests include power electronics,
+  wide-bandgap devices (SiC/GaN), IC design, and EMI-aware converter design.
 
-url: "https://MdYekraRahman.github.io"
+twitter_username: ""
+github_username: "MdYekraRahman"
+
+url: "https://mdyekrarahman.github.io"
 baseurl: ""
 
+# ===============================
+# Theme Settings
+# ===============================
+remote_theme: "mmistakes/minimal-mistakes@4.27.3"
 minimal_mistakes_skin: dark
 search: true
 
+# ===============================
+# Build Settings
+# ===============================
 markdown: kramdown
-remote_theme: "mmistakes/minimal-mistakes@4.27.3"
-
 permalink: /:categories/:title/
 paginate: 5
 paginate_path: /page:num/
@@ -22,6 +32,9 @@ timezone: "America/Chicago"
 include:
   - _pages
 
+# ===============================
+# Plugins (GitHub Pages safe)
+# ===============================
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -30,6 +43,9 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
+# ===============================
+# Author (Sidebar Profile)
+# ===============================
 author:
   name   : "Md Yekra Rahman"
   avatar : "/assets/images/profile.jpg"
@@ -38,29 +54,63 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
       url: "mailto:YOUR_EMAIL_HERE"
+
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/MdYekraRahman"
+
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/YOUR_LINKEDIN/"
+
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=YOURID"
 
+# ===============================
+# Footer Links
+# ===============================
 footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/MdYekraRahman"
+
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/YOUR_LINKEDIN/"
 
+# ===============================
+# Defaults
+# ===============================
 defaults:
+  # Blog posts
   - scope:
       path: ""
       type: posts
     values:
       layout: single
-      author_pro_
+      author_profile: true
+      read_time: true
+      comments: false
+      share: false
+      related: true
+
+  # Pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+# ===============================
+# Archives
+# ===============================
+category_archive:
+  type: liquid
+  path: /categories/
+
+tag_archive:
+  type: liquid
+  path: /tags/
