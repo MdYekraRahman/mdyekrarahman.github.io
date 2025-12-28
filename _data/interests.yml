@@ -1,6 +1,9 @@
 items:
-  - Power electronics and power management ICs (PMICs)
-  - High-frequency DC–DC conversion and gate drivers
-  - Wide-bandgap devices (SiC/GaN) and dv/dt control
-  - EMI-aware converter and PCB design
-  - Analog / mixed-signal IC design & verification workflows
+  - Analog and mixed-signal IC design
+  - Power management ICs (PMICs)
+  - High-frequency DC–DC converters
+  - Gate-driver and level-shifter circuits
+  - Wide-bandgap power devices (SiC/GaN/Ga2O3)
+  - EMI-aware power converter design
+  - Transistor-level design and verification
+  - Device-to-system co-design
