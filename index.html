@@ -5,7 +5,7 @@ title: "Home"
 ---
 
 <!-- =========================
-     HERO (full-width image)
+     HERO (background image + left photo + centered text)
 ========================== -->
 <section class="hero hero--split" style="background-image:url('/assets/images/hero.JPG')">
   <div class="hero__overlay">
@@ -13,15 +13,12 @@ title: "Home"
 
       <!-- LEFT: Photo -->
       <div class="hero__photo">
-        <img src="/assets/images/profile.jpg" alt="Md Yekra Rahman">
+        <img src="/assets/images/profile.JPG" alt="Md Yekra Rahman">
       </div>
 
       <!-- RIGHT: Centered Text -->
       <div class="hero__text">
-        <h1 class="hero__title">
-          HI, I'M <span class="hero__name">MD YEKRA</span>
-        </h1>
-
+        <h1 class="hero__title">HI, I'M <span class="hero__name">MD YEKRA</span></h1>
         <div class="hero__rule"></div>
 
         <h2 class="hero__subtitle">
@@ -39,14 +36,13 @@ title: "Home"
   </div>
 </section>
 
-
 <!-- =========================
      HELLO SECTION (photo + text)
 ========================== -->
 <section class="section section--white">
   <div class="wrap two-col">
     <div class="col col--photo">
-      <img class="profile-card" src="/assets/images/profile.JPG" alt="Md Yekra Rahman">
+      <img class="profile-card" src="/assets/images/bio-photo.jpg" alt="Md Yekra Rahman">
     </div>
 
     <div class="col">
@@ -71,7 +67,7 @@ title: "Home"
 </section>
 
 <!-- =========================
-     RESEARCH INTERESTS (center band)
+     RESEARCH INTERESTS
 ========================== -->
 <section class="section section--soft">
   <div class="wrap center">
@@ -95,6 +91,7 @@ title: "Home"
       {% for year in site.data.updates.years %}
         <div class="timeline__year">
           <div class="timeline__year-label">{{ year.year }}</div>
+
           <div class="timeline__items">
             {% for u in year.items %}
               <div class="timeline__item">
@@ -108,6 +105,7 @@ title: "Home"
               </div>
             {% endfor %}
           </div>
+
         </div>
       {% endfor %}
     </div>
@@ -115,7 +113,7 @@ title: "Home"
 </section>
 
 <!-- =========================
-     GET IN TOUCH (icons)
+     GET IN TOUCH
 ========================== -->
 <section class="section section--soft">
   <div class="wrap center">
@@ -131,12 +129,6 @@ title: "Home"
       <a class="social" href="https://www.linkedin.com/in/mdyekrarahman/" target="_blank" rel="noopener" aria-label="LinkedIn">
         <i class="fab fa-linkedin-in"></i>
       </a>
-      <!-- Optional: add Google Scholar when you have the correct link -->
-      <!--
-      <a class="social" href="https://scholar.google.com/citations?user=YOURID" target="_blank" rel="noopener" aria-label="Google Scholar">
-        <i class="fas fa-graduation-cap"></i>
-      </a>
-      -->
     </div>
   </div>
 </section>
