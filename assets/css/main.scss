@@ -4,119 +4,103 @@
 @import "minimal-mistakes";
 
 /* ================================
-   Base tone — warm, academic, calm
+   Pure white academic background
 ================================ */
 body {
-  background-color: #111315;
-  color: #e6e6e6;
+  background-color: #ffffff;
+  color: #1f2937; /* dark gray, not pure black */
 }
 
 /* ================================
-   Content containers
+   Remove dark containers / glass
 ================================ */
-.page__content,
-.archive,
-.masthead,
-.page__footer {
-  background-color: transparent;
-}
-
-/* ================================
-   Glass panels → turned into soft cards
-================================ */
-.glass {
-  background-color: #16191d;
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
-}
-
+.glass,
 .hero-glass {
-  margin: 1.2rem 0 1.6rem 0;
-  padding: 1.4rem 1.5rem;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
 }
 
 /* ================================
-   Typography (this matters most)
+   Typography (clean & readable)
 ================================ */
+.page__content {
+  line-height: 1.7;
+}
+
 .headline {
-  font-size: 1.85rem;
+  font-size: 2rem;
   font-weight: 600;
-  letter-spacing: 0.2px;
-  margin-bottom: 0.35rem;
+  color: #111827;
+  margin-bottom: 0.4rem;
 }
 
 .subhead {
-  font-size: 1.02rem;
-  color: #cfcfcf;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  color: #374151;
+  line-height: 1.65;
 }
 
 /* ================================
-   Accent (ONE muted color)
+   Accent color (ONE subtle color)
 ================================ */
 :root {
-  --accent: #5b7c99;
+  --accent: #2563eb; /* academic blue */
 }
 
 a {
   color: var(--accent);
 }
 a:hover {
-  color: #6f90ad;
+  color: #1d4ed8;
 }
 
 /* ================================
-   Buttons — calm, not flashy
+   Buttons — clean, no shadows
 ================================ */
 .btn--primary {
   background-color: var(--accent);
   color: #ffffff;
-  border-radius: 999px;
+  border-radius: 6px;
   padding: 0.45rem 1.1rem;
   box-shadow: none;
-  transition: background-color 0.15s ease;
 }
 .btn--primary:hover {
-  background-color: #6f90ad;
+  background-color: #1d4ed8;
 }
 
 /* ================================
-   Feature cards
+   Feature cards (very light)
 ================================ */
 .feature__item {
   transition: transform 0.15s ease;
 }
 .feature__item:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .feature__item .archive__item-teaser img {
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  border-radius: 6px;
+  box-shadow: none;
 }
 
 /* ================================
-   Pills (quiet, informational)
+   Pills (simple tags)
 ================================ */
 .pill {
-  background-color: #1c1f24;
-  border: 1px solid rgba(255,255,255,0.08);
-  color: #cfcfcf;
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  color: #374151;
   border-radius: 999px;
-  padding: 0.32rem 0.7rem;
-  font-size: 0.82rem;
+  padding: 0.3rem 0.65rem;
+  font-size: 0.85rem;
 }
 
 /* ================================
-   Motion — barely noticeable
+   Disable fancy reveal motion
 ================================ */
 .reveal {
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-.reveal.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
