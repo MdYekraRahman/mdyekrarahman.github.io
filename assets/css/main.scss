@@ -4,22 +4,31 @@
 @import "minimal-mistakes";
 
 /* ================================
-   Global background (calm, single-tone)
+   Base tone — warm, academic, calm
 ================================ */
 body {
-  background-color: #0b1220;   /* deep navy */
-  color: #e5e7eb;
+  background-color: #111315;
+  color: #e6e6e6;
 }
 
 /* ================================
-   Glass panels (neutral, not colorful)
+   Content containers
+================================ */
+.page__content,
+.archive,
+.masthead,
+.page__footer {
+  background-color: transparent;
+}
+
+/* ================================
+   Glass panels → turned into soft cards
 ================================ */
 .glass {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 18px;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  background-color: #16191d;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
 }
 
 .hero-glass {
@@ -28,82 +37,85 @@ body {
 }
 
 /* ================================
-   Typography (clean + readable)
+   Typography (this matters most)
 ================================ */
 .headline {
-  font-size: 1.9rem;
-  letter-spacing: 0.3px;
-  margin-bottom: 0.4rem;
+  font-size: 1.85rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  margin-bottom: 0.35rem;
 }
 
 .subhead {
-  font-size: 1.05rem;
-  opacity: 0.9;
+  font-size: 1.02rem;
+  color: #cfcfcf;
   line-height: 1.6;
 }
 
 /* ================================
-   Accent color (ONE color only)
+   Accent (ONE muted color)
 ================================ */
 :root {
-  --accent: #38bdf8;   /* cyan */
+  --accent: #5b7c99;
 }
 
-a,
-a:hover {
+a {
   color: var(--accent);
 }
-
-.btn--primary {
-  background-color: var(--accent);
-  color: #020617;
-  border-radius: 999px;
-  box-shadow: 0 8px 26px rgba(56, 189, 248, 0.35);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.btn--primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 36px rgba(56, 189, 248, 0.5);
+a:hover {
+  color: #6f90ad;
 }
 
 /* ================================
-   Feature cards (subtle motion only)
+   Buttons — calm, not flashy
 ================================ */
-.feature__item {
-  transition: transform 0.2s ease;
+.btn--primary {
+  background-color: var(--accent);
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 0.45rem 1.1rem;
+  box-shadow: none;
+  transition: background-color 0.15s ease;
+}
+.btn--primary:hover {
+  background-color: #6f90ad;
 }
 
+/* ================================
+   Feature cards
+================================ */
+.feature__item {
+  transition: transform 0.15s ease;
+}
 .feature__item:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
 
 .feature__item .archive__item-teaser img {
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
 }
 
 /* ================================
-   Pills (calm, not colorful)
+   Pills (quiet, informational)
 ================================ */
 .pill {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #e5e7eb;
+  background-color: #1c1f24;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #cfcfcf;
   border-radius: 999px;
-  padding: 0.35rem 0.7rem;
-  font-size: 0.85rem;
+  padding: 0.32rem 0.7rem;
+  font-size: 0.82rem;
 }
 
 /* ================================
-   Reveal animation (keep subtle)
+   Motion — barely noticeable
 ================================ */
 .reveal {
   opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(6px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
-
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
