@@ -1,10 +1,9 @@
 ---
 ---
-
 @import "minimal-mistakes";
 
 /* =========================================================
-   GLOBAL RESET / BASE
+   GLOBAL BASE
 ========================================================= */
 html, body {
   background: #ffffff !important;
@@ -39,20 +38,51 @@ html, body {
 }
 
 /* =========================================================
-   HERO SECTION (Split layout)
+   ACCENT COLOR
+========================================================= */
+:root {
+  --accent: #2563eb;
+}
+
+a { color: var(--accent); }
+a:hover { color: #1d4ed8; }
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+.btn--primary {
+  background-color: var(--accent) !important;
+  color: #ffffff !important;
+  border-radius: 6px !important;
+  padding: 0.5rem 1.1rem !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+.btn--primary:hover { background-color: #1d4ed8 !important; }
+
+/* =========================================================
+   HERO (background image + overlay + split layout)
 ========================================================= */
 .hero {
   position: relative;
-  padding: 4.5rem 1.5rem;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center 20%; /* adjust if face is cut */
+  padding: 2.5rem 1.5rem;
 }
 
+/* Light overlay so text is readable */
 .hero__overlay {
-  background: rgba(255,255,255,0.88);
-  padding: 3rem 1.5rem;
+  width: 100%;
+  background: rgba(255,255,255,0.80);
+  padding: 2.4rem 1.5rem;
 }
 
+/* Split layout */
 .hero__content {
   max-width: 1100px;
   margin: 0 auto;
@@ -62,141 +92,200 @@ html, body {
   align-items: center;
 }
 
-/* Left photo */
+/* Photo (fixed size) */
+.hero__photo {
+  display: flex;
+  justify-content: center;
+}
 .hero__photo img {
   width: 220px;
-  border-radius: 6px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
   border: 5px solid #ffffff;
   box-shadow: 0 14px 30px rgba(0,0,0,0.25);
 }
 
-/* Right text */
-.hero__text {
-  text-align: center;
-}
+/* Text */
+.hero__text { text-align: center; }
 
 .hero__title {
   font-size: 2.6rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.02em;
-  margin-bottom: 0.4rem;
+  margin: 0 0 0.35rem 0;
+  text-transform: uppercase;
 }
 
-.hero__name {
-  color: #2563eb;
-}
+.hero__name { color: var(--accent); }
 
 .hero__rule {
-  width: 80px;
+  width: 90px;
   height: 3px;
-  background: #2563eb;
+  background: var(--accent);
   margin: 0.6rem auto 0.9rem auto;
 }
 
 .hero__subtitle {
-  font-size: 1.15rem;
-  font-weight: 400;
+  font-size: 1.05rem;
+  font-weight: 600;
   color: #374151;
-  margin-bottom: 1.4rem;
+  margin: 0 0 1.2rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
-/* Hero buttons */
-.hero__nav .btn {
-  margin: 0 0.35rem;
-}
+/* Buttons spacing */
+.hero__nav .btn { margin: 0 0.35rem; }
 
-/* Responsive hero */
+/* Responsive */
 @media (max-width: 900px) {
+  .hero {
+    min-height: 480px;
+    background-position: center;
+  }
+
   .hero__content {
     grid-template-columns: 1fr;
-    text-align: center;
+    gap: 20px;
   }
 
-  .hero__photo {
-    display: flex;
-    justify-content: center;
+  .hero__photo img {
+    width: 180px;
+    height: 230px;
   }
 }
 
 /* =========================================================
-   TYPOGRAPHY
+   SECTIONS / LAYOUT HELPERS
 ========================================================= */
-h1, h2, h3, h4 {
-  color: #111827;
+.section { padding: 60px 0; }
+.section--white { background: #ffffff; }
+.section--soft { background: #f6f7fb; }
+
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 18px;
 }
 
-p, li {
-  color: #374151;
-  line-height: 1.7;
+.center { text-align: center; }
+
+.two-col {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 38px;
+  align-items: start;
 }
 
-.page__content {
-  font-size: 1rem;
+@media (max-width: 900px) {
+  .two-col { grid-template-columns: 1fr; }
 }
+
+/* HELLO photo */
+.profile-card {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 6px solid #ffffff;
+  box-shadow: 0 12px 26px rgba(0,0,0,0.12);
+}
+
+/* HELLO heading */
+.section__heading {
+  font-size: 34px;
+  font-weight: 900;
+  margin: 0 0 14px 0;
+}
+
+.btn-row { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
 
 /* =========================================================
-   ACCENT COLOR (single source)
+   RESEARCH INTERESTS TAGS
 ========================================================= */
-:root {
-  --accent: #2563eb;
+.big-title {
+  font-size: 38px;
+  font-weight: 900;
+  margin: 0 0 18px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
-a {
-  color: var(--accent);
-}
+.underline { text-decoration: underline; text-underline-offset: 8px; }
 
-a:hover {
-  color: #1d4ed8;
-}
-
-/* =========================================================
-   BUTTONS
-========================================================= */
-.btn--primary {
-  background-color: var(--accent);
-  color: #ffffff !important;
-  border-radius: 6px;
-  padding: 0.5rem 1.1rem;
-  font-weight: 500;
-  box-shadow: none;
-}
-
-.btn--primary:hover {
-  background-color: #1d4ed8;
-}
-
-/* =========================================================
-   FEATURE CARDS
-========================================================= */
-.feature__item {
-  transition: transform 0.15s ease;
-}
-
-.feature__item:hover {
-  transform: translateY(-3px);
-}
-
-.archive__item-teaser img {
-  border-radius: 6px;
-}
-
-/* =========================================================
-   TAG / PILL STYLE
-========================================================= */
-.pill-row {
+.keywords {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 10px;
 }
 
-.pill {
-  background: #f3f4f6;
+.kw {
+  background: #ffffff;
   border: 1px solid #e5e7eb;
-  color: #374151;
+  padding: 8px 12px;
   border-radius: 999px;
-  padding: 0.3rem 0.7rem;
-  font-size: 0.85rem;
+  font-size: 14px;
+  color: #374151;
 }
+
+/* =========================================================
+   UPDATES TIMELINE
+========================================================= */
+.timeline {
+  border-left: 4px solid var(--accent);
+  padding-left: 22px;
+}
+
+.timeline__year { margin: 26px 0; }
+
+.timeline__year-label {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.timeline__item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 14px;
+  padding: 10px 0;
+}
+
+.timeline__date { font-weight: 800; color: #111827; }
+
+.timeline__text { color: #374151; }
+.timeline__text a { margin-left: 8px; font-weight: 700; }
+
+@media (max-width: 700px) {
+  .timeline__item { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+.social-row {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.social {
+  width: 54px;
+  height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #ffffff !important;
+  font-size: 22px;
+}
+
+.social:hover { filter: brightness(0.92); }
 
 /* =========================================================
    FOOTER
@@ -205,13 +294,10 @@ a:hover {
   background: #ffffff;
   border-top: 1px solid #e5e7eb;
 }
-
-.page__footer a {
-  color: #2563eb;
-}
+.page__footer a { color: var(--accent); }
 
 /* =========================================================
-   DISABLE GLASS / MOTION
+   (Optional) remove any leftover “glass/motion” classes
 ========================================================= */
 .glass,
 .hero-glass,
