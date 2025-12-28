@@ -2,23 +2,39 @@
 # Site Identity
 # ===============================
 title: "Md Yekra Rahman"
+name: "Md Yekra Rahman"
 email: "YOUR_EMAIL_HERE"
 description: >-
-  Graduate student in Electrical Engineering. Interests include power electronics,
-  wide-bandgap devices (SiC/GaN), IC design, and EMI-aware converter design.
+  Graduate student in Electrical Engineering. Power electronics • SiC/GaN • IC design • EMI-aware converters.
 
-twitter_username: ""
-github_username: "MdYekraRahman"
+locale: "en-US"
+timezone: "America/Chicago"
 
 url: "https://mdyekrarahman.github.io"
 baseurl: ""
 
+repository: "MdYekraRahman/mdyekrarahman.github.io"
+
 # ===============================
-# Theme Settings
+# Theme / UI (make it “lively”)
 # ===============================
 remote_theme: "mmistakes/minimal-mistakes@4.27.3"
-minimal_mistakes_skin: dark
+minimal_mistakes_skin: "dark"   # try: "air", "contrast", "mint", "sunrise"
 search: true
+
+# Better search experience
+search_full_content: true
+search_provider: lunr
+
+# Navigation / reading UX
+breadcrumbs: true
+reading_time: true
+enable_copy_code_button: true
+
+# SEO / social preview
+title_separator: "-"
+twitter_username: ""
+github_username: "MdYekraRahman"
 
 # ===============================
 # Build Settings
@@ -27,7 +43,6 @@ markdown: kramdown
 permalink: /:categories/:title/
 paginate: 5
 paginate_path: /page:num/
-timezone: "America/Chicago"
 
 include:
   - _pages
@@ -54,15 +69,12 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
       url: "mailto:YOUR_EMAIL_HERE"
-
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/MdYekraRahman"
-
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/YOUR_LINKEDIN/"
-
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=YOURID"
@@ -71,20 +83,28 @@ author:
 # Footer Links
 # ===============================
 footer:
+  since: 2024
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/MdYekraRahman"
-
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/YOUR_LINKEDIN/"
 
 # ===============================
+# Collections (for “cards” / lively projects)
+# ===============================
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+# ===============================
 # Defaults
 # ===============================
 defaults:
-  # Blog posts
+  # Blog posts (optional)
   - scope:
       path: ""
       type: posts
@@ -103,6 +123,16 @@ defaults:
     values:
       layout: single
       author_profile: true
+
+  # Projects collection (cards + nice layout)
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: single
+      author_profile: false
+      share: false
+      related: false
 
 # ===============================
 # Archives
