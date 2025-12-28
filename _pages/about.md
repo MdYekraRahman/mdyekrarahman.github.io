@@ -1,8 +1,23 @@
 ---
-permalink: /about/
 title: "About"
+permalink: /about/
+layout: single
+author_profile: true
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+I am **Md Yekra Rahman**, a PhD student in Electrical Engineering with a concentration in **circuits and analog IC design**. My interests include **power management ICs (PMICs), switch-mode power conversion, wide-bandgap devices (SiC/GaN), and EMI-aware converter design**. :contentReference[oaicite:4]{index=4} :contentReference[oaicite:5]{index=5}
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+## Summary
+- Seeking **Summer 2026 internship** in **Analog IC Design**. :contentReference[oaicite:6]{index=6}  
+- Experience in transistor-level design of **op-amps, LDOs, bandgap references, charge pumps, differential amplifiers**, and **gate driver/level shifter circuits** using **Cadence Virtuoso** and **gm/ID methodology**. :contentReference[oaicite:7]{index=7}  
+- Strong in simulation validation, documentation, and lab mentoring / TA support. :contentReference[oaicite:8]{index=8}  
+
+## Education
+- **PhD Student (Electrical Engineering)** — University of Missouri–Columbia, MO (Fall 2025–Present) :contentReference[oaicite:9]{index=9}  
+- **PhD Student (Circuits concentration)** — TxACE, University of Texas at Dallas, TX (Fall 2024–Summer 2025), GPA 3.83/4.00 :contentReference[oaicite:10]{index=10}  
+- **B.Sc. EEE (Electronics)** — BUET, Dhaka (Apr 2018–May 2023), GPA 3.65/4.00 :contentReference[oaicite:11]{index=11}  
+
+## Current Focus
+- Analog/mixed-signal design and verification workflows (schematic → simulation → layout-aware validation)
+- High-frequency power conversion and gate-driver design in HV BCD technologies
+- Practical EMI-aware PCB design and validation
