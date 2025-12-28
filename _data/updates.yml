@@ -1,15 +1,28 @@
 years:
+  - year: 2026
+    items:
+      - date: "Summer 2026"
+        text: "Actively seeking internship opportunities in Analog / Mixed-Signal and Power IC Design."
+
   - year: 2025
     items:
-      - date: "Fall 2025"
-        text: "Started PhD in Electrical Engineering at University of Missouri–Columbia (Circuits)."
-      - date: "Summer 2025"
-        text: "Completed TxACE PhD program year at UT Dallas (Circuits), GPA 3.83/4.00."
+      - date: "Aug 2025"
+        text: "Started PhD in Electrical Engineering (Circuits) at the University of Missouri–Columbia; serving as Graduate Research and Teaching Assistant."
 
   - year: 2024
     items:
-      - date: "Fall 2024"
-        text: "Began PhD track (TxACE, UT Dallas) and TA duties (CMOS IC Design / labs)."
-      - date: "2024"
-        text: "Published ICECE 2024 paper on lead-free mixed halide double perovskite solar cell."
+
+      - date: "Aug 2024"
+        text: "Began working in TxACE (Texas Analog Center of Excellence) at UT Dallas and served as Graduate Teaching Assistant."
+
+      - date: "Dec 2024"
+        text: "Published first first authored IEEE ICECE 2024 conference paper on lead-free mixed halide double perovskite solar cells from undergraduate thesis."
         link: "https://doi.org/10.1109/ICECE64886.2024.11024609"
+
+  - year: 2023
+    items:
+      - date: "Aug 2023 – Aug 2024"
+        text: "Served as Lecturer (On Leave) at Eastern University teaching core undergraduate courses and laboratories."
+
+      - date: "May 2023"
+        text: "Graduated with B.Sc. in Electrical and Electronic Engineering (Electronics major) from BUET, Dhaka, Bangladesh."
