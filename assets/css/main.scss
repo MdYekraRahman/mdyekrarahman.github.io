@@ -4,92 +4,86 @@
 @import "minimal-mistakes";
 
 /* ================================
-   Pure white academic background
+   GLOBAL: pure white everywhere
 ================================ */
-body {
-  background-color: #ffffff;
-  color: #1f2937; /* dark gray, not pure black */
+body,
+.page,
+.initial-content,
+#main {
+  background: #ffffff !important;
+  color: #111827 !important;
 }
 
-/* ================================
-   Remove dark containers / glass
-================================ */
+/* Header + nav background white */
+.masthead,
+.masthead__inner-wrap {
+  background: #ffffff !important;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Remove any hero overlay styling */
+.page__hero,
+.page__hero--overlay,
+.page__hero-image {
+  background: #ffffff !important;
+}
+.page__hero--overlay .page__title,
+.page__hero--overlay .page__lead,
+.page__hero--overlay .page__meta {
+  color: #111827 !important;
+  text-shadow: none !important;
+}
+
+/* Content typography */
+.page__content {
+  line-height: 1.75;
+}
+
+/* Your intro card (keep it light and clean) */
 .glass,
 .hero-glass {
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  padding: 0;
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  padding: 1.1rem 1.2rem;
 }
 
-/* ================================
-   Typography (clean & readable)
-================================ */
-.page__content {
-  line-height: 1.7;
-}
-
+/* Headline styles */
 .headline {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 650;
   color: #111827;
-  margin-bottom: 0.4rem;
+  margin: 0 0 0.45rem 0;
 }
-
 .subhead {
   font-size: 1.05rem;
   color: #374151;
   line-height: 1.65;
+  margin: 0 0 0.9rem 0;
 }
 
-/* ================================
-   Accent color (ONE subtle color)
-================================ */
-:root {
-  --accent: #2563eb; /* academic blue */
-}
+/* Accent color */
+:root { --accent: #2563eb; }
+a { color: var(--accent) !important; }
+a:hover { color: #1d4ed8 !important; }
 
-a {
-  color: var(--accent);
-}
-a:hover {
-  color: #1d4ed8;
-}
-
-/* ================================
-   Buttons — clean, no shadows
-================================ */
+/* Buttons */
 .btn--primary {
-  background-color: var(--accent);
-  color: #ffffff;
-  border-radius: 6px;
-  padding: 0.45rem 1.1rem;
-  box-shadow: none;
+  background-color: var(--accent) !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  padding: 0.5rem 1.1rem !important;
+  box-shadow: none !important;
 }
 .btn--primary:hover {
-  background-color: #1d4ed8;
+  background-color: #1d4ed8 !important;
 }
 
-/* ================================
-   Feature cards (very light)
-================================ */
-.feature__item {
-  transition: transform 0.15s ease;
-}
-.feature__item:hover {
-  transform: translateY(-2px);
-}
-
-.feature__item .archive__item-teaser img {
-  border-radius: 6px;
-  box-shadow: none;
-}
-
-/* ================================
-   Pills (simple tags)
-================================ */
+/* Pills */
+.pill-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .pill {
-  background-color: #f3f4f6;
+  background: #f3f4f6;
   border: 1px solid #e5e7eb;
   color: #374151;
   border-radius: 999px;
@@ -97,10 +91,8 @@ a:hover {
   font-size: 0.85rem;
 }
 
-/* ================================
-   Disable fancy reveal motion
-================================ */
-.reveal {
-  opacity: 1;
-  transform: none;
+/* Feature cards */
+.feature__item .archive__item-teaser img {
+  border-radius: 10px;
+  box-shadow: none;
 }
