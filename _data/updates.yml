@@ -7,22 +7,22 @@ years:
   - year: 2025
     items:
       - date: "Aug 2025"
-        text: "Started PhD in Electrical Engineering (Circuits) at the University of Missouri–Columbia; serving as Graduate Research and Teaching Assistant."
+        text: "Started PhD in Electrical Engineering at the University of Missouri–Columbia; serving as Graduate Research and Teaching Assistant."
 
   - year: 2024
     items:
-
-      - date: "Aug 2024"
-        text: "Began working in TxACE (Texas Analog Center of Excellence) at UT Dallas and served as Graduate Teaching Assistant."
-
       - date: "Dec 2024"
         text: "Published first first authored IEEE ICECE 2024 conference paper on lead-free mixed halide double perovskite solar cells from undergraduate thesis."
         link: "https://doi.org/10.1109/ICECE64886.2024.11024609"
+      - date: "Aug 2024"
+        text: "Started working in TxACE (Texas Analog Center of Excellence) at UT Dallas and served as Graduate Teaching Assistant."
+      - date: "Aug 2024"
+        text: "Took leave for graduate studies from Eastern University."
 
   - year: 2023
     items:
-      - date: "Aug 2023 – Aug 2024"
-        text: "Served as Lecturer (On Leave) at Eastern University teaching core undergraduate courses and laboratories."
+      - date: "Aug 2023"
+        text: "Joined as Lecturer at Eastern University, Dhaka, Bangladesh."
 
       - date: "May 2023"
         text: "Graduated with B.Sc. in Electrical and Electronic Engineering (Electronics major) from BUET, Dhaka, Bangladesh."
