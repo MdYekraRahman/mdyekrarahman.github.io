@@ -1,51 +1,122 @@
 ---
-layout: splash
-title: "Md Yekra Rahman"
+layout: default
 permalink: /
-
-
-excerpt: "Graduate Student • Power Electronics • SiC/GaN • Analog IC Design"
-
-feature_row:
-  - image_path: /assets/images/card-ic.jpg
-    alt: "Analog IC Design"
-    title: "Analog / Mixed-Signal IC Design"
-    excerpt: "Op-amp & PLL building blocks, gm/ID sizing, verification-focused schematics."
-    url: /projects/
-    btn_label: "Explore IC Work"
-    btn_class: "btn--primary"
-
-  - image_path: /assets/images/card-power.jpg
-    alt: "Power Electronics"
-    title: "Power Electronics & Wide-Bandgap"
-    excerpt: "High-frequency conversion, dv/dt & EMI-aware design using SiC/GaN."
-    url: /projects/
-    btn_label: "Explore Power Work"
-    btn_class: "btn--primary"
-
-  - image_path: /assets/images/card-pcb.jpg
-    alt: "PCB Design"
-    title: "PCB / Hardware Prototyping"
-    excerpt: "4-layer layouts, PI/SI/EMI practices, bring-up and measurement mindset."
-    url: /projects/
-    btn_label: "Explore Hardware"
-    btn_class: "btn--primary"
+title: "Home"
 ---
 
-<div class="glass hero-glass reveal">
-  <h2 class="headline">Designing efficient power systems and robust IC blocks.</h2>
-  <p class="subhead">
-    I build and validate power conversion and analog IC subsystems with an emphasis on efficiency,
-    EMI awareness, and reproducible design workflows.
-  </p>
-
-  <div class="pill-row">
-    <span class="pill">Cadence Virtuoso</span>
-    <span class="pill">gm/ID</span>
-    <span class="pill">TSMC 180nm HV BCD</span>
-    <span class="pill">SiC / GaN</span>
-    <span class="pill">Altium</span>
+<!-- =========================
+     HERO (full-width image)
+========================== -->
+<section class="hero" style="background-image:url('/assets/images/hero.jpg')">
+  <div class="hero__overlay">
+    <h1 class="hero__title">HI, I'M <span class="hero__name">MD YEKRA</span></h1>
+    <div class="hero__rule"></div>
+    <h2 class="hero__subtitle">Graduate Student • Power Electronics • SiC/GaN • Analog IC Design</h2>
+    <div class="hero__nav">
+      <a class="btn btn--primary" href="/cv/">Download CV</a>
+      <a class="btn btn--primary" href="/projects/">View Projects</a>
+      <a class="btn btn--primary" href="/contact/">Contact</a>
+    </div>
   </div>
-</div>
+</section>
 
-{% include feature_row id="feature_row" %}
+<!-- =========================
+     HELLO SECTION (photo + text)
+========================== -->
+<section class="section section--white">
+  <div class="wrap two-col">
+    <div class="col col--photo">
+      <img class="profile-card" src="/assets/images/profile.jpg" alt="Md Yekra Rahman">
+    </div>
+
+    <div class="col">
+      <h2 class="section__heading">HELLO.</h2>
+      <p>
+        I am <strong>Md Yekra Rahman</strong>, a PhD student in Electrical Engineering (circuits/analog IC).
+        My interests include <strong>PMICs</strong>, <strong>switch-mode power conversion</strong>,
+        <strong>wide-bandgap devices (SiC/GaN)</strong>, and <strong>EMI-aware converter design</strong>.
+      </p>
+
+      <p>
+        I work on transistor-level design and verification of analog/mixed-signal blocks (op-amps, PLL blocks, etc.)
+        and power conversion systems with a strong focus on reproducible workflows.
+      </p>
+
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/cv/">View online</a>
+        <a class="btn btn--primary" href="/assets/pdf/Md_Yekra_Rahman_Resume.pdf">Download PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     RESEARCH INTERESTS (center band)
+========================== -->
+<section class="section section--soft">
+  <div class="wrap center">
+    <h2 class="big-title">RESEARCH INTERESTS</h2>
+    <div class="keywords">
+      {% for item in site.data.interests.items %}
+        <span class="kw">{{ item }}</span>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     UPDATES (timeline)
+========================== -->
+<section class="section section--white">
+  <div class="wrap">
+    <h2 class="big-title">Updates</h2>
+
+    <div class="timeline">
+      {% for year in site.data.updates.years %}
+        <div class="timeline__year">
+          <div class="timeline__year-label">{{ year.year }}</div>
+          <div class="timeline__items">
+            {% for u in year.items %}
+              <div class="timeline__item">
+                <div class="timeline__date">{{ u.date }}</div>
+                <div class="timeline__text">
+                  {{ u.text }}
+                  {% if u.link %}
+                    <a href="{{ u.link }}" target="_blank" rel="noopener">Link</a>
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     GET IN TOUCH (icons)
+========================== -->
+<section class="section section--soft">
+  <div class="wrap center">
+    <h2 class="big-title underline">GET IN TOUCH</h2>
+
+    <div class="social-row">
+      <a class="social" href="mailto:mrvpx@missouri.edu" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a class="social" href="https://github.com/MdYekraRahman" target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a class="social" href="https://www.linkedin.com/in/mdyekrarahman/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <!-- Optional: add Google Scholar when you have the correct link -->
+      <!--
+      <a class="social" href="https://scholar.google.com/citations?user=YOURID" target="_blank" rel="noopener" aria-label="Google Scholar">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+      -->
+    </div>
+  </div>
+</section>
