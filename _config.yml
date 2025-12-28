@@ -3,7 +3,7 @@
 # ===============================
 title: "Md Yekra Rahman"
 name: "Md Yekra Rahman"
-email: "YOUR_EMAIL_HERE"
+email: "mrvpx@missouri.edu"
 description: >-
   Graduate student in Electrical Engineering. Power electronics • SiC/GaN • IC design • EMI-aware converters.
 
@@ -68,16 +68,13 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
-      url: "mailto:YOUR_EMAIL_HERE"
+      url: "mailto:mrvpx@missouri.edu"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/MdYekraRahman"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/YOUR_LINKEDIN/"
-    - label: "Google Scholar"
-      icon: "fas fa-fw fa-graduation-cap"
-      url: "https://scholar.google.com/citations?user=YOURID"
+      url: "https://www.linkedin.com/in/mdyekrarahman/"
 
 # ===============================
 # Footer Links
@@ -85,12 +82,15 @@ author:
 footer:
   since: 2024
   links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:mrvpx@missouri.edu"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/MdYekraRahman"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/YOUR_LINKEDIN/"
+      url: "https://www.linkedin.com/in/mdyekrarahman/"
 
 # ===============================
 # Collections (for “cards” / lively projects)
@@ -144,3 +144,9 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+# ===============================
+# Optional scripts (for subtle motion)
+# ===============================
+after_footer_scripts:
+  - /assets/js/reveal.js
