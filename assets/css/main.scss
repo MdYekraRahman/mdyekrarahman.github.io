@@ -199,7 +199,13 @@ a:hover { color: #1d4ed8; }
   margin: 0 0 14px 0;
 }
 
-.btn-row { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;   /* spacing between buttons */
+  margin-top: 16px;
+}
+
 
 /* =========================================================
    RESEARCH INTERESTS TAGS
