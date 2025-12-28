@@ -18,11 +18,11 @@ title: "Home"
 
       <!-- RIGHT: Centered Text -->
       <div class="hero__text">
-        <h1 class="hero__title">HI, I'M <span class="hero__name">YEKRA</span> (iqra)</h1>
+        <h1 class="hero__title">HI, I'M <span class="hero__name">YEKRA</span> (iq-ra)</h1>
         <div class="hero__rule"></div>
 
         <h2 class="hero__subtitle">
-          Graduate Student • Power Electronics • SiC/GaN • Analog IC Design
+          Designing Robust Analog ICs and Efficient Power Converters
         </h2>
       </div>
 
@@ -39,14 +39,35 @@ title: "Home"
     <h2 class="section__heading">HELLO.</h2>
 
     <p>
-      I am <strong>Md Yekra Rahman</strong>, a PhD student in Electrical Engineering (circuits/analog IC).
-      My interests include <strong>PMICs</strong>, <strong>switch-mode power conversion</strong>,
-      <strong>wide-bandgap devices (SiC/GaN)</strong>, and <strong>EMI-aware converter design</strong>.
+      I am <strong>Md Yekra Rahman</strong>, a PhD student in Electrical Engineering with a concentration in
+      <strong>circuits and analog IC design</strong>. I am currently pursuing my doctoral studies at the
+      University of Missouri–Columbia, USA, after completing a PhD-track program at the University of Texas
+      at Dallas (TxACE). I obtained my B.Sc. in Electrical and Electronic Engineering (Electronics major)
+      from the Bangladesh University of Engineering and Technology (BUET), Dhaka, Bangladesh.
     </p>
 
     <p>
-      I work on transistor-level design and verification of analog/mixed-signal blocks (op-amps, PLL blocks, etc.)
-      and power conversion systems with a strong focus on reproducible workflows.
+      My technical interests lie at the intersection of <strong>analog/mixed-signal IC design</strong> and
+      <strong>power electronics</strong>, with a particular focus on <strong>PMICs</strong>,
+      <strong>switch-mode power conversion</strong>, <strong>wide-bandgap devices (SiC/GaN)</strong>, and
+      <strong>EMI-aware converter design</strong>. I have hands-on experience in transistor-level design,
+      simulation, and verification of analog and mixed-signal building blocks—including
+      op-amps, PLLs, bandgap references, LDOs, and gate-driver circuits—using
+      <strong>Cadence Virtuoso</strong>, <strong>Spectre</strong>, and <strong>gm/ID methodology</strong>.
+    </p>
+
+    <p>
+      In parallel, I work on the design and validation of power conversion systems across schematic,
+      layout-aware simulation, and PCB implementation, with an emphasis on reproducible design workflows,
+      high-frequency behavior, and practical measurement considerations. I also serve as a
+      <strong>Graduate Teaching Assistant</strong>, mentoring students in CMOS IC design, SPICE-based
+      simulation, and laboratory validation.
+    </p>
+
+    <p>
+      My long-term goal is to pursue a research- and design-oriented career in
+      <strong>analog and power IC development</strong>, contributing to robust, efficient, and scalable
+      integrated solutions for modern electronic and energy systems.
     </p>
 
     <div class="btn-row">
@@ -56,6 +77,7 @@ title: "Home"
 
   </div>
 </section>
+
 
 
 <!-- =========================
@@ -79,30 +101,34 @@ title: "Home"
   <div class="wrap">
     <h2 class="big-title">Updates</h2>
 
-    <div class="timeline">
-      {% for year in site.data.updates.years %}
-        <div class="timeline__year">
-          <div class="timeline__year-label">{{ year.year }}</div>
+    <div class="timeline-scroll">
+      <div class="timeline">
+        {% for year in site.data.updates.years %}
+          <div class="timeline__year">
+            <div class="timeline__year-label">{{ year.year }}</div>
 
-          <div class="timeline__items">
-            {% for u in year.items %}
-              <div class="timeline__item">
-                <div class="timeline__date">{{ u.date }}</div>
-                <div class="timeline__text">
-                  {{ u.text }}
-                  {% if u.link %}
-                    <a href="{{ u.link }}" target="_blank" rel="noopener">Link</a>
-                  {% endif %}
+            <div class="timeline__items">
+              {% for u in year.items %}
+                <div class="timeline__item">
+                  <div class="timeline__date">{{ u.date }}</div>
+                  <div class="timeline__text">
+                    {{ u.text }}
+                    {% if u.link %}
+                      <a href="{{ u.link }}" target="_blank" rel="noopener">Link</a>
+                    {% endif %}
+                  </div>
                 </div>
-              </div>
-            {% endfor %}
-          </div>
+              {% endfor %}
+            </div>
 
-        </div>
-      {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
     </div>
+
   </div>
 </section>
+
 
 <!-- =========================
      GET IN TOUCH
