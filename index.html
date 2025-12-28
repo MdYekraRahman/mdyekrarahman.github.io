@@ -2,46 +2,61 @@
 layout: splash
 title: "Md Yekra Rahman"
 permalink: /
+
 header:
   overlay_color: "#000"
-  overlay_filter: "0.55"
+  overlay_filter: "0.62"
   overlay_image: /assets/images/hero.jpg
   actions:
     - label: "Download CV"
       url: /cv/
     - label: "View Projects"
       url: /projects/
-excerpt: "Graduate Student • Power Electronics • SiC/GaN • IC Design"
+    - label: "Contact"
+      url: /contact/
+
+excerpt: "Graduate Student • Power Electronics • SiC/GaN • Analog IC Design"
+
 feature_row:
   - image_path: /assets/images/card-ic.jpg
-    alt: "Analog IC design"
-    title: "Analog / Mixed-Signal"
-    excerpt: "Op-amps, PLL blocks, LDO/PMIC building blocks, gm/ID sizing & verification."
+    alt: "Analog IC Design"
+    title: "Analog / Mixed-Signal IC Design"
+    excerpt: "Op-amp & PLL building blocks, gm/ID sizing, verification-focused schematics."
     url: /projects/
-    btn_label: "See IC Work"
+    btn_label: "Explore IC Work"
     btn_class: "btn--primary"
+
   - image_path: /assets/images/card-power.jpg
-    alt: "Power electronics"
-    title: "Power Electronics"
-    excerpt: "High-frequency converters, EMI-aware design, gate drivers, wide-bandgap devices."
+    alt: "Power Electronics"
+    title: "Power Electronics & Wide-Bandgap"
+    excerpt: "High-frequency conversion, dv/dt & EMI-aware design using SiC/GaN."
     url: /projects/
-    btn_label: "See Power Work"
+    btn_label: "Explore Power Work"
     btn_class: "btn--primary"
+
   - image_path: /assets/images/card-pcb.jpg
-    alt: "PCB design"
-    title: "PCB / Hardware"
-    excerpt: "4-layer layout, PI/SI/EMI practices, prototypes, test strategy."
+    alt: "PCB Design"
+    title: "PCB / Hardware Prototyping"
+    excerpt: "4-layer layouts, PI/SI/EMI practices, bring-up and measurement mindset."
     url: /projects/
-    btn_label: "See Hardware"
+    btn_label: "Explore Hardware"
     btn_class: "btn--primary"
 ---
 
-<div class="home-intro fancy-glass">
-  <h2 class="typing">Building efficient power systems & robust IC blocks.</h2>
-  <p>
-    I work on power conversion, wide-bandgap device applications, and analog IC design workflows
-    with a focus on efficiency, EMI, and verification.
+<div class="glass hero-glass reveal">
+  <h2 class="headline">Designing efficient power systems and robust IC blocks.</h2>
+  <p class="subhead">
+    I build and validate power conversion and analog IC subsystems with an emphasis on efficiency,
+    EMI awareness, and reproducible design workflows.
   </p>
+
+  <div class="pill-row">
+    <span class="pill">Cadence Virtuoso</span>
+    <span class="pill">gm/ID</span>
+    <span class="pill">TSMC 180nm HV BCD</span>
+    <span class="pill">SiC / GaN</span>
+    <span class="pill">Altium</span>
+  </div>
 </div>
 
 {% include feature_row id="feature_row" %}
