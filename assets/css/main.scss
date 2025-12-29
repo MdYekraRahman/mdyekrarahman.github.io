@@ -364,19 +364,22 @@ a:hover { color: #1d4ed8; }
 /* REMOVE the vertical line that caused your issue */
 .edu-item::before { content: none !important; display: none !important; }
 
-/* Logo column (all same width) */
+/* Logo column (fixed, wider column) */
 .edu-logo {
-  width: 110px;
+  width: 160px;                /* ⬅️ increase column width */
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;              /* prevents squeezing */
 }
 
+/* Logos themselves */
 .edu-logo img {
-  width: 150px;        /* same visible width for all logos */
-  height: 150px;       /* make them visually consistent */
-  object-fit: contain;
+  width: 140px;                /* ⬅️ consistent visible width */
+  height: 140px;               /* uniform height */
+  object-fit: contain;         /* no cropping */
 }
+
 
 /* Content column */
 .edu-content h3 {
