@@ -1,5 +1,4 @@
 ---
-title: "Professional Experience"
 permalink: /professional-experience/
 layout: single
 author_profile: true
