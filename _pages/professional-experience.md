@@ -1,7 +1,6 @@
 ---
 permalink: /professional-experience/
 layout: single
-author_profile: true
 ---
 
 ## <i class="fas fa-briefcase"></i> Professional Experience
