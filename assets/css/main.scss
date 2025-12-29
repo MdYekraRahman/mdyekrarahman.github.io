@@ -726,3 +726,30 @@ summary {
   color: var(--accent);
   margin-bottom: 0.5rem;
 }
+/* =========================================================
+   FIX DESKTOP SINGLE LAYOUT WIDTH (CRITICAL)
+========================================================= */
+
+@media (min-width: 64em) {
+
+  /* Force the single layout to be a true 2-column flex */
+  .layout--single .page__inner-wrap {
+    display: flex !important;
+    align-items: flex-start;
+    gap: 2.5rem;                 /* space between sidebar & content */
+  }
+
+  /* Sidebar: fixed, predictable width */
+  .layout--single .sidebar {
+    flex: 0 0 260px !important;  /* lock sidebar width */
+    width: 260px !important;
+  }
+
+  /* Content: take ALL remaining space */
+  .layout--single .archive {
+    flex: 1 1 0 !important;
+    max-width: none !important;  /* 🔥 THIS removes the narrow column */
+    width: auto !important;
+    min-width: 0;                /* prevent overflow bugs */
+  }
+}
