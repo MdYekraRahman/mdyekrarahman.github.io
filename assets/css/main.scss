@@ -637,3 +637,45 @@ summary {
     height: 280px;
   }
 }
+
+/* =========================================================
+   FORCE FULL-WIDTH CONTENT (ALL PAGES, DESKTOP/TABLET)
+========================================================= */
+
+/* Override Minimal Mistakes layout container */
+.layout--single .page {
+  max-width: 95vw !important;     /* fills almost entire screen */
+  width: 95vw !important;
+}
+
+/* Inner wrapper */
+.layout--single .page__inner-wrap {
+  max-width: 95vw !important;
+  width: 95vw !important;
+}
+
+/* Content column */
+.layout--single .page__content {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Archive / special pages */
+.archive,
+.archive__wrapper,
+.initial-content {
+  max-width: 95vw !important;
+  width: 95vw !important;
+}
+
+/* Sidebar stays same size */
+.sidebar {
+  flex: 0 0 300px;
+  max-width: 300px;
+}
+
+/* Remove invisible gutters */
+.page__content > * {
+  max-width: 100% !important;
+}
+
