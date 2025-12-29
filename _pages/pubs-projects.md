@@ -2,7 +2,6 @@
 title: "Publications / Projects"
 permalink: /pubs-projects/
 layout: single
-author_profile: true
 ---
 
 ## <i class="fas fa-file-alt"></i> Publications
