@@ -78,28 +78,7 @@ classes: wide
   <!-- RIGHT: page content -->
   <main markdown="1">
 
-## <i class="fas fa-file-alt"></i> Publications
-<hr class="section-rule"/>
 
-### Journal Papers
-<p class="muted">Loading.</p>
-
-### Conference Papers
-
-<div class="pub-item">
-  <div class="pub-title">
-    <strong>M. Y. Rahman</strong> and S. M. Mominuzzaman,
-    “Exploring Lead-Free Mixed Halide Double Perovskites Solar Cell,”
-    <em>13th International Conference on Electrical and Computer Engineering (ICECE 2024)</em>,
-    Dhaka, Bangladesh, pp. 165–170.     <a class="btn btn--primary btn--small"
-       href="https://doi.org/10.1109/ICECE64886.2024.11024609"
-       target="_blank" rel="noopener">
-      DOI
-    </a>
-  </div>
-</div>
-
----
 
 ## <i class="fas fa-project-diagram"></i> Projects
 <hr class="section-rule"/>
@@ -288,6 +267,29 @@ classes: wide
   </div>
 
 </div>
+
+## <i class="fas fa-file-alt"></i> Publications
+<hr class="section-rule"/>
+
+### Journal Papers
+<p class="muted">Loading.</p>
+
+### Conference Papers
+
+<div class="pub-item">
+  <div class="pub-title">
+    <strong>M. Y. Rahman</strong> and S. M. Mominuzzaman,
+    “Exploring Lead-Free Mixed Halide Double Perovskites Solar Cell,”
+    <em>13th International Conference on Electrical and Computer Engineering (ICECE 2024)</em>,
+    Dhaka, Bangladesh, pp. 165–170.     <a class="btn btn--primary btn--small"
+       href="https://doi.org/10.1109/ICECE64886.2024.11024609"
+       target="_blank" rel="noopener">
+      DOI
+    </a>
+  </div>
+</div>
+
+---
 
   </main>
 
