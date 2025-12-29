@@ -20,7 +20,46 @@ html, body {
 }
 
 /* =========================================================
+   MAKE THE WHOLE SITE WIDER (ALL PAGES / ALL SCREENS)
+   This fixes your “too narrow” content area problem.
+========================================================= */
+
+/* Main container width */
+.page {
+  max-width: 1400px !important;   /* <-- increase if you want even wider */
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Inner wrap (content + sidebar layout wrapper) */
+.page__inner-wrap {
+  max-width: 1400px !important;
+  width: 100% !important;
+}
+
+/* Content column itself */
+.page__content {
+  max-width: 100% !important;
+}
+
+/* Archives / collections pages sometimes use these */
+.archive,
+.archive__wrapper,
+.initial-content {
+  max-width: 1400px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Make sure the sidebar layout doesn’t force narrow content */
+.sidebar {
+  max-width: 320px; /* optional: keep sidebar reasonable */
+}
+
+/* =========================================================
    REMOVE THEME SIDEBAR DIVIDER LINE (author_profile pages)
+   (This is the vertical line you saw on Education/ProfExp/etc.)
 ========================================================= */
 .sidebar,
 .sidebar.sticky {
@@ -72,6 +111,11 @@ a:hover { color: #1d4ed8; }
 }
 .btn--primary:hover { background-color: #1d4ed8 !important; }
 
+.btn--small {
+  padding: 0.35rem 0.75rem !important;
+  font-size: 0.9rem !important;
+}
+
 /* =========================================================
    HERO (background image + overlay + split layout)
 ========================================================= */
@@ -93,7 +137,7 @@ a:hover { color: #1d4ed8; }
 }
 
 .hero__content {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 260px 1fr;
@@ -163,14 +207,14 @@ a:hover { color: #1d4ed8; }
 }
 
 /* =========================================================
-   SECTIONS / LAYOUT HELPERS
+   SECTIONS / HELPERS
 ========================================================= */
 .section { padding: 60px 0; }
 .section--white { background: #ffffff; }
 .section--soft { background: #f6f7fb; }
 
 .wrap {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 18px;
 }
@@ -183,12 +227,10 @@ a:hover { color: #1d4ed8; }
   gap: 38px;
   align-items: start;
 }
-
 @media (max-width: 900px) {
   .two-col { grid-template-columns: 1fr; }
 }
 
-/* HELLO photo */
 .profile-card {
   width: 260px;
   height: 260px;
@@ -198,14 +240,12 @@ a:hover { color: #1d4ed8; }
   box-shadow: 0 12px 26px rgba(0,0,0,0.12);
 }
 
-/* HELLO heading */
 .section__heading {
   font-size: 34px;
   font-weight: 900;
   margin: 0 0 14px 0;
 }
 
-/* Center just the CV buttons row */
 .btn-row {
   display: flex;
   justify-content: center;
@@ -275,7 +315,6 @@ a:hover { color: #1d4ed8; }
   .timeline__item { grid-template-columns: 1fr; }
 }
 
-/* Scrollable Updates container */
 .timeline-scroll {
   max-height: 420px;
   overflow-y: auto;
@@ -319,7 +358,7 @@ a:hover { color: #1d4ed8; }
 .social:hover { filter: brightness(0.92); }
 
 /* =========================================================
-   FOOTER (hide powered-by)
+   FOOTER
 ========================================================= */
 .page__footer {
   background: #ffffff;
@@ -329,7 +368,7 @@ a:hover { color: #1d4ed8; }
 .page__footer-copyright .powered-by { display: none !important; }
 
 /* =========================================================
-   Remove any leftover “glass/motion” classes
+   Remove leftover “glass/motion” classes
 ========================================================= */
 .glass,
 .hero-glass,
@@ -339,12 +378,12 @@ a:hover { color: #1d4ed8; }
   opacity: 1 !important;
   transform: none !important;
 }
+
 /* =========================================================
-   EDUCATION PAGE — side-by-side logo + content + dividers
-   (UPDATED: larger, consistent logo sizing)
+   EDUCATION PAGE — SIDE-BY-SIDE + BIG CONSISTENT LOGOS
+   (LATEST LOGO SIZING)
 ========================================================= */
 
-/* Timeline container */
 .edu-timeline {
   display: flex;
   flex-direction: column;
@@ -352,40 +391,39 @@ a:hover { color: #1d4ed8; }
   margin-top: 18px;
 }
 
-/* Each institution row */
 .edu-item {
   display: grid;
-  grid-template-columns: 160px 1fr; /* ⬅️ match the new logo column width */
+  grid-template-columns: 160px 1fr;  /* column matches logo column */
   gap: 22px;
-  align-items: center;             /* side-by-side (NOT top/bottom) */
+  align-items: center;
   padding: 18px 0;
-  position: relative;              /* safe if you add pseudo-elements later */
+  position: relative;
 }
 
-/* REMOVE the vertical line (from older CSS) */
+/* Ensure NO pseudo vertical line */
 .edu-item::before {
   content: none !important;
   display: none !important;
 }
 
-/* Logo column (fixed, wider column) */
+/* Logo column */
 .edu-logo {
-  width: 160px;                    /* ⬅️ increased column width */
+  width: 160px;     /* wider column */
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;                  /* prevents squeezing */
+  flex-shrink: 0;
 }
 
-/* Logos themselves (uniform, readable) */
+/* Logos */
 .edu-logo img {
-  width: 140px;                    /* ⬅️ consistent visible width */
-  height: 140px;                   /* uniform height */
-  object-fit: contain;             /* no cropping */
+  width: 150px;        /* same visible width */
+  height: 150px;       /* same visible height */
+  object-fit: contain; /* no crop */
   display: block;
 }
 
-/* Content column */
+/* Content */
 .edu-content h3 {
   margin: 0 0 0.35rem 0;
   font-size: 1.15rem;
@@ -406,46 +444,39 @@ a:hover { color: #1d4ed8; }
   margin: 0.1rem 0 0 0;
 }
 
-.edu-extra {
-  margin-top: 0.35rem;
-}
+.edu-extra { margin-top: 0.35rem; }
 
-/* Visible divider between institutions (aligned to content start) */
+/* Divider aligned with content start */
 .edu-divider {
   height: 1px;
   background: #e5e7eb;
-  margin-left: 182px;  /* ⬅️ 160 (logo col) + 22 (gap) = content start */
+  margin-left: 182px; /* 160 + 22 gap */
 }
 
-/* Section rule */
 .section-rule {
   border: none;
   border-top: 2px solid #e5e7eb;
   margin: 0.6rem 0 1.5rem;
 }
 
-/* Lists */
 .edu-list {
   list-style: disc;
   padding-left: 1.5rem;
 }
 
-/* Icon styling in headings */
 h2 i {
   margin-right: 0.4rem;
   color: var(--accent);
 }
 
-/* Mobile: still side-by-side, smaller logos */
+/* Mobile */
 @media (max-width: 640px) {
   .edu-item {
-    grid-template-columns: 110px 1fr; /* ⬅️ tighter logo column */
+    grid-template-columns: 110px 1fr;
     gap: 14px;
   }
 
-  .edu-logo {
-    width: 110px;
-  }
+  .edu-logo { width: 110px; }
 
   .edu-logo img {
     width: 90px;
@@ -453,10 +484,9 @@ h2 i {
   }
 
   .edu-divider {
-    margin-left: 124px; /* ⬅️ 110 (logo col) + 14 (gap) */
+    margin-left: 124px; /* 110 + 14 gap */
   }
 }
-
 
 /* =========================================================
    COLLAPSIBLE SECTIONS
@@ -470,12 +500,9 @@ summary {
   margin-bottom: 0.5rem;
 }
 
-
-
 /* =========================================================
-   PUBLICATIONS / PROJECTS PAGE
+   PUBLICATIONS / PROJECTS
 ========================================================= */
-
 .pub-item {
   background: #ffffff;
   border: 1px solid #e5e7eb;
@@ -489,19 +516,11 @@ summary {
   line-height: 1.6;
 }
 
-.pub-links {
-  margin-top: 10px;
-}
-
-.btn--small {
-  padding: 0.35rem 0.75rem !important;
-  font-size: 0.9rem !important;
-}
+.pub-links { margin-top: 10px; }
 
 /* =========================================================
    PROJECT CARD (2-column)
 ========================================================= */
-
 .proj-card {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -543,7 +562,6 @@ summary {
 /* =========================================================
    CAROUSEL (Instagram-like)
 ========================================================= */
-
 .carousel {
   position: relative;
   border: 1px solid #e5e7eb;
@@ -569,11 +587,8 @@ summary {
   transition: opacity 180ms ease;
 }
 
-.carousel-slide.is-active {
-  opacity: 1;
-}
+.carousel-slide.is-active { opacity: 1; }
 
-/* Buttons */
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -589,14 +604,10 @@ summary {
   cursor: pointer;
 }
 
-.carousel-btn:hover {
-  background: rgba(17,24,39,0.7);
-}
-
+.carousel-btn:hover { background: rgba(17,24,39,0.7); }
 .carousel-btn.prev { left: 10px; }
 .carousel-btn.next { right: 10px; }
 
-/* Dots */
 .carousel-dots {
   position: absolute;
   bottom: 10px;
@@ -616,18 +627,13 @@ summary {
   cursor: pointer;
 }
 
-.dot.is-active {
-  background: rgba(17,24,39,0.75);
-}
+.dot.is-active { background: rgba(17,24,39,0.75); }
 
-/* Responsive */
 @media (max-width: 900px) {
-  .proj-card {
-    grid-template-columns: 1fr;
-  }
+  .proj-card { grid-template-columns: 1fr; }
+
   .carousel, .carousel-track {
     min-height: 280px;
     height: 280px;
   }
 }
-
