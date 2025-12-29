@@ -1,8 +1,10 @@
 ---
 title: "Education"
 permalink: /education/
-layout: dafault
+layout: default
 ---
+
+<div class="wrap">
 
 ## <i class="fas fa-graduation-cap"></i> Education
 
@@ -33,7 +35,7 @@ layout: dafault
     </div>
 
     <div class="edu-content">
-      <h3>Graduate Teaching Assistant </h3>
+      <h3>Graduate Teaching Assistant</h3>
       <div class="edu-meta">
         <span>Fall 2024 – Summer 2025</span>
         <span>Department of Electrical Engineering</span>
@@ -115,15 +117,12 @@ layout: dafault
   </a>
 </p>
 
-
 ---
 
 ## <i class="fas fa-certificate"></i> Certifications
 <hr class="section-rule"/>
 
-<ul class="edu-list">
-  
-</ul>
+<ul class="edu-list"></ul>
 
 ---
 
@@ -136,3 +135,5 @@ layout: dafault
   <li>Scholarship of Merit — Bangladesh Education Board (2012–2017)</li>
   <li>Scholarship of Merit — Primary Education Board (2010–2012)</li>
 </ul>
+
+</div>
