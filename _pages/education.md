@@ -6,7 +6,6 @@ author_profile: true
 ---
 
 ## <i class="fas fa-graduation-cap"></i> Education
-<hr class="section-rule"/>
 
 <div class="edu-timeline">
 
