@@ -1,8 +1,11 @@
 ---
 title: "Publications / Projects"
 permalink: /pubs-projects/
-layout: single
+layout: default
+author_profile: false
 ---
+
+<div class="wrap">
 
 ## <i class="fas fa-file-alt"></i> Publications
 <hr class="section-rule"/>
@@ -250,5 +253,7 @@ layout: single
       <div class="carousel-dots" data-dots></div>
     </div>
   </div>
+
+</div>
 
 </div>
