@@ -124,8 +124,8 @@ author_profile: true
 <hr class="section-rule"/>
 
 <ul class="edu-list">
-  <li>Dean’s List Award — BUET (2018–2023)</li>
+  <li>Dean’s List Award — BUET (Level-2)</li>
   <li>University Merit Scholarship — BUET (2018–2023)</li>
-  <li>Scholarship of Merit — Bangladesh Education Board (2010–2015)</li>
-  <li>Scholarship of Merit — Primary Education Board (2008–2010)</li>
+  <li>Scholarship of Merit — Bangladesh Education Board (2012–2017)</li>
+  <li>Scholarship of Merit — Primary Education Board (20010–2012)</li>
 </ul>
