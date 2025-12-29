@@ -3,9 +3,80 @@ title: "Publications / Projects"
 permalink: /pubs-projects/
 layout: default
 author_profile: false
+classes: wide
 ---
 
-<div class="wrap">
+<div class="wrap" markdown="1">
+
+<style>
+  /* ===== Page-only 2-column layout ===== */
+  .page-grid{
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+  @media (max-width: 900px){
+    .page-grid{ grid-template-columns: 1fr; }
+  }
+
+  /* ===== Author card ===== */
+  .author-card{
+    position: sticky;
+    top: 90px;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 16px;
+    background: #fff;
+  }
+  @media (max-width: 900px){
+    .author-card{ position: static; }
+  }
+
+  .author-avatar{
+    width: 110px;
+    height: 110px;
+    border-radius: 999px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px auto;
+  }
+  .author-name{ text-align: center; font-weight: 800; margin: 0; }
+  .author-bio{ text-align: center; color: #6b7280; margin: 6px 0 12px 0; font-size: 0.95rem; }
+  .author-links{ list-style: none; padding: 0; margin: 0; }
+  .author-links li{ margin: 8px 0; }
+  .author-links a{ text-decoration: none; display: inline-flex; gap: 8px; align-items: center; }
+</style>
+
+<div class="page-grid">
+
+  <!-- LEFT: manual author profile -->
+  <aside class="author-card">
+    <img class="author-avatar" src="/assets/images/profile.JPG" alt="Md Yekra Rahman">
+    <p class="author-name">Md Yekra Rahman</p>
+    <p class="author-bio">PhD Student, Mizzou</p>
+
+    <ul class="author-links">
+      <li>
+        <a href="mailto:mrvpx@missouri.edu">
+          <i class="fas fa-fw fa-envelope"></i><span>Email</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/MdYekraRahman" target="_blank" rel="noopener">
+          <i class="fab fa-fw fa-github"></i><span>GitHub</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/mdyekrarahman/" target="_blank" rel="noopener">
+          <i class="fab fa-fw fa-linkedin"></i><span>LinkedIn</span>
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- RIGHT: page content -->
+  <main markdown="1">
 
 ## <i class="fas fa-file-alt"></i> Publications
 <hr class="section-rule"/>
@@ -42,7 +113,6 @@ author_profile: false
 ========================================================= -->
 <div class="proj-card">
 
-  <!-- TEXT -->
   <div class="proj-text">
     <h3 class="proj-title">
       Two-Stage Miller-Compensated CMOS Op-Amp (IBM 130 nm)
@@ -69,21 +139,13 @@ author_profile: false
     </div>
   </div>
 
-  <!-- MEDIA -->
   <div class="proj-media">
     <div class="carousel" data-carousel>
       <div class="carousel-track" data-track>
-        <img class="carousel-slide is-active"
-             src="/assets/images/projects/opamp/1.jpg"
-             alt="Op-amp schematic">
-        <img class="carousel-slide"
-             src="/assets/images/projects/opamp/2.jpg"
-             alt="Op-amp AC response">
-        <img class="carousel-slide"
-             src="/assets/images/projects/opamp/3.jpg"
-             alt="Op-amp transient response">
+        <img class="carousel-slide is-active" src="/assets/images/projects/opamp/1.jpg" alt="Op-amp schematic">
+        <img class="carousel-slide" src="/assets/images/projects/opamp/2.jpg" alt="Op-amp AC response">
+        <img class="carousel-slide" src="/assets/images/projects/opamp/3.jpg" alt="Op-amp transient response">
       </div>
-
       <button class="carousel-btn prev" data-prev aria-label="Previous">‹</button>
       <button class="carousel-btn next" data-next aria-label="Next">›</button>
       <div class="carousel-dots" data-dots></div>
@@ -126,20 +188,11 @@ author_profile: false
   <div class="proj-media">
     <div class="carousel" data-carousel>
       <div class="carousel-track" data-track>
-        <img class="carousel-slide is-active"
-             src="/assets/images/projects/buck/1.jpg"
-             alt="Buck schematic">
-        <img class="carousel-slide"
-             src="/assets/images/projects/buck/2.jpg"
-             alt="Gate driver waveforms">
-        <img class="carousel-slide"
-             src="/assets/images/projects/buck/3.jpg"
-             alt="Switching node waveform">
-        <img class="carousel-slide"
-             src="/assets/images/projects/buck/4.jpg"
-             alt="Efficiency sweep">
+        <img class="carousel-slide is-active" src="/assets/images/projects/buck/1.jpg" alt="Buck schematic">
+        <img class="carousel-slide" src="/assets/images/projects/buck/2.jpg" alt="Gate driver waveforms">
+        <img class="carousel-slide" src="/assets/images/projects/buck/3.jpg" alt="Switching node waveform">
+        <img class="carousel-slide" src="/assets/images/projects/buck/4.jpg" alt="Efficiency sweep">
       </div>
-
       <button class="carousel-btn prev" data-prev aria-label="Previous">‹</button>
       <button class="carousel-btn next" data-next aria-label="Next">›</button>
       <div class="carousel-dots" data-dots></div>
@@ -181,17 +234,10 @@ author_profile: false
   <div class="proj-media">
     <div class="carousel" data-carousel>
       <div class="carousel-track" data-track>
-        <img class="carousel-slide is-active"
-             src="/assets/images/projects/tcad/1.jpg"
-             alt="TCAD structure">
-        <img class="carousel-slide"
-             src="/assets/images/projects/tcad/2.jpg"
-             alt="IV characteristics">
-        <img class="carousel-slide"
-             src="/assets/images/projects/tcad/3.jpg"
-             alt="Circuit simulation">
+        <img class="carousel-slide is-active" src="/assets/images/projects/tcad/1.jpg" alt="TCAD structure">
+        <img class="carousel-slide" src="/assets/images/projects/tcad/2.jpg" alt="IV characteristics">
+        <img class="carousel-slide" src="/assets/images/projects/tcad/3.jpg" alt="Circuit simulation">
       </div>
-
       <button class="carousel-btn prev" data-prev aria-label="Previous">‹</button>
       <button class="carousel-btn next" data-next aria-label="Next">›</button>
       <div class="carousel-dots" data-dots></div>
@@ -234,20 +280,11 @@ author_profile: false
   <div class="proj-media">
     <div class="carousel" data-carousel>
       <div class="carousel-track" data-track>
-        <img class="carousel-slide is-active"
-             src="/assets/images/projects/pcb/1.jpg"
-             alt="PCB layout">
-        <img class="carousel-slide"
-             src="/assets/images/projects/pcb/2.jpg"
-             alt="Inner layer ground plane">
-        <img class="carousel-slide"
-             src="/assets/images/projects/pcb/3.jpg"
-             alt="Power plane">
-        <img class="carousel-slide"
-             src="/assets/images/projects/pcb/4.jpg"
-             alt="3D PCB view">
+        <img class="carousel-slide is-active" src="/assets/images/projects/pcb/1.jpg" alt="PCB layout">
+        <img class="carousel-slide" src="/assets/images/projects/pcb/2.jpg" alt="Inner layer ground plane">
+        <img class="carousel-slide" src="/assets/images/projects/pcb/3.jpg" alt="Power plane">
+        <img class="carousel-slide" src="/assets/images/projects/pcb/4.jpg" alt="3D PCB view">
       </div>
-
       <button class="carousel-btn prev" data-prev aria-label="Previous">‹</button>
       <button class="carousel-btn next" data-next aria-label="Next">›</button>
       <div class="carousel-dots" data-dots></div>
@@ -256,4 +293,7 @@ author_profile: false
 
 </div>
 
+  </main>
+
+</div>
 </div>
