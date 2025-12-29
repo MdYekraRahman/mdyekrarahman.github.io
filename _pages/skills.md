@@ -151,9 +151,6 @@ classes: wide
 
 <div class="skills-hero">
   <h2 style="margin:0 0 6px 0;"><i class="fas fa-tools"></i> Skills</h2>
-  <p class="muted" style="margin:0;">
-    Logo → proficiency bar → what I’ve built / simulated / designed using the tool.
-  </p>
 </div>
 
 <div class="skills-table">
@@ -166,29 +163,34 @@ classes: wide
 
   <!-- ====== EDIT ONLY THE % AND DESCRIPTION TEXTS BELOW ====== -->
 
-  <!-- Cadence -->
-  <div class="skill-row">
+<div class="skill-row">
     <div class="skill-logo"><img src="/assets/images/logos/Cadence-Logo.jpg" alt="Cadence"></div>
     <div class="skill-barwrap">
-      <div class="skill-bar"><div class="skill-fill" style="width:90%;"></div></div>
-      <div class="skill-pct">90%</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:95%;"></div></div>
     </div>
     <div class="skill-meta">
-      <p class="title">Cadence Virtuoso / ADE / Spectre</p>
-      <p class="desc">Analog & power IC design flow: schematics, testbenches, corner checks, transient/AC/noise sims, verification mindset.</p>
+      <p class="title">Cadence Virtuoso / ADE / Spectre / Layout</p>
+      <p class="desc">
+        End-to-end Analog/Mixed-Signal flow: Virtuoso Schematic & Layout (XL); Simulation via Spectre & HSpice; 
+        ADE L/XL/Explorer/Assembler (Maestro) for DC/AC/Tran/Noise, Stability, Monte Carlo, & Corner analysis; 
+        Physical Verification (DRC/LVS/ERC) with Assura/PVS/Pegasus; Parasitic Extraction (Quantus/QRC) and automation via SKILL/OCEAN scripting.
+      </p>
     </div>
   </div>
 
   <!-- LTspice -->
-  <div class="skill-row">
+<div class="skill-row">
     <div class="skill-logo"><img src="/assets/images/logos/LtSpice-logo.jpg" alt="LTspice"></div>
     <div class="skill-barwrap">
-      <div class="skill-bar"><div class="skill-fill" style="width:85%;"></div></div>
-      <div class="skill-pct">85%</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:90%;"></div></div>
     </div>
     <div class="skill-meta">
       <p class="title">LTspice</p>
-      <p class="desc">Fast converter prototyping, param sweeps, waveform analysis, sanity checks before full Cadence/Spectre verification.</p>
+      <p class="desc">
+        Rapid circuit prototyping & simulation (Schematic and Netlist): Transient, AC, DC Sweep, Noise, & Transfer Function analysis;
+        Importing 3rd-party SPICE/PSpice models & subcircuits; Custom hierarchy & symbol creation; 
+        Behavioral voltage/current sources (B-sources), and performance validation via Measurement directives (.meas).
+      </p>
     </div>
   </div>
 
@@ -196,8 +198,7 @@ classes: wide
   <div class="skill-row">
     <div class="skill-logo"><img src="/assets/images/logos/MATLAB-Symbol.jpg" alt="MATLAB"></div>
     <div class="skill-barwrap">
-      <div class="skill-bar"><div class="skill-fill" style="width:85%;"></div></div>
-      <div class="skill-pct">85%</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:99%;"></div></div>
     </div>
     <div class="skill-meta">
       <p class="title">MATLAB</p>
@@ -205,60 +206,69 @@ classes: wide
     </div>
   </div>
 
-  <!-- Simulink -->
-  <div class="skill-row">
-    <div class="skill-logo"><img src="/assets/images/logos/Simulink_Logo.png" alt="Simulink"></div>
-    <div class="skill-barwrap">
-      <div class="skill-bar"><div class="skill-fill" style="width:70%;"></div></div>
-      <div class="skill-pct">70%</div>
-    </div>
-    <div class="skill-meta">
-      <p class="title">Simulink</p>
-      <p class="desc">Control-oriented modeling and quick validation of dynamic behavior (controller ideas, system blocks, responses).</p>
-    </div>
-  </div>
-
-  <!-- PLECS -->
-  <div class="skill-row">
+<div class="skill-row">
     <div class="skill-logo"><img src="/assets/images/logos/plecs-logo.png" alt="PLECS"></div>
     <div class="skill-barwrap">
       <div class="skill-bar"><div class="skill-fill" style="width:70%;"></div></div>
-      <div class="skill-pct">70%</div>
     </div>
     <div class="skill-meta">
       <p class="title">PLECS</p>
-      <p class="desc">Power electronics system simulation, switching behavior, and control validation workflows.</p>
+      <p class="desc">
+        High-speed system-level simulation for power electronics courseworks; Transient, Steady-State Analysis, & Small-Signal AC Sweeps (Loop Gain/Bode plots); 
+      </p>
     </div>
   </div>
 
-  <!-- Altium -->
-  <div class="skill-row">
+<div class="skill-row">
     <div class="skill-logo"><img src="/assets/images/logos/Altium-Logo.jpg" alt="Altium"></div>
     <div class="skill-barwrap">
-      <div class="skill-bar"><div class="skill-fill" style="width:80%;"></div></div>
-      <div class="skill-pct">80%</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:90%;"></div></div>
     </div>
     <div class="skill-meta">
       <p class="title">Altium Designer</p>
-      <p class="desc">Schematic + PCB layout, custom symbols/footprints, DRC, EMI-aware layout basics, Gerber export.</p>
+      <p class="desc">
+        Full-cycle 4-layer PCB design (Schematic to Gerber); Custom Integrated Library creation (Symbols, Footprints, 3D Bodies); 
+        Layer Stackup Manager; DRC/ERC validation; and generation of fabrication files (Gerber X2, NC Drill, BOM).
+      </p>
     </div>
   </div>
 
-  <!-- Silvaco -->
   <div class="skill-row">
-    <div class="skill-logo"><img src="/assets/images/logos/SILVACO_Logo.jpg" alt="Silvaco"></div>
+    <div class="skill-logo"><img src="/assets/images/logos/KiCad-Logo.png" alt="KiCad"></div>
     <div class="skill-barwrap">
-      <div class="skill-bar"><div class="skill-fill" style="width:70%;"></div></div>
-      <div class="skill-pct">70%</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:80%;"></div></div>
     </div>
     <div class="skill-meta">
-      <p class="title">Silvaco (TCAD)</p>
-      <p class="desc">Device-level simulation, extracting behavior trends, and connecting device physics to circuit-level implications.</p>
+      <p class="title">KiCad</p>
+      <p class="desc">
+        Complete 4-layer PCB workflow (Schematic to Gerber); High-Voltage design considerations (Creepage & Clearance rules, Isolation slots); 
+        Custom Symbol & Footprint library management; Layer stackup configuration & Power plane generation; 3D Viewer verification, and fabrication output generation (Gerbers, Drill files, BOM).
+      </p>
     </div>
   </div>
 
-  <!-- Lumerical -->
-  <div class="skill-row">
+<!-- Silvaco -->
+<div class="skill-row">
+  <div class="skill-logo">
+    <img src="/assets/images/logos/SILVACO_Logo.jpg" alt="Silvaco">
+  </div>
+  <div class="skill-barwrap">
+    <div class="skill-bar">
+      <div class="skill-fill" style="width:60%;"></div>
+    </div>
+  </div>
+  <div class="skill-meta">
+    <p class="title">Silvaco TCAD (ATLAS / UTMOST IV)</p>
+    <p class="desc">
+      End-to-end TCAD workflow: device structure definition, physics-based simulation,
+      DC/AC characterization, automated dataset generation (UDS),
+      and compact-model preparation for HiSIM2 using UTMOST IV.
+    </p>
+  </div>
+</div>
+
+
+<div class="skill-row">
     <div class="skill-logo"><img src="/assets/images/logos/Ansys_Lumerical_Logo.jpg" alt="Lumerical"></div>
     <div class="skill-barwrap">
       <div class="skill-bar"><div class="skill-fill" style="width:55%;"></div></div>
@@ -266,59 +276,64 @@ classes: wide
     </div>
     <div class="skill-meta">
       <p class="title">ANSYS Lumerical FDTD</p>
-      <p class="desc">Optical simulation workflows (device structures, field distributions, photonic behavior studies).</p>
+      <p class="desc">
+        Photovoltaic device simulation & optimization for undergraduate thesis.
+      </p>
     </div>
   </div>
 
-  <!-- Quantum ESPRESSO -->
-  <div class="skill-row">
+<div class="skill-row">
     <div class="skill-logo"><img src="/assets/images/logos/Quantum_ESPRESSO_logo.jpg" alt="Quantum ESPRESSO"></div>
     <div class="skill-barwrap">
       <div class="skill-bar"><div class="skill-fill" style="width:55%;"></div></div>
-      <div class="skill-pct">55%</div>
     </div>
     <div class="skill-meta">
       <p class="title">Quantum ESPRESSO</p>
-      <p class="desc">DFT-based material simulations and analysis workflows (band structure / material property exploration).</p>
+      <p class="desc">
+        Ab-initio material modeling (DFT); Input creation & Pseudopotential selection; 
+        Convergence testing; Geometry Optimization; 
+        Electronic structure analysis & Density of States (DOS/PDOS);
+      </p>
     </div>
   </div>
 
-  <!-- Quartus -->
-  <div class="skill-row">
+<div class="skill-row">
     <div class="skill-logo"><img src="/assets/images/logos/quartus-logo.png" alt="Quartus"></div>
     <div class="skill-barwrap">
       <div class="skill-bar"><div class="skill-fill" style="width:60%;"></div></div>
-      <div class="skill-pct">60%</div>
     </div>
     <div class="skill-meta">
-      <p class="title">Intel Quartus</p>
-      <p class="desc">Digital design flow basics: synth/compile, FPGA project setup, verification fundamentals.</p>
+      <p class="title">Intel Quartus Prime</p>
+      <p class="desc">
+        FPGA design using Verilog HDL; RTL coding (Finite State Machines, Combinational/Sequential logic); 
+        Testbench creation & Simulation (ModelSim-Altera) and Timing Analysis basics.
+      </p>
     </div>
   </div>
 
-  <!-- ARM -->
-  <div class="skill-row">
-    <div class="skill-logo"><img src="/assets/images/logos/ARM_logo.png" alt="ARM"></div>
+<div class="skill-row">
+    <div class="skill-logo"><img src="/assets/images/logos/ARM_logo.png" alt="RISC-V"></div>
     <div class="skill-barwrap">
       <div class="skill-bar"><div class="skill-fill" style="width:60%;"></div></div>
-      <div class="skill-pct">60%</div>
     </div>
     <div class="skill-meta">
-      <p class="title">ARM</p>
-      <p class="desc">Embedded fundamentals and ARM ecosystem familiarity for microcontroller-based development workflows.</p>
+      <p class="title">arm (RISC-V)</p>
+      <p class="desc">
+        Open Instruction Set Architecture; Assembly language programming & Optimization; and Processor pipeline stages (Fetch, Decode, Execute, Mem, WB); 
+      </p>
     </div>
   </div>
 
-  <!-- C -->
-  <div class="skill-row">
+<div class="skill-row">
     <div class="skill-logo"><img src="/assets/images/logos/C_Programming_Language.png" alt="C"></div>
     <div class="skill-barwrap">
-      <div class="skill-bar"><div class="skill-fill" style="width:70%;"></div></div>
-      <div class="skill-pct">70%</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:90%;"></div></div>
     </div>
     <div class="skill-meta">
-      <p class="title">C</p>
-      <p class="desc">Embedded-level programming fundamentals, structured coding, debugging mindset, and algorithm implementation.</p>
+      <p class="title">C Language</p>
+      <p class="desc">
+        Foundational procedural programming & Algorithm design and Core syntax mastery;
+      </p>
     </div>
   </div>
 
@@ -335,90 +350,65 @@ classes: wide
     </div>
   </div>
 
-  <!-- NumPy -->
-  <div class="skill-row">
-    <div class="skill-logo"><img src="/assets/images/logos/numpy_logo-freelogovectors.net_.png" alt="NumPy"></div>
+<div class="skill-row">
+    <div class="skill-logo"><img src="/assets/images/logos/tektronix-logo.png" alt="Oscilloscope"></div>
     <div class="skill-barwrap">
-      <div class="skill-bar"><div class="skill-fill" style="width:70%;"></div></div>
-      <div class="skill-pct">70%</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:90%;"></div></div>
     </div>
     <div class="skill-meta">
-      <p class="title">NumPy</p>
-      <p class="desc">Numerical computing for analysis scripts, curve processing, automation, and custom computation workflows.</p>
+      <p class="title">Oscilloscope</p>
+      <p class="desc">
+        Benchtop signal analysis & debugging; Vertical/Horizontal scaling & Probe compensation; 
+        Cursor measurements (Voltage, Time, Frequency);
+        and Data export (Screenshots/CSV) for documentation.
+      </p>
     </div>
   </div>
 
-  <!-- Tektronix -->
-  <div class="skill-row">
-    <div class="skill-logo"><img src="/assets/images/logos/tektronix-logo.png" alt="Tektronix"></div>
+
+<div class="skill-row">
+    <div class="skill-logo"><img src="/assets/images/logos/Agilent-33120A.jpg" alt="Signal Generator"></div>
     <div class="skill-barwrap">
-      <div class="skill-bar"><div class="skill-fill" style="width:65%;"></div></div>
-      <div class="skill-pct">65%</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:85%;"></div></div>
     </div>
     <div class="skill-meta">
-      <p class="title">Tektronix</p>
-      <p class="desc">Lab measurement workflows: oscilloscopes and instrument-driven debugging (switching waveforms, signal integrity).</p>
+      <p class="title">Signal Generator</p>
+      <p class="desc">
+        Standard waveform generation (Sine, Square, Triangle, Ramp, Noise); Signal parameter configuration (Amplitude Vpp/Vrms, Frequency, DC Offset); 
+        Output impedance management (50Ω / High-Z termination); Duty Cycle adjustment; 
+        and Basic Modulation/Sweep setup for circuit stimulus.
+      </p>
     </div>
   </div>
 
-  <!-- Keysight -->
-  <div class="skill-row">
-    <div class="skill-logo"><img src="/assets/images/logos/Keysight_Pref_Logo_Color.jpg" alt="Keysight"></div>
+<div class="skill-row">
+    <div class="skill-logo"><img src="/assets/images/logos/SLx_01_0224.jpg" alt="Magna-Power SLx"></div>
     <div class="skill-barwrap">
       <div class="skill-bar"><div class="skill-fill" style="width:60%;"></div></div>
-      <div class="skill-pct">60%</div>
     </div>
     <div class="skill-meta">
-      <p class="title">Keysight</p>
-      <p class="desc">Instrument familiarity for measurement workflows and lab validation (bench tools, waveform acquisition mindset).</p>
+      <p class="title">Magna-Power DC Supply</p>
+      <p class="desc">
+        Programmable High-Voltage DC Power Supply (2.6 kW) for precision output control (0–1250 Vdc / 0–2 Adc); 
+      </p>
     </div>
   </div>
 
-  <!-- Agilent 33120A -->
-  <div class="skill-row">
-    <div class="skill-logo"><img src="/assets/images/logos/Agilent-33120A.jpg" alt="Agilent 33120A"></div>
+<div class="skill-row">
+    <div class="skill-logo"><img src="/assets/images/logos/alx_front.jpg" alt="MagnaLOAD ALx"></div>
     <div class="skill-barwrap">
-      <div class="skill-bar"><div class="skill-fill" style="width:55%;"></div></div>
-      <div class="skill-pct">55%</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:60%;"></div></div>
     </div>
     <div class="skill-meta">
-      <p class="title">Agilent 33120A</p>
-      <p class="desc">Function generator usage for lab setups (signal injection, stimulus creation, basic bench workflow).</p>
-    </div>
-  </div>
-
-  <!-- SLx_01_0224 -->
-  <div class="skill-row">
-    <div class="skill-logo"><img src="/assets/images/logos/SLx_01_0224.jpg" alt="SLx_01_0224"></div>
-    <div class="skill-barwrap">
-      <div class="skill-bar"><div class="skill-fill" style="width:50%;"></div></div>
-      <div class="skill-pct">50%</div>
-    </div>
-    <div class="skill-meta">
-      <p class="title">SLx_01_0224</p>
-      <p class="desc">Add your note here (what tool/instrument this logo represents and how you used it).</p>
-    </div>
-  </div>
-
-  <!-- alx_front -->
-  <div class="skill-row">
-    <div class="skill-logo"><img src="/assets/images/logos/alx_front.jpg" alt="alx_front"></div>
-    <div class="skill-barwrap">
-      <div class="skill-bar"><div class="skill-fill" style="width:50%;"></div></div>
-      <div class="skill-pct">50%</div>
-    </div>
-    <div class="skill-meta">
-      <p class="title">alx_front</p>
-      <p class="desc">Add your note here (what tool/instrument this is and your usage).</p>
+      <p class="title">MagnaLOAD DC Electronic Load (ALx Series)</p>
+      <p class="desc">
+        High-power DC Electronic Load (2.5 kW) with high-current sinking capability (Up to 250 Adc / 500 Vdc); 
+      </p>
     </div>
   </div>
 
 </div>
 
-<p class="muted" style="margin-top:12px;">
-  Update any bar by changing the <code>width:XX%</code> in each row.  
-  Replace the “Add your note here” lines with your real tasks.
-</p>
 
 </main>
 
