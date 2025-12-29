@@ -339,9 +339,9 @@ a:hover { color: #1d4ed8; }
   opacity: 1 !important;
   transform: none !important;
 }
-
 /* =========================================================
    EDUCATION PAGE — side-by-side logo + content + dividers
+   (UPDATED: larger, consistent logo sizing)
 ========================================================= */
 
 /* Timeline container */
@@ -355,31 +355,35 @@ a:hover { color: #1d4ed8; }
 /* Each institution row */
 .edu-item {
   display: grid;
-  grid-template-columns: 110px 1fr; /* fixed logo column */
+  grid-template-columns: 160px 1fr; /* ⬅️ match the new logo column width */
   gap: 22px;
-  align-items: center;            /* side-by-side (NOT top/bottom) */
+  align-items: center;             /* side-by-side (NOT top/bottom) */
   padding: 18px 0;
+  position: relative;              /* safe if you add pseudo-elements later */
 }
 
-/* REMOVE the vertical line that caused your issue */
-.edu-item::before { content: none !important; display: none !important; }
+/* REMOVE the vertical line (from older CSS) */
+.edu-item::before {
+  content: none !important;
+  display: none !important;
+}
 
 /* Logo column (fixed, wider column) */
 .edu-logo {
-  width: 160px;                /* ⬅️ increase column width */
+  width: 160px;                    /* ⬅️ increased column width */
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;              /* prevents squeezing */
+  flex-shrink: 0;                  /* prevents squeezing */
 }
 
-/* Logos themselves */
+/* Logos themselves (uniform, readable) */
 .edu-logo img {
-  width: 140px;                /* ⬅️ consistent visible width */
-  height: 140px;               /* uniform height */
-  object-fit: contain;         /* no cropping */
+  width: 140px;                    /* ⬅️ consistent visible width */
+  height: 140px;                   /* uniform height */
+  object-fit: contain;             /* no cropping */
+  display: block;
 }
-
 
 /* Content column */
 .edu-content h3 {
@@ -402,13 +406,15 @@ a:hover { color: #1d4ed8; }
   margin: 0.1rem 0 0 0;
 }
 
-.edu-extra { margin-top: 0.35rem; }
+.edu-extra {
+  margin-top: 0.35rem;
+}
 
-/* Visible divider between institutions */
+/* Visible divider between institutions (aligned to content start) */
 .edu-divider {
   height: 1px;
   background: #e5e7eb;
-  margin-left: 132px; /* aligns with content start */
+  margin-left: 182px;  /* ⬅️ 160 (logo col) + 22 (gap) = content start */
 }
 
 /* Section rule */
@@ -430,26 +436,27 @@ h2 i {
   color: var(--accent);
 }
 
-/* Mobile: keep side-by-side but tighter */
+/* Mobile: still side-by-side, smaller logos */
 @media (max-width: 640px) {
   .edu-item {
-    grid-template-columns: 90px 1fr;
+    grid-template-columns: 110px 1fr; /* ⬅️ tighter logo column */
     gap: 14px;
   }
 
   .edu-logo {
-    width: 90px;
+    width: 110px;
   }
 
   .edu-logo img {
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
   }
 
   .edu-divider {
-    margin-left: 104px;
+    margin-left: 124px; /* ⬅️ 110 (logo col) + 14 (gap) */
   }
 }
+
 
 /* =========================================================
    COLLAPSIBLE SECTIONS
