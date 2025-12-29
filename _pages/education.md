@@ -34,12 +34,12 @@ author_profile: true
     </div>
 
     <div class="edu-content">
-      <h3>Graduate Teaching Assistant (TxACE Program)</h3>
+      <h3>Graduate Teaching Assistant </h3>
       <div class="edu-meta">
         <span>Fall 2024 – Summer 2025</span>
         <span>Department of Electrical Engineering</span>
       </div>
-      <p class="edu-inst">University of Texas at Dallas, USA</p>
+      <p class="edu-inst">TxACE, University of Texas at Dallas, USA</p>
     </div>
   </div>
 
