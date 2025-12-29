@@ -13,7 +13,7 @@
      - Adds responsive side padding
      - Caps only on ultra-wide screens (so it still looks professional)
   */
-  --site-cap: 1800px;                 /* increase to 2000px if you want even wider on huge monitors */
+  --site-cap: 3000px;                 /* increase to 2000px if you want even wider on huge monitors */
   --gutter: clamp(14px, 3vw, 56px);   /* responsive left/right padding */
   --inner-gutter: clamp(14px, 2.2vw, 36px);
 
