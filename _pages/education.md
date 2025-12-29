@@ -89,19 +89,27 @@ author_profile: true
 <hr class="section-rule"/>
 
 <ul class="edu-list">
-  <li>Analog Electronics</li>
-  <li>Digital Electronics</li>
-  <li>Control Systems</li>
+  <li>Analog Integrated Circuits</li>
+  <li>Electronic Circuits & Electrical Circuits</li>
+  <li>Solid-State Devices & Compound Semiconductor Devices</li>
+  <li>VLSI Circuits and Design</li>
   <li>Power Electronics</li>
+  <li>Power System I & Power System Analysis</li>
   <li>Electrical Machines</li>
-  <li>Power System Analysis</li>
+  <li>Control Systems</li>
+  <li>Digital Signal Processing</li>
   <li>Signals and Systems</li>
-  <li>Probability and Statistics</li>
-  <li>Linear Algebra</li>
-  <li>Numerical Methods</li>
+  <li>Digital Logic Design</li>
+  <li>Microprocessors and Embedded Systems</li>
+  <li>Processing and Fabrication Technology</li>
+  <li>Electrical Properties of Materials</li>
+  <li>Optoelectronics</li>
+  <li>Nano-electronics and Nanotechnology</li>
+  <li>Computer Programming</li>
 </ul>
+
 <p class="edu-inst">
-  Full list of my completed courses and grades:
+  Full list of my completed undergraduate courses and grades:
   <a href="https://docs.google.com/spreadsheets/d/1Z4_jXWNf3in0Tf3PKaMeoOQdXzZbt0l7hZH-1Ulfi_0/edit?usp=sharing"
      target="_blank" rel="noopener">
     View coursework spreadsheet
@@ -127,5 +135,5 @@ author_profile: true
   <li>Dean’s List Award — BUET (Level-2)</li>
   <li>University Merit Scholarship — BUET (2018–2023)</li>
   <li>Scholarship of Merit — Bangladesh Education Board (2012–2017)</li>
-  <li>Scholarship of Merit — Primary Education Board (20010–2012)</li>
+  <li>Scholarship of Merit — Primary Education Board (2010–2012)</li>
 </ul>
