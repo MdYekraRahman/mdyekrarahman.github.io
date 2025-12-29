@@ -13,7 +13,7 @@ author_profile: true
   <!-- PhD Missouri -->
   <div class="edu-item">
     <div class="edu-logo">
-      <img src="/assets/images/mizzou-logo.PNG" alt="University of Missouri - Columbia">
+      <img src="/assets/images/mizzou-logo.png" alt="University of Missouri - Columbia">
     </div>
     <div class="edu-content">
       <h3>Doctor of Philosophy (Ph.D.), Electrical Engineering</h3>
@@ -26,7 +26,7 @@ author_profile: true
   <!-- TxACE -->
   <div class="edu-item">
     <div class="edu-logo">
-      <img src="/assets/images/TxACE.PNG" alt="UT Dallas">
+      <img src="/assets/images/TxACE.png" alt="UT Dallas">
     </div>
     <div class="edu-content">
       <h3>Graduate Teaching Assistant</h3>
@@ -39,7 +39,7 @@ author_profile: true
   <!-- BUET -->
   <div class="edu-item">
     <div class="edu-logo">
-      <img src="/assets/images/buet-logo.PNG" alt="BUET">
+      <img src="/assets/images/buet-logo.png" alt="BUET">
     </div>
     <div class="edu-content">
       <h3>B.Sc. in Electrical and Electronic Engineering (EEE)</h3>
@@ -53,7 +53,7 @@ author_profile: true
   <!-- HSC -->
   <div class="edu-item">
     <div class="edu-logo">
-      <img src="/assets/images/Rajshahi_College_Logo.PNG" alt="Rajshahi College">
+      <img src="/assets/images/Rajshahi_College_Logo.png" alt="Rajshahi College">
     </div>
     <div class="edu-content">
       <h3>Higher Secondary School Certificate (HSC), Class XI–XII</h3>
