@@ -1,8 +1,8 @@
 ---
 permalink: /professional-experience/
-layout: single
+layout: default
 ---
-
+<div class="wrap">
 ## <i class="fas fa-briefcase"></i> Professional Experience
 
 <div class="edu-timeline">
@@ -89,4 +89,5 @@ layout: single
     </div>
   </div>
 
+</div>
 </div>
