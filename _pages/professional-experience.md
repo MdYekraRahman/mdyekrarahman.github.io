@@ -79,9 +79,6 @@ author_profile: true
       <p class="edu-inst">
         Eastern University, Dhaka, Bangladesh
       </p>
-Power System Analysis, Signals and Linear Systems, Electric and Magnetic Field,
-Digital Logic Design Lab, Electronics II Lab, Electrical Service Design
-
       <p class="edu-extra"><strong>Courses Instructed:</strong></p>
       <ul class="edu-list">
         <!-- You will fill these -->
