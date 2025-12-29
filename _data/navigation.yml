@@ -1,11 +1,23 @@
 main:
-  - title: "About"
-    url: /about/
-  - title: "Projects"
-    url: /projects/
-  - title: "Publications"
-    url: /publications/
+  - title: "Home"
+    url: /
+  - title: "Education"
+    url: /education/
+  - title: "Professional Experience"
+    url: /experience/
   - title: "CV"
     url: /cv/
+  - title: "Publications/Projects"
+    url: /pubs-projects/
+  - title: "Honors/Awards"
+    url: /honors/
+  - title: "ECA"
+    url: /eca/
+  - title: "Others"
+    children:
+      - title: "Teaching"
+        url: /teaching/
+      - title: "Skills"
+        url: /skills/
   - title: "Contact"
     url: /contact/
