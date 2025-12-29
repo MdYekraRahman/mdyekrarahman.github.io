@@ -82,7 +82,7 @@ classes: wide
 <hr class="section-rule"/>
 
 ### Journal Papers
-<p class="muted">Coming soon.</p>
+<p class="muted">Loading.</p>
 
 ### Conference Papers
 
