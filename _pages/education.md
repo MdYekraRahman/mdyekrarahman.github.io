@@ -10,59 +10,75 @@ author_profile: true
 
 <div class="edu-timeline">
 
-  <!-- PhD Missouri -->
+  <!-- Missouri -->
   <div class="edu-item">
     <div class="edu-logo">
       <img src="/assets/images/mizzou-logo.png" alt="University of Missouri - Columbia">
     </div>
+
     <div class="edu-content">
       <h3>Doctor of Philosophy (Ph.D.), Electrical Engineering</h3>
-      <p class="edu-date">Fall 2025 – Present</p>
-      <p>Department of Electrical Engineering and Computer Science</p>
-      <p><strong>University of Missouri–Columbia, USA</strong></p>
+      <div class="edu-meta">
+        <span>Fall 2025 – Present</span>
+        <span>Department of Electrical Engineering and Computer Science</span>
+      </div>
+      <p class="edu-inst">University of Missouri–Columbia, USA</p>
     </div>
   </div>
+
+  <div class="edu-divider"></div>
 
   <!-- TxACE -->
   <div class="edu-item">
     <div class="edu-logo">
-      <img src="/assets/images/TxACE.png" alt="UT Dallas">
+      <img src="/assets/images/TxACE.png" alt="University of Texas at Dallas">
     </div>
+
     <div class="edu-content">
-      <h3>Graduate Teaching Assistant</h3>
-      <p class="edu-date">Fall 2024 – Summer 2025</p>
-      <p>Department of Electrical Engineering</p>
-      <p><strong>University of Texas at Dallas, USA</strong></p>
+      <h3>Graduate Teaching Assistant (TxACE Program)</h3>
+      <div class="edu-meta">
+        <span>Fall 2024 – Summer 2025</span>
+        <span>Department of Electrical Engineering</span>
+      </div>
+      <p class="edu-inst">University of Texas at Dallas, USA</p>
     </div>
   </div>
+
+  <div class="edu-divider"></div>
 
   <!-- BUET -->
   <div class="edu-item">
     <div class="edu-logo">
       <img src="/assets/images/buet-logo.png" alt="BUET">
     </div>
+
     <div class="edu-content">
       <h3>B.Sc. in Electrical and Electronic Engineering (EEE)</h3>
-      <p class="edu-date">April 2018 – May 2023</p>
-      <p>Department of Electrical and Electronic Engineering</p>
-      <p><strong>Bangladesh University of Engineering and Technology (BUET)</strong></p>
-      <p><strong>GPA:</strong> 3.65 / 4.00</p>
+      <div class="edu-meta">
+        <span>April 2018 – May 2023</span>
+        <span>Department of Electrical and Electronic Engineering</span>
+      </div>
+      <p class="edu-inst">Bangladesh University of Engineering and Technology (BUET)</p>
+      <p class="edu-extra"><strong>GPA:</strong> 3.65 / 4.00</p>
     </div>
   </div>
+
+  <div class="edu-divider"></div>
 
   <!-- HSC -->
   <div class="edu-item">
     <div class="edu-logo">
       <img src="/assets/images/Rajshahi_College_Logo.png" alt="Rajshahi College">
     </div>
+
     <div class="edu-content">
-      <h3>Higher Secondary School Certificate (HSC), Class XI–XII</h3>
-      <p class="edu-date">Class of 2017</p>
-      <p><strong>Rajshahi College, Rajshahi</strong></p>
-      <p>Group: Science</p>
-      <p>
-        <strong>GPA:</strong> 5.00 / 5.00
-      </p>
+      <h3>Higher Secondary School Certificate (HSC), Science</h3>
+      <div class="edu-meta">
+        <span>Class of 2017</span>
+        <span>Science Group</span>
+      </div>
+      <p class="edu-inst">Rajshahi College, Rajshahi</p>
+      <p class="edu-extra"><strong>GPA:</strong> 5.00 / 5.00</p>
     </div>
   </div>
 
@@ -73,110 +89,53 @@ author_profile: true
 ## <i class="fas fa-book"></i> Major Courses
 <hr class="section-rule"/>
 
-<details open>
-<summary>Undergraduate Level Courses</summary>
-
-- Analog Electronics  
-- Digital Electronics  
-- Control Systems  
-- Power Electronics  
-- Electrical Machines  
-- Power System Analysis  
-- Signals and Systems  
-- Probability and Statistics  
-- Linear Algebra  
-- Numerical Methods  
-
-</details>
+<ul class="edu-list">
+  <li>Analog Electronics</li>
+  <li>Digital Electronics</li>
+  <li>Control Systems</li>
+  <li>Power Electronics</li>
+  <li>Electrical Machines</li>
+  <li>Power System Analysis</li>
+  <li>Signals and Systems</li>
+  <li>Probability and Statistics</li>
+  <li>Linear Algebra</li>
+  <li>Numerical Methods</li>
+</ul>
 
 ---
 
 ## <i class="fas fa-laptop-code"></i> Software & Technical Skills
 <hr class="section-rule"/>
 
-- **IC Design & Verification:** Cadence Virtuoso, Spectre, SPICE/HSPICE, Verilog-A  
-- **Power & Systems:** MATLAB, Simulink, gm/ID methodology  
-- **Programming:** Python, C/C++, SKILL  
-- **Device Modeling:** TCAD simulation, compact SPICE model generation  
-- **Hardware:** Altium Designer, PCB bring-up, EMI-aware validation  
+<ul class="edu-list">
+  <li><strong>IC Design & Verification:</strong> Cadence Virtuoso, Spectre, SPICE/HSPICE, Verilog-A</li>
+  <li><strong>Power & Systems:</strong> MATLAB, Simulink, gm/ID methodology</li>
+  <li><strong>Programming:</strong> Python, C/C++, SKILL</li>
+  <li><strong>Device Modeling:</strong> TCAD simulation, compact SPICE model generation</li>
+  <li><strong>Hardware:</strong> Altium Designer, PCB bring-up, EMI-aware validation</li>
+</ul>
 
 ---
 
 ## <i class="fas fa-certificate"></i> Certifications
 <hr class="section-rule"/>
 
-<details>
-<summary>Nuclear Technology Workshop</summary>
-
-Courses completed:
-- Machinery and Equipment of VVER-1000 and VVER-1200 NPP  
-- Nuclear Fuel Cycle  
-- Thermohydraulic Profiling of Nuclear Reactor Cores  
-
-**Issuing Organizations:** National Research Nuclear University MEPhI (Russia) & BUET  
-**Issue Date:** November 2018  
-**Expiration:** N/A  
-
-</details>
-
-<details>
-<summary>Wind Energy — Technical University of Denmark (DTU)</summary>
-
-- **Grade:** 100%  
-- **Platform:** Coursera  
-- **Issue Date:** April 2020  
-- **Expiration:** N/A  
-
-</details>
-
-<details>
-<summary>Electric Power Systems — University at Buffalo (SUNY)</summary>
-
-- **Grade:** 93%  
-- **Platform:** Coursera  
-- **Issue Date:** May 2020  
-- **Expiration:** N/A  
-
-</details>
-
-<details>
-<summary>Natural Gas — University at Buffalo (SUNY)</summary>
-
-- **Grade:** 93%  
-- **Platform:** Coursera  
-- **Issue Date:** May 2020  
-- **Expiration:** N/A  
-
-</details>
-
-<details>
-<summary>Engaging Consumers in the Smart Grid Marketplace — IEEE Learning Network</summary>
-
-- **Continuing Education Units (CEUs):** 0.3  
-- **Professional Development Hours (PDHs):** 3  
-- **Issuing Organization:** IEEE  
-- **Issue Date:** July 2021  
-- **Expiration:** N/A  
-
-</details>
-
-<details>
-<summary>Introduction to IEEE Standard 1547-2018 — IEEE Learning Network</summary>
-
-- **Continuing Education Units (CEUs):** 0.3  
-- **Professional Development Hours (PDHs):** 3  
-- **Issuing Organization:** IEEE  
-- **Issue Date:** July 2021  
-- **Expiration:** N/A  
-
-</details>
+<ul class="edu-list">
+  <li><strong>Nuclear Technology Workshop</strong> — MEPhI (Russia) & BUET, Nov 2018</li>
+  <li><strong>Wind Energy</strong> — Technical University of Denmark, Coursera (100%)</li>
+  <li><strong>Electric Power Systems</strong> — University at Buffalo, Coursera (93%)</li>
+  <li><strong>Natural Gas</strong> — University at Buffalo, Coursera (93%)</li>
+  <li><strong>IEEE Smart Grid & IEEE 1547-2018</strong> — IEEE Learning Network</li>
+</ul>
 
 ---
 
 ## <i class="fas fa-award"></i> Academic Awards
 <hr class="section-rule"/>
 
-- **Dean’s List Award** — BUET *(2018 – 2023)*  
-- **University Merit Scholarship** — BUET *(2018 – 2023)*  
-- **Scholarship of Merit** — Intermediate & Secondary Education Board, Bangladesh *(2010 – 2015)*  
-- **Scholarship of Merit** — Primary Education Board, Bangladesh *(2008 – 2010)*
+<ul class="edu-list">
+  <li>Dean’s List Award — BUET (2018–2023)</li>
+  <li>University Merit Scholarship — BUET (2018–2023)</li>
+  <li>Scholarship of Merit — Bangladesh Education Board (2010–2015)</li>
+  <li>Scholarship of Merit — Primary Education Board (2008–2010)</li>
+</ul>
