@@ -1,7 +1,9 @@
 ---
 title: "Education"
 permalink: /education/
-layout: default
+layout: single
+author_profile: true
+classes: wide
 ---
 
 <div class="wrap" markdown="1">
