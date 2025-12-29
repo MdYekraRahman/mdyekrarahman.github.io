@@ -727,29 +727,31 @@ summary {
   margin-bottom: 0.5rem;
 }
 /* =========================================================
-   FIX DESKTOP SINGLE LAYOUT WIDTH (CRITICAL)
+   FIX: layout: single + author_profile sidebar
+   Make main content use remaining width (no narrow column)
 ========================================================= */
 
 @media (min-width: 64em) {
 
-  /* Force the single layout to be a true 2-column flex */
+  /* Make the inner wrap actually span wide area */
   .layout--single .page__inner-wrap {
-    display: flex !important;
-    align-items: flex-start;
-    gap: 2.5rem;                 /* space between sidebar & content */
+    max-width: min(var(--site-cap, 1800px), 100%) !important;
+    padding-left: var(--gutter, 40px) !important;
+    padding-right: var(--gutter, 40px) !important;
   }
 
-  /* Sidebar: fixed, predictable width */
+  /* Sidebar stays fixed width */
   .layout--single .sidebar {
-    flex: 0 0 260px !important;  /* lock sidebar width */
+    flex: 0 0 260px !important;
     width: 260px !important;
   }
 
-  /* Content: take ALL remaining space */
+  /* 🔥 Remove MM's narrow max-width cap */
   .layout--single .archive {
-    flex: 1 1 0 !important;
-    max-width: none !important;  /* 🔥 THIS removes the narrow column */
+    max-width: none !important;
     width: auto !important;
-    min-width: 0;                /* prevent overflow bugs */
+    flex: 1 1 0 !important;
+    min-width: 0;
   }
 }
+
