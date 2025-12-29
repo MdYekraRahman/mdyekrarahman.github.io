@@ -107,7 +107,7 @@ a:hover { color: #1d4ed8; }
 .btn--primary:hover { background-color: #1d4ed8 !important; }
 
 /* =========================================================
-   HERO (if you use it on home)
+   HERO (Home)
 ========================================================= */
 .hero {
   position: relative;
@@ -222,6 +222,153 @@ h2 i {
 p.muted {
   color: var(--muted);
   margin-top: 0.5rem;
+}
+
+/* =========================================================
+   ✅ HOME: RESTORE LOST FEATURES (keywords + updates scroll)
+========================================================= */
+
+/* Buttons row on home */
+.btn-row{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+/* Big titles used on home */
+.big-title{
+  font-size: 34px;
+  font-weight: 900;
+  margin: 0 0 16px 0;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.underline{
+  display: inline-block;
+  padding-bottom: 8px;
+  border-bottom: 3px solid var(--card-border);
+}
+
+/* Research Interests keywords/pills */
+.keywords{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.kw{
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid var(--card-border);
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #111827;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.kw:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.10);
+}
+
+/* Updates: scroll container */
+.timeline-scroll{
+  max-height: 420px;          /* ✅ scroll behavior restored */
+  overflow: auto;
+  padding: 12px 14px;
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 12px 26px rgba(0,0,0,0.06);
+}
+
+/* nicer scrollbar (Chrome/Edge) */
+.timeline-scroll::-webkit-scrollbar{ width: 10px; }
+.timeline-scroll::-webkit-scrollbar-thumb{
+  background: rgba(17,24,39,0.18);
+  border-radius: 999px;
+}
+.timeline-scroll::-webkit-scrollbar-track{
+  background: rgba(17,24,39,0.04);
+  border-radius: 999px;
+}
+
+/* Updates: timeline layout */
+.timeline{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.timeline__year{
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 14px;
+  background: #ffffff;
+}
+
+.timeline__year-label{
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--card-border);
+  background: #f9fafb;
+}
+
+.timeline__items{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.timeline__item{
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 14px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #eef2f7;
+  background: #ffffff;
+}
+
+.timeline__date{
+  font-weight: 900;
+  color: #111827;
+  white-space: nowrap;
+}
+
+.timeline__text{
+  color: #374151;
+  line-height: 1.5;
+}
+
+.timeline__text a{
+  margin-left: 10px;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 640px){
+  .timeline__item{
+    grid-template-columns: 1fr;
+  }
+  .timeline__date{
+    opacity: 0.85;
+  }
 }
 
 /* =========================================================
@@ -445,15 +592,24 @@ p.muted {
 .page__footer-copyright .powered-by { display: none !important; }
 
 /* =========================================================
-   OPTIONAL: remove “glass/motion”
+   ✅ IMPORTANT: DO NOT KILL OTHER FEATURES GLOBALLY
+   (Removed the old block that forced glass/reveal transparent)
 ========================================================= */
-.glass,
-.hero-glass,
-.reveal {
-  background: transparent !important;
-  box-shadow: none !important;
-  opacity: 1 !important;
-  transform: none !important;
+
+/* Keep "reveal" usable if you use it anywhere */
+.reveal{
+  opacity: 1;
+  transform: none;
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+
+/* Keep glass cards usable if your older code relies on them */
+.glass{
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(229,231,235,0.7);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.10);
+  border-radius: 16px;
 }
 
 /* =========================================================
