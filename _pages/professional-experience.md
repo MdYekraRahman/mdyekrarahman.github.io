@@ -34,55 +34,47 @@ author_profile: true
 
   <div class="edu-divider"></div>
 
-  <!-- GTA Mizzou -->
-  <div class="edu-item">
-    <div class="edu-logo">
-      <img src="/assets/images/mizzou-logo.png" alt="University of Missouri">
-    </div>
-
-    <div class="edu-content">
-      <h3>Graduate Teaching Assistant</h3>
-      <div class="edu-meta">
-        <span>Fall 2025 – Present</span>
-        <span>Department of Electrical Engineering and Computer Science</span>
-      </div>
-      <p class="edu-inst">
-        University of Missouri–Columbia, USA
-      </p>
-
-      <p class="edu-extra">
-        Supporting undergraduate and graduate courses in
-        <em>circuits, electronics, and power systems</em>, including
-        laboratory instruction, grading, and student mentoring.
-      </p>
-    </div>
+<!-- Graduate Teaching Assistant (UT Dallas + Mizzou) -->
+<div class="edu-item">
+  <div class="edu-logo">
+    <img src="/assets/images/txace-mizzou-logo.png" alt="UT Dallas & University of Missouri">
   </div>
 
-  <div class="edu-divider"></div>
+  <div class="edu-content">
+    <h3>Graduate Teaching Assistant</h3>
 
-  <!-- GTA UT Dallas -->
-  <div class="edu-item">
-    <div class="edu-logo">
-      <img src="/assets/images/utd-logo.png" alt="University of Texas at Dallas">
+    <div class="edu-meta">
+      <span>Fall 2024 – Present</span>
+      <span>Electrical Engineering & Computer Science</span>
     </div>
 
-    <div class="edu-content">
-      <h3>Graduate Teaching Assistant (TxACE Program)</h3>
-      <div class="edu-meta">
-        <span>Fall 2024 – Summer 2025</span>
-        <span>Department of Electrical Engineering</span>
-      </div>
-      <p class="edu-inst">
-        University of Texas at Dallas, USA
-      </p>
+    <p class="edu-inst">
+      University of Texas at Dallas (TxACE Program) &nbsp;|&nbsp;
+      University of Missouri–Columbia, USA
+    </p>
 
-      <p class="edu-extra">
-        Assisted instruction for courses related to
-        <em>CMOS IC design, circuit analysis, and laboratory-based learning</em>,
-        with emphasis on simulation-driven design workflows.
-      </p>
-    </div>
+    <p class="edu-extra">
+      Served as a Graduate Teaching Assistant across two institutions, supporting
+      <em>undergraduate and graduate-level courses</em> with a strong emphasis on
+      <em>circuits, CMOS analog IC design, and simulation-driven design workflows</em>.
+    </p>
+
+    <p class="edu-extra">
+      Responsibilities included <em>laboratory instruction, grading, and hands-on
+      support for circuit simulation and verification</em>, as well as assisting with
+      <em>probability and statistics coursework</em> for engineering students.
+    </p>
+
+    <p class="edu-extra">
+      At the University of Missouri–Columbia, additionally served as a
+      <em>student mentor</em>, guiding undergraduate interns in laboratory research,
+      simulation methodologies, and reproducible engineering workflows.
+    </p>
   </div>
+</div>
+
+<div class="edu-divider"></div>
+
 
   <div class="edu-divider"></div>
 
