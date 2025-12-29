@@ -13,13 +13,9 @@ main:
 
   - title: "Publications/Projects"
     url: /pubs-projects/
-
-  - title: "Others"
-    children:
-      - title: "Teaching"
-        url: /teaching/
-      - title: "Skills"
-        url: /skills/
+    
+  - title: "Skills"
+    url: /skills/
 
   - title: "Contact"
     url: /contact/
