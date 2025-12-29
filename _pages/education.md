@@ -2,10 +2,11 @@
 title: "Education"
 permalink: /education/
 layout: default
-
+author_profile: false
+classes: wide
 ---
 
-
+<div class="wrap" markdown="1">
 
 <style>
   /* Page-only layout */
@@ -97,11 +98,9 @@ layout: default
     </ul>
   </aside>
 
-</div> <!-- /.edu-layout -->
   <!-- RIGHT: your existing content -->
-<div class="wrap" markdown="1">
   <main>
-
+<div class="wrap" markdown="1">
 ## <i class="fas fa-graduation-cap"></i> Education
 
 <div class="edu-timeline">
@@ -233,6 +232,6 @@ layout: default
 </ul>
 
   </main>
-
-
+</div> 
+</div> <!-- /.edu-layout -->
 </div> <!-- /.wrap -->
