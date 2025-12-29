@@ -4,7 +4,7 @@ permalink: /education/
 layout: default
 ---
 
-<div class="wrap">
+<div class="wrap" markdown="1">
 
 ## <i class="fas fa-graduation-cap"></i> Education
 
