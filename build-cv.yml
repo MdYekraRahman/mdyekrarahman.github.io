@@ -1,0 +1,36 @@
+name: Build CV PDF
+
+on:
+  push:
+    paths:
+      - "cv/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX (cv/main.tex)
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: cv
+          root_file: main.tex
+
+      - name: Copy PDF into site assets
+        run: |
+          mkdir -p assets/pdf
+          cp cv/main.pdf assets/pdf/Md_Yekra_Rahman_Resume.pdf
+
+      - name: Commit updated PDF
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/pdf/Md_Yekra_Rahman_Resume.pdf
+          git commit -m "Auto-update CV PDF" || echo "No changes"
+          git push
