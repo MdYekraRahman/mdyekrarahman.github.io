@@ -25,9 +25,7 @@ author_profile: true
       </p>
 
       <p class="edu-extra">
-        Research focused on <em>power electronics, power management ICs (PMICs),
-        and wide-bandgap (SiC/GaN) devices</em>. My work spans the full design stack
-        from <em>device-level modeling</em> to <em>circuit- and system-level validation</em>.
+        Research focused on full design stack from <em>device-level modeling</em> to <em>circuit- and system-level validation</em>.
       </p>
     </div>
   </div>
@@ -49,26 +47,14 @@ author_profile: true
     </div>
 
     <p class="edu-inst">
-      University of Texas at Dallas (TxACE Program) &nbsp;|&nbsp;
-      University of Missouri–Columbia, USA
+      University of Missouri–Columbia &nbsp;|&nbsp;
+      University of Texas at Dallas
     </p>
 
     <p class="edu-extra">
       Served as a Graduate Teaching Assistant across two institutions, supporting
-      <em>undergraduate and graduate-level courses</em> with a strong emphasis on
-      <em>circuits, CMOS analog IC design, and simulation-driven design workflows</em>.
-    </p>
-
-    <p class="edu-extra">
-      Responsibilities included <em>laboratory instruction, grading, and hands-on
-      support for circuit simulation and verification</em>, as well as assisting with
-      <em>probability and statistics coursework</em> for engineering students.
-    </p>
-
-    <p class="edu-extra">
-      At the University of Missouri–Columbia, additionally served as a
-      <em>student mentor</em>, guiding undergraduate interns in laboratory research,
-      simulation methodologies, and reproducible engineering workflows.
+      <em>undergraduate and graduate-level courses</em>. At the University of Missouri–Columbia, additionally serving as a
+      <em>student mentor</em>, guiding undergraduate interns in AVDL.
     </p>
   </div>
 </div>
@@ -87,25 +73,22 @@ author_profile: true
     <div class="edu-content">
       <h3>Lecturer</h3>
       <div class="edu-meta">
-        <span>[START DATE] – [END DATE]</span>
+        <span>Aug 2023 – Aug 2024</span>
         <span>Department of Electrical and Electronic Engineering (EEE)</span>
       </div>
       <p class="edu-inst">
-        Eastern University, Bangladesh
+        Eastern University, Dhaka, Bangladesh
       </p>
-
-      <p class="edu-extra">
-        Taught undergraduate-level courses in electrical and electronic engineering,
-        focusing on <em>fundamental theory, practical laboratory instruction,
-        and problem-solving skills</em>.
-      </p>
+Power System Analysis, Signals and Linear Systems, Electric and Magnetic Field,
+Digital Logic Design Lab, Electronics II Lab, Electrical Service Design
 
       <p class="edu-extra"><strong>Courses Instructed:</strong></p>
       <ul class="edu-list">
         <!-- You will fill these -->
-        <li>[Course Code] — [Course Title]</li>
-        <li>[Course Code] — [Course Title]</li>
-        <li>[Course Code] — [Course Title]</li>
+        <li>Power System Analysis</li>
+        <li>Signals and Linear Systems</li>
+        <li>Electric and Magnetic Field</li>
+        <li>Digital Logic Design (Theory + Lab) </li>
       </ul>
     </div>
   </div>
