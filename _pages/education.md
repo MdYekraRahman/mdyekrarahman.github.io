@@ -2,11 +2,10 @@
 title: "Education"
 permalink: /education/
 layout: default
-author_profile: false
-classes: wide
+
 ---
 
-<div class="wrap" markdown="1">
+
 
 <style>
   /* Page-only layout */
@@ -98,7 +97,9 @@ classes: wide
     </ul>
   </aside>
 
+</div> <!-- /.edu-layout -->
   <!-- RIGHT: your existing content -->
+<div class="wrap" markdown="1">
   <main>
 
 ## <i class="fas fa-graduation-cap"></i> Education
@@ -233,5 +234,5 @@ classes: wide
 
   </main>
 
-</div> <!-- /.edu-layout -->
+
 </div> <!-- /.wrap -->
