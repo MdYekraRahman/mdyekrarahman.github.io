@@ -5,7 +5,6 @@ layout: single
 author_profile: true
 ---
 
-
 ## <i class="fas fa-graduation-cap"></i> Education
 
 <div class="edu-timeline">
