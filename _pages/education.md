@@ -230,8 +230,4 @@ classes: wide
   <li>Scholarship of Merit — Bangladesh Education Board (2012–2017)</li>
   <li>Scholarship of Merit — Primary Education Board (2010–2012)</li>
 </ul>
-
-  </main>
-</div> 
-</div> <!-- /.edu-layout -->
 </div> <!-- /.wrap -->
