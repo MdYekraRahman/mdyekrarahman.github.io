@@ -100,19 +100,14 @@ author_profile: true
   <li>Linear Algebra</li>
   <li>Numerical Methods</li>
 </ul>
+<p class="edu-inst">
+  Full list of my completed courses and grades:
+  <a href="https://docs.google.com/spreadsheets/d/1Z4_jXWNf3in0Tf3PKaMeoOQdXzZbt0l7hZH-1Ulfi_0/edit?usp=sharing"
+     target="_blank" rel="noopener">
+    View coursework spreadsheet
+  </a>
+</p>
 
----
-
-## <i class="fas fa-laptop-code"></i> Software & Technical Skills
-<hr class="section-rule"/>
-
-<ul class="edu-list">
-  <li><strong>IC Design & Verification:</strong> Cadence Virtuoso, Spectre, SPICE/HSPICE, Verilog-A</li>
-  <li><strong>Power & Systems:</strong> MATLAB, Simulink, gm/ID methodology</li>
-  <li><strong>Programming:</strong> Python, C/C++, SKILL</li>
-  <li><strong>Device Modeling:</strong> TCAD simulation, compact SPICE model generation</li>
-  <li><strong>Hardware:</strong> Altium Designer, PCB bring-up, EMI-aware validation</li>
-</ul>
 
 ---
 
@@ -120,11 +115,7 @@ author_profile: true
 <hr class="section-rule"/>
 
 <ul class="edu-list">
-  <li><strong>Nuclear Technology Workshop</strong> — MEPhI (Russia) & BUET, Nov 2018</li>
-  <li><strong>Wind Energy</strong> — Technical University of Denmark, Coursera (100%)</li>
-  <li><strong>Electric Power Systems</strong> — University at Buffalo, Coursera (93%)</li>
-  <li><strong>Natural Gas</strong> — University at Buffalo, Coursera (93%)</li>
-  <li><strong>IEEE Smart Grid & IEEE 1547-2018</strong> — IEEE Learning Network</li>
+  
 </ul>
 
 ---
