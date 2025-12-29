@@ -27,37 +27,35 @@ classes: wide
   .skills-hero{
     border:1px solid #e5e7eb;
     border-radius:16px;
-    padding:18px 18px;
-    background: linear-gradient(180deg, rgba(243,244,246,.7), rgba(255,255,255,1));
-    margin-bottom: 18px;
+    padding:18px;
+    background:linear-gradient(180deg,rgba(243,244,246,.7),#fff);
+    margin-bottom:18px;
   }
-  .skills-hero h2{margin:0 0 6px 0;}
-  .skills-hero p{margin:0;color:#6b7280;}
 
   .section-card{
     border:1px solid #e5e7eb;
     border-radius:16px;
-    padding:16px 16px;
+    padding:16px;
     background:#fff;
-    margin: 16px 0;
+    margin:16px 0;
   }
+
   .section-title{
     display:flex;
     align-items:center;
     gap:10px;
-    margin:0 0 10px 0;
+    margin:0 0 12px 0;
   }
-  .section-title i{opacity:.9;}
 
   /* ====== Logo grid ====== */
   .logo-grid{
     display:grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: 12px;
+    grid-template-columns:repeat(6,1fr);
+    gap:12px;
   }
-  @media(max-width:1100px){.logo-grid{grid-template-columns: repeat(4, minmax(0, 1fr));}}
-  @media(max-width:700px){.logo-grid{grid-template-columns: repeat(3, minmax(0, 1fr));}}
-  @media(max-width:420px){.logo-grid{grid-template-columns: repeat(2, minmax(0, 1fr));}}
+  @media(max-width:1100px){.logo-grid{grid-template-columns:repeat(4,1fr);}}
+  @media(max-width:700px){.logo-grid{grid-template-columns:repeat(3,1fr);}}
+  @media(max-width:420px){.logo-grid{grid-template-columns:repeat(2,1fr);}}
 
   .logo-tile{
     border:1px solid #e5e7eb;
@@ -70,12 +68,11 @@ classes: wide
     justify-content:center;
     gap:8px;
     text-align:center;
-    min-height: 92px;
+    min-height:92px;
   }
   .logo-tile img{
     width:42px;height:42px;
     object-fit:contain;
-    filter: none;
   }
   .logo-tile .label{
     font-size:.85rem;
@@ -83,136 +80,165 @@ classes: wide
     line-height:1.1;
   }
 
-  /* ====== Skill chips ====== */
-  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;}
+  /* ====== Chips ====== */
+  .chips{display:flex;flex-wrap:wrap;gap:10px;}
   .chip{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:8px 10px;
+    padding:8px 12px;
     border:1px solid #e5e7eb;
     border-radius:999px;
     background:#fff;
     font-size:.92rem;
-    color:#111827;
   }
-  .chip b{font-weight:700;}
-  .muted{color:#6b7280;}
 
-  /* ====== Two-column skill sections ====== */
-  .grid-2{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap:16px;
-  }
+  /* ====== Skill blocks ====== */
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
   @media(max-width:900px){.grid-2{grid-template-columns:1fr;}}
-  .skill-block h3{margin:0 0 8px 0;}
-  .skill-block ul{margin:0;padding-left:18px;}
-  .skill-block li{margin:6px 0;}
 </style>
 
 <div class="page-grid">
 
+<!-- LEFT SIDEBAR -->
 <aside class="author-card">
   <img class="author-avatar" src="/assets/images/profile.JPG" alt="Md Yekra Rahman">
   <p class="author-name">Md Yekra Rahman</p>
   <p class="author-bio">PhD Student, Mizzou</p>
   <ul class="author-links">
     <li><a href="mailto:mrvpx@missouri.edu"><i class="fas fa-envelope"></i>Email</a></li>
-    <li><a href="https://github.com/MdYekraRahman" target="_blank" rel="noopener"><i class="fab fa-github"></i>GitHub</a></li>
-    <li><a href="https://www.linkedin.com/in/mdyekrarahman/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
+    <li><a href="https://github.com/MdYekraRahman" target="_blank"><i class="fab fa-github"></i>GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/mdyekrarahman/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
   </ul>
 </aside>
 
+<!-- MAIN CONTENT -->
 <main markdown="1">
 
 <div class="skills-hero">
   <h2 class="section-title"><i class="fas fa-tools"></i> Technical Skills</h2>
-  <p>My workflow spans IC design, power electronics, device modeling, simulation, and PCB implementation.</p>
+  <p>Experience spanning IC design, power electronics, device modeling, simulation, and embedded systems.</p>
 </div>
 
+<!-- SOFTWARE & TOOLS -->
 <div class="section-card">
   <h3 class="section-title"><i class="fas fa-layer-group"></i> Software & Tools</h3>
 
   <div class="logo-grid">
-    <!-- Put your logo images in /assets/images/logos/ -->
-    <div class="logo-tile"><img src="/assets/images/logos/cadence.png" alt="Cadence"><div class="label">Cadence<br>Virtuoso</div></div>
-    <div class="logo-tile"><img src="/assets/images/logos/spectre.png" alt="Spectre"><div class="label">Spectre</div></div>
-    <div class="logo-tile"><img src="/assets/images/logos/matlab.png" alt="MATLAB"><div class="label">MATLAB</div></div>
-    <div class="logo-tile"><img src="/assets/images/logos/python.png" alt="Python"><div class="label">Python</div></div>
-    <div class="logo-tile"><img src="/assets/images/logos/ltspice.png" alt="LTspice"><div class="label">LTspice</div></div>
-    <div class="logo-tile"><img src="/assets/images/logos/altium.png" alt="Altium"><div class="label">Altium<br>Designer</div></div>
 
-    <!-- Optional extras (add/remove freely) -->
-    <div class="logo-tile"><img src="/assets/images/logos/git.png" alt="Git"><div class="label">Git</div></div>
-    <div class="logo-tile"><img src="/assets/images/logos/latex.png" alt="LaTeX"><div class="label">LaTeX</div></div>
-    <div class="logo-tile"><img src="/assets/images/logos/linux.png" alt="Linux"><div class="label">Linux</div></div>
-    <div class="logo-tile"><img src="/assets/images/logos/verilog.png" alt="Verilog-A"><div class="label">Verilog-A</div></div>
-    <div class="logo-tile"><img src="/assets/images/logos/silvaco.png" alt="Silvaco"><div class="label">Silvaco<br>(TCAD)</div></div>
-    <div class="logo-tile"><img src="/assets/images/logos/office.png" alt="Office"><div class="label">Office /<br>Docs</div></div>
+    <div class="logo-tile">
+      <img src="/assets/images/logos/Cadence-Logo.jpg" alt="Cadence">
+      <div class="label">Cadence<br>Virtuoso</div>
+    </div>
+
+    <div class="logo-tile">
+      <img src="/assets/images/logos/LtSpice-logo.jpg" alt="LTspice">
+      <div class="label">LTspice</div>
+    </div>
+
+    <div class="logo-tile">
+      <img src="/assets/images/logos/MATLAB-Symbol.jpg" alt="MATLAB">
+      <div class="label">MATLAB</div>
+    </div>
+
+    <div class="logo-tile">
+      <img src="/assets/images/logos/Simulink_Logo.png" alt="Simulink">
+      <div class="label">Simulink</div>
+    </div>
+
+    <div class="logo-tile">
+      <img src="/assets/images/logos/Altium-Logo.jpg" alt="Altium">
+      <div class="label">Altium<br>Designer</div>
+    </div>
+
+    <div class="logo-tile">
+      <img src="/assets/images/logos/SILVACO_Logo.jpg" alt="Silvaco">
+      <div class="label">Silvaco<br>TCAD</div>
+    </div>
+
+    <div class="logo-tile">
+      <img src="/assets/images/logos/Ansys_Lumerical_Logo.jpg" alt="Lumerical">
+      <div class="label">Lumerical<br>FDTD</div>
+    </div>
+
+    <div class="logo-tile">
+      <img src="/assets/images/logos/Quantum_ESPRESSO_logo.jpg" alt="Quantum ESPRESSO">
+      <div class="label">Quantum<br>ESPRESSO</div>
+    </div>
+
+    <div class="logo-tile">
+      <img src="/assets/images/logos/quartus-logo.png" alt="Quartus">
+      <div class="label">Intel<br>Quartus</div>
+    </div>
+
+    <div class="logo-tile">
+      <img src="/assets/images/logos/plecs-logo.png" alt="PLECS">
+      <div class="label">PLECS</div>
+    </div>
+
+    <div class="logo-tile">
+      <img src="/assets/images/logos/ARM_logo.png" alt="ARM">
+      <div class="label">ARM</div>
+    </div>
+
+    <div class="logo-tile">
+      <img src="/assets/images/logos/C_Programming_Language.png" alt="C">
+      <div class="label">C</div>
+    </div>
+
   </div>
-
-  <p class="muted" style="margin-top:12px;">
-    Tip: add logo files under <code>/assets/images/logos/</code> with the same names above (or update paths).
-  </p>
 </div>
 
+<!-- CORE COMPETENCIES -->
 <div class="section-card">
   <h3 class="section-title"><i class="fas fa-microchip"></i> Core Competencies</h3>
-
   <div class="chips">
-    <span class="chip"><b>Analog IC</b> Op-amps, LDOs, PLLs</span>
-    <span class="chip"><b>Power IC</b> Gate drivers, level shifters</span>
-    <span class="chip"><b>gm/ID</b> sizing & optimization</span>
-    <span class="chip"><b>Converters</b> Buck / Boost / Half-Bridge</span>
-    <span class="chip"><b>WBG</b> SiC / GaN</span>
-    <span class="chip"><b>EMI</b> layout-aware design</span>
-    <span class="chip"><b>PCB</b> 4-layer design</span>
-    <span class="chip"><b>Modeling</b> TCAD → SPICE</span>
+    <span class="chip">Analog IC Design (Op-Amps, LDOs, PLLs)</span>
+    <span class="chip">gm/ID Methodology</span>
+    <span class="chip">Power Converters (Buck / Boost / Half-Bridge)</span>
+    <span class="chip">SiC / GaN Devices</span>
+    <span class="chip">TCAD → SPICE Modeling</span>
+    <span class="chip">PCB Design (4-Layer)</span>
+    <span class="chip">EMI-Aware Design</span>
+    <span class="chip">Embedded & FPGA Basics</span>
   </div>
 </div>
 
+<!-- SKILL DETAILS -->
 <div class="section-card">
   <h3 class="section-title"><i class="fas fa-list-check"></i> Skills Breakdown</h3>
 
   <div class="grid-2">
-    <div class="skill-block">
-      <h3>Analog / IC Design</h3>
+    <div>
+      <h4>Analog & Power IC</h4>
       <ul>
-        <li>CMOS analog design: op-amps, LDOs, PLLs</li>
-        <li>gm/ID-based sizing, corner checks</li>
-        <li>Cadence Virtuoso, ADE, Spectre</li>
-        <li>Layout-aware verification mindset</li>
+        <li>CMOS analog circuit design</li>
+        <li>Biasing, stability, and corner analysis</li>
+        <li>Gate drivers and PMIC blocks</li>
       </ul>
     </div>
 
-    <div class="skill-block">
-      <h3>Power Electronics</h3>
+    <div>
+      <h4>Simulation & Modeling</h4>
       <ul>
-        <li>Buck / Boost / Half-Bridge converter design</li>
-        <li>SiC / GaN device understanding</li>
-        <li>Switching loss & efficiency tradeoffs</li>
-        <li>EMI-aware switching and layout</li>
+        <li>Spectre, LTspice workflows</li>
+        <li>MATLAB/Python automation</li>
+        <li>TCAD device modeling</li>
       </ul>
     </div>
 
-    <div class="skill-block">
-      <h3>Simulation & Prototyping</h3>
+    <div>
+      <h4>Power Electronics</h4>
       <ul>
-        <li>LTspice + Spectre simulation workflows</li>
-        <li>MATLAB/Python automation for sweeps & plots</li>
-        <li>Altium PCB schematic + layout + DRC</li>
-        <li>Gerber generation and review</li>
+        <li>High-frequency DC–DC converters</li>
+        <li>Efficiency and loss optimization</li>
+        <li>EMI-conscious layout</li>
       </ul>
     </div>
 
-    <div class="skill-block">
-      <h3>Programming</h3>
+    <div>
+      <h4>Embedded & Digital</h4>
       <ul>
-        <li>MATLAB & Python for analysis and tooling</li>
-        <li>LaTeX for IEEE-style writing</li>
-        <li>Git for version control</li>
-        <li>Basic Verilog-A / behavioral modeling</li>
+        <li>C programming</li>
+        <li>ARM-based workflows</li>
+        <li>Quartus / FPGA fundamentals</li>
       </ul>
     </div>
   </div>
