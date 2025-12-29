@@ -91,11 +91,7 @@ classes: wide
     <strong>M. Y. Rahman</strong> and S. M. Mominuzzaman,
     “Exploring Lead-Free Mixed Halide Double Perovskites Solar Cell,”
     <em>13th International Conference on Electrical and Computer Engineering (ICECE 2024)</em>,
-    Dhaka, Bangladesh, pp. 165–170.
-  </div>
-
-  <div class="pub-links">
-    <a class="btn btn--primary btn--small"
+    Dhaka, Bangladesh, pp. 165–170.     <a class="btn btn--primary btn--small"
        href="https://doi.org/10.1109/ICECE64886.2024.11024609"
        target="_blank" rel="noopener">
       DOI
