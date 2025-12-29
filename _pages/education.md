@@ -2,7 +2,6 @@
 title: "Education"
 permalink: /education/
 layout: single
-author_profile: false
 ---
 
 ## <i class="fas fa-graduation-cap"></i> Education
