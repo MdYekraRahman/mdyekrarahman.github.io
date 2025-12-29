@@ -1,10 +1,10 @@
 ---
 title: "Curriculum Vitae"
 permalink: /cv/
-layout: single
+layout: default
 author_profile: true
 ---
-
+<div class="wrap">
 ## Curriculum Vitae
 
 <div style="text-align:center; margin-bottom: 1.2rem;">
@@ -23,4 +23,5 @@ author_profile: true
     style="border:none;"
   >
   </iframe>
+</div>
 </div>
