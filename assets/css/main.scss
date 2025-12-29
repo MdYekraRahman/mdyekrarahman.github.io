@@ -11,11 +11,18 @@
   /* ✅ Make ALL pages wider (PC/tablet). Change 1500px → 1600px if you want even wider */
   --site-max: 1500px;
   --side-pad: 24px;
+
+  /* UI helpers */
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --soft-bg: #f6f7fb;
+  --text: #111827;
+  --muted: #6b7280;
 }
 
 html, body {
   background: #ffffff !important;
-  color: #111827 !important;
+  color: var(--text) !important;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
                Roboto, Helvetica, Arial, sans-serif;
   overflow-x: hidden; /* prevents any accidental horizontal shift/overflow */
@@ -57,12 +64,8 @@ html, body {
 
 /* Optional: keep sidebar but let content use the space nicely */
 @media (min-width: 64em) {
-  .sidebar {
-    width: 260px; /* adjust if you want */
-  }
-  .archive {
-    width: calc(100% - 260px) !important;
-  }
+  .sidebar { width: 260px; } /* adjust if you want */
+  .archive { width: calc(100% - 260px) !important; }
 }
 
 /* =========================================================
@@ -71,11 +74,11 @@ html, body {
 .masthead,
 .masthead__inner-wrap {
   background: #ffffff !important;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--card-border);
 }
 
 .masthead a {
-  color: #111827 !important;
+  color: var(--text) !important;
   font-weight: 500;
 }
 
@@ -90,21 +93,21 @@ a { color: var(--accent); }
 a:hover { color: #1d4ed8; }
 
 /* =========================================================
-   BUTTONS
+   BUTTONS (Minimal Mistakes buttons)
 ========================================================= */
 .btn--primary {
   background-color: var(--accent) !important;
   color: #ffffff !important;
-  border-radius: 6px !important;
+  border-radius: 8px !important;
   padding: 0.5rem 1.1rem !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
   box-shadow: none !important;
   border: none !important;
 }
 .btn--primary:hover { background-color: #1d4ed8 !important; }
 
 /* =========================================================
-   HERO (background image + overlay + split layout)
+   HERO (if you use it on home)
 ========================================================= */
 .hero {
   position: relative;
@@ -141,7 +144,7 @@ a:hover { color: #1d4ed8; }
   width: 220px;
   height: 280px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 5px solid #ffffff;
   box-shadow: 0 14px 30px rgba(0,0,0,0.25);
 }
@@ -167,7 +170,7 @@ a:hover { color: #1d4ed8; }
 
 .hero__subtitle {
   font-size: 1.05rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #374151;
   margin: 0 0 1.2rem 0;
   text-transform: uppercase;
@@ -187,7 +190,7 @@ a:hover { color: #1d4ed8; }
 ========================================================= */
 .section { padding: 60px 0; }
 .section--white { background: #ffffff; }
-.section--soft { background: #f6f7fb; }
+.section--soft { background: var(--soft-bg); }
 
 .wrap {
   max-width: var(--site-max);
@@ -197,111 +200,215 @@ a:hover { color: #1d4ed8; }
 
 .center { text-align: center; }
 
-.two-col {
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 38px;
-  align-items: start;
-}
-
-@media (max-width: 900px) {
-  .two-col { grid-template-columns: 1fr; }
-}
-
-.profile-card {
-  width: 260px;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 10px;
-  border: 6px solid #ffffff;
-  box-shadow: 0 12px 26px rgba(0,0,0,0.12);
-}
-
 .section__heading {
   font-size: 34px;
   font-weight: 900;
   margin: 0 0 14px 0;
 }
 
-.btn-row {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 16px;
+.section-rule {
+  border: none;
+  border-top: 2px solid var(--card-border);
+  margin: 0.6rem 0 1.5rem;
+}
+
+/* Heading icons */
+h2 i {
+  margin-right: 0.4rem;
+  color: var(--accent);
+}
+
+.muted,
+p.muted {
+  color: var(--muted);
+  margin-top: 0.5rem;
 }
 
 /* =========================================================
-   RESEARCH INTERESTS TAGS
+   ✅ PUBLICATIONS STYLING
 ========================================================= */
-.big-title {
-  font-size: 38px;
-  font-weight: 900;
-  margin: 0 0 18px 0;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
+.pub-item {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin: 14px 0;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
 }
 
-.underline { text-decoration: underline; text-underline-offset: 8px; }
+.pub-title {
+  color: #111827;
+  font-size: 1.02rem;
+  line-height: 1.55;
+}
 
-.keywords {
+.pub-title em { color: #374151; }
+
+.pub-links {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Make MM small buttons look consistent */
+.btn--small {
+  border-radius: 999px !important;
+  padding: 0.35rem 0.85rem !important;
+  font-weight: 700 !important;
+}
+
+/* =========================================================
+   ✅ PROJECT CARDS (Text + Right Carousel)
+========================================================= */
+.proj-card {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 22px;
+  align-items: start;
+
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  padding: 18px;
+  margin: 18px 0;
+  box-shadow: 0 12px 26px rgba(0,0,0,0.07);
+}
+
+.proj-title {
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+}
+
+.proj-sub {
+  margin: 0 0 12px 0;
+  color: #374151;
+  line-height: 1.55;
+}
+
+.proj-bullets {
+  margin: 0 0 14px 0;
+  padding-left: 1.25rem;
+}
+.proj-bullets li { margin: 6px 0; color: #111827; }
+
+.proj-tags {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+  gap: 8px;
 }
 
-.kw {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  padding: 8px 12px;
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
   border-radius: 999px;
-  font-size: 16px;
+  border: 1px solid var(--card-border);
+  background: #ffffff;
   color: #374151;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.proj-media {
+  width: 100%;
+}
+
+/* Responsive: stack text then carousel */
+@media (max-width: 980px) {
+  .proj-card {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* =========================================================
-   UPDATES TIMELINE
+   ✅ CAROUSEL (Instagram-ish)
 ========================================================= */
-.timeline {
-  border-left: 4px solid var(--accent);
-  padding-left: 22px;
+.carousel {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  background: #ffffff;
 }
 
-.timeline__year { margin: 26px 0; }
-
-.timeline__year-label {
-  font-size: 28px;
-  font-weight: 900;
-  color: var(--accent);
-  margin-bottom: 10px;
+/* Keep a consistent visual height */
+.carousel-track {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10; /* change to 4/3 if you want more “tall” */
+  overflow: hidden;
 }
 
-.timeline__item {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 14px;
-  padding: 10px 0;
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  transform: scale(1.01);
 }
 
-.timeline__date { font-weight: 800; color: #111827; }
-.timeline__text { color: #374151; }
-.timeline__text a { margin-left: 8px; font-weight: 700; }
+.carousel-slide.is-active { display: block; }
 
-@media (max-width: 700px) {
-  .timeline__item { grid-template-columns: 1fr; }
+/* Controls */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.65);
+  background: rgba(17,24,39,0.45);
+  color: #ffffff;
+  font-size: 26px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
 }
 
-.timeline-scroll {
-  max-height: 420px;
-  overflow-y: auto;
-  padding-right: 14px;
-  scroll-behavior: smooth;
+.carousel-btn:hover { background: rgba(17,24,39,0.60); }
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+/* Dots */
+.carousel-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 2;
 }
 
-.timeline-scroll::-webkit-scrollbar { width: 8px; }
-.timeline-scroll::-webkit-scrollbar-track { background: #f3f4f6; border-radius: 4px; }
-.timeline-scroll::-webkit-scrollbar-thumb { background: #c7d2fe; border-radius: 4px; }
-.timeline-scroll::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+.carousel-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 0;
+  cursor: pointer;
+  background: rgba(255,255,255,0.60);
+}
+
+.carousel-dots .dot.is-active {
+  background: rgba(255,255,255,0.95);
+}
+
+/* Slightly smaller controls on small screens */
+@media (max-width: 640px) {
+  .carousel-btn { width: 38px; height: 38px; font-size: 24px; }
+}
 
 /* =========================================================
    SOCIAL ICONS
@@ -332,7 +439,7 @@ a:hover { color: #1d4ed8; }
 ========================================================= */
 .page__footer {
   background: #ffffff;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid var(--card-border);
 }
 .page__footer a { color: var(--accent); }
 .page__footer-copyright .powered-by { display: none !important; }
@@ -350,7 +457,7 @@ a:hover { color: #1d4ed8; }
 }
 
 /* =========================================================
-   EDUCATION (✅ corrected, no vertical line, bigger logos)
+   EDUCATION (your existing block kept)
 ========================================================= */
 .edu-timeline {
   display: flex;
@@ -399,7 +506,7 @@ a:hover { color: #1d4ed8; }
   flex-wrap: wrap;
   gap: 0.75rem 1.2rem;
   font-size: 0.92rem;
-  color: #6b7280;
+  color: var(--muted);
   margin-bottom: 0.35rem;
 }
 
@@ -413,7 +520,7 @@ a:hover { color: #1d4ed8; }
 /* Divider between institutions */
 .edu-divider {
   height: 1px;
-  background: #e5e7eb;
+  background: var(--card-border);
   margin-left: 182px; /* aligns to content start (160px + 22px gap) */
 }
 
@@ -423,43 +530,19 @@ a:hover { color: #1d4ed8; }
   padding-left: 1.5rem;
 }
 
-/* Section rule */
-.section-rule {
-  border: none;
-  border-top: 2px solid #e5e7eb;
-  margin: 0.6rem 0 1.5rem;
-}
-
-/* Heading icons */
-h2 i {
-  margin-right: 0.4rem;
-  color: var(--accent);
-}
-
 /* Mobile: keep side-by-side but tighter */
 @media (max-width: 640px) {
-  .edu-item {
-    grid-template-columns: 100px 1fr;
-    gap: 14px;
-  }
-
+  .edu-item { grid-template-columns: 100px 1fr; gap: 14px; }
   .edu-logo { width: 100px; }
-
-  .edu-logo img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .edu-divider {
-    margin-left: 114px; /* 100 + 14 gap */
-  }
+  .edu-logo img { width: 80px; height: 80px; }
+  .edu-divider { margin-left: 114px; }
 }
 
 /* Collapsible sections */
 details { margin: 1rem 0; }
 summary {
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--accent);
   margin-bottom: 0.5rem;
 }
