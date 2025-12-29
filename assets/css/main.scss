@@ -8,9 +8,14 @@
 :root{
   --accent: #2563eb;
 
-  /* ✅ Make ALL pages wider (PC/tablet). Change 1500px → 1600px if you want even wider */
-  --site-max: 1500px;
-  --side-pad: 24px;
+  /* ✅ FLUID WIDTH SYSTEM (works on mobile -> 4K)
+     - Uses full available width
+     - Adds responsive side padding
+     - Caps only on ultra-wide screens (so it still looks professional)
+  */
+  --site-cap: 1800px;                 /* increase to 2000px if you want even wider on huge monitors */
+  --gutter: clamp(14px, 3vw, 56px);   /* responsive left/right padding */
+  --inner-gutter: clamp(14px, 2.2vw, 36px);
 
   /* UI helpers */
   --card-bg: #ffffff;
@@ -20,14 +25,30 @@
   --muted: #6b7280;
 }
 
+/* ✅ Hardening: prevent any random overflow */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
 html, body {
   background: #ffffff !important;
   color: var(--text) !important;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
                Roboto, Helvetica, Arial, sans-serif;
-  overflow-x: hidden; /* prevents any accidental horizontal shift/overflow */
+  overflow-x: clip; /* better than hidden: avoids horizontal scroll without shifting layout */
 }
 
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tables + code blocks are common overflow culprits */
+table { max-width: 100%; display: block; overflow-x: auto; }
+pre, code { max-width: 100%; }
+pre { overflow: auto; }
+
+/* Minimal Mistakes base containers */
 #main,
 .initial-content,
 .page,
@@ -36,36 +57,46 @@ html, body {
 }
 
 /* =========================================================
-   ✅ WIDEN THE WHOLE SITE (ALL PAGES)
+   ✅ WIDEN THE WHOLE SITE (ALL PAGES) — THE REAL FIX
    Minimal Mistakes constrains width via these wrappers.
+   We make them fluid + responsive (no per-device tweaking needed).
 ========================================================= */
 .masthead__inner-wrap,
 .page__inner-wrap,
-.archive,
-.initial-content > .page__inner-wrap {
-  max-width: var(--site-max) !important;
-}
-
-/* give a little breathing room left/right */
-.masthead__inner-wrap,
-.page__inner-wrap {
-  padding-left: var(--side-pad) !important;
-  padding-right: var(--side-pad) !important;
-}
-
-/* If your content ever looks “shifted left”, this usually fixes it */
-.archive,
-.page__content {
+.initial-content > .page__inner-wrap,
+.archive {
   width: 100% !important;
-  max-width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+  max-width: min(var(--site-cap), 100%) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: var(--gutter) !important;
+  padding-right: var(--gutter) !important;
 }
 
-/* Optional: keep sidebar but let content use the space nicely */
+/* Ensure content can shrink properly in flex layouts (prevents overflow) */
+.archive,
+.page__content,
+.page__inner-wrap,
+.proj-card,
+.edu-item {
+  min-width: 0;
+}
+
+/* ✅ Sidebar + content: use flex properly (no width calc hacks that break responsiveness) */
 @media (min-width: 64em) {
-  .sidebar { width: 260px; } /* adjust if you want */
-  .archive { width: calc(100% - 260px) !important; }
+  .layout--single .page__inner-wrap {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+  }
+  .layout--single .sidebar {
+    flex: 0 0 260px; /* your preferred sidebar width */
+    width: 260px;
+  }
+  .layout--single .archive {
+    flex: 1 1 auto;
+    width: auto !important;
+  }
 }
 
 /* =========================================================
@@ -117,17 +148,17 @@ a:hover { color: #1d4ed8; }
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 20%;
-  padding: 2.5rem 1.5rem;
+  padding: 2.5rem var(--gutter);
 }
 
 .hero__overlay {
   width: 100%;
   background: rgba(255,255,255,0.80);
-  padding: 2.4rem 1.5rem;
+  padding: 2.4rem var(--inner-gutter);
 }
 
 .hero__content {
-  max-width: var(--site-max);
+  max-width: min(var(--site-cap), 100%);
   margin: 0 auto;
   display: grid;
   grid-template-columns: 260px 1fr;
@@ -192,10 +223,13 @@ a:hover { color: #1d4ed8; }
 .section--white { background: #ffffff; }
 .section--soft { background: var(--soft-bg); }
 
+/* Your internal section wrapper (keep it fluid too) */
 .wrap {
-  max-width: var(--site-max);
+  width: 100%;
+  max-width: min(var(--site-cap), 100%);
   margin: 0 auto;
-  padding: 0 18px;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
 }
 
 .center { text-align: center; }
@@ -225,7 +259,7 @@ p.muted {
 }
 
 /* =========================================================
-   ✅ HOME: RESTORE LOST FEATURES (keywords + updates scroll)
+   ✅ HOME: KEYWORDS + UPDATES SCROLL (keep your features)
 ========================================================= */
 
 /* Buttons row on home */
@@ -282,7 +316,7 @@ p.muted {
 
 /* Updates: scroll container */
 .timeline-scroll{
-  max-height: 420px;          /* ✅ scroll behavior restored */
+  max-height: 420px;
   overflow: auto;
   padding: 12px 14px;
   border: 1px solid var(--card-border);
@@ -353,6 +387,8 @@ p.muted {
 .timeline__text{
   color: #374151;
   line-height: 1.5;
+  min-width: 0;
+  overflow-wrap: anywhere; /* ✅ prevents long links/text from breaking layout */
 }
 
 .timeline__text a{
@@ -363,12 +399,8 @@ p.muted {
 
 /* Responsive */
 @media (max-width: 640px){
-  .timeline__item{
-    grid-template-columns: 1fr;
-  }
-  .timeline__date{
-    opacity: 0.85;
-  }
+  .timeline__item{ grid-template-columns: 1fr; }
+  .timeline__date{ opacity: 0.85; }
 }
 
 /* =========================================================
@@ -459,15 +491,11 @@ p.muted {
   font-weight: 700;
 }
 
-.proj-media {
-  width: 100%;
-}
+.proj-media { width: 100%; }
 
 /* Responsive: stack text then carousel */
 @media (max-width: 980px) {
-  .proj-card {
-    grid-template-columns: 1fr;
-  }
+  .proj-card { grid-template-columns: 1fr; }
 }
 
 /* =========================================================
@@ -486,7 +514,7 @@ p.muted {
 .carousel-track {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 10; /* change to 4/3 if you want more “tall” */
+  aspect-ratio: 16 / 10;
   overflow: hidden;
 }
 
@@ -592,11 +620,8 @@ p.muted {
 .page__footer-copyright .powered-by { display: none !important; }
 
 /* =========================================================
-   ✅ IMPORTANT: DO NOT KILL OTHER FEATURES GLOBALLY
-   (Removed the old block that forced glass/reveal transparent)
+   Keep "reveal" usable
 ========================================================= */
-
-/* Keep "reveal" usable if you use it anywhere */
 .reveal{
   opacity: 1;
   transform: none;
@@ -625,14 +650,14 @@ p.muted {
 /* Each institution row */
 .edu-item {
   display: grid;
-  grid-template-columns: 160px 1fr; /* ✅ wider logo column */
+  grid-template-columns: 160px 1fr;
   gap: 22px;
   align-items: center;
   padding: 18px 0;
   position: relative;
 }
 
-/* ✅ kill any accidental vertical line */
+/* kill any accidental vertical line */
 .edu-item::before { content: none !important; display: none !important; }
 
 /* Logo column */
@@ -643,7 +668,6 @@ p.muted {
   align-items: center;
 }
 
-/* ✅ latest sizing request */
 .edu-logo img {
   width: 150px;
   height: 150px;
@@ -677,7 +701,7 @@ p.muted {
 .edu-divider {
   height: 1px;
   background: var(--card-border);
-  margin-left: 182px; /* aligns to content start (160px + 22px gap) */
+  margin-left: 182px;
 }
 
 /* Lists */
@@ -686,7 +710,7 @@ p.muted {
   padding-left: 1.5rem;
 }
 
-/* Mobile: keep side-by-side but tighter */
+/* Mobile */
 @media (max-width: 640px) {
   .edu-item { grid-template-columns: 100px 1fr; gap: 14px; }
   .edu-logo { width: 100px; }
