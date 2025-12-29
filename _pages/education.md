@@ -1,9 +1,24 @@
 ---
 title: "Education"
 permalink: /education/
-layout: single
+layout: default
 author_profile: true
 classes: wide
+
+author:
+  name: "Md Yekra Rahman"
+  avatar: "/assets/images/profile.JPG"
+  bio: "PhD Student, Mizzou"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:mrvpx@missouri.edu"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/MdYekraRahman"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/mdyekrarahman/"
 ---
 
 <div class="wrap" markdown="1">
