@@ -1,7 +1,7 @@
 ---
 title: "Education"
 permalink: /education/
-layout: single
+layout: dafault
 ---
 
 ## <i class="fas fa-graduation-cap"></i> Education
