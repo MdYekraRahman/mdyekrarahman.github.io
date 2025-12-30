@@ -81,7 +81,9 @@ author:
 footer:
   since: 2024
   links: []   # remove Email/GitHub/LinkedIn/Feed from footer
-
+  powered_by: false
+atom_feed:
+  hide: true
 # ===============================
 # Collections
 # ===============================
