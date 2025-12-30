@@ -6,297 +6,210 @@ author_profile: false
 classes: wide
 ---
 
-<div class="wrap" markdown="1">
+<div class="wrap" markdown="0">
 
+  <h1>Operational Amplifier Design (IBM 130 nm)</h1>
+
+  <p>
+    Two-stage, Miller-compensated CMOS operational amplifier designed using
+    gm/ID methodology in IBM 130 nm CMOS technology. The design was validated
+    for gain, GBW, phase margin, slew rate, and saturation compliance.
+  </p>
+
+  <!-- =========================
+       PROJECT MEDIA (CAROUSEL)
+  ========================== -->
+  <div class="proj-media">
+    <div class="carousel" data-carousel>
+      <div class="carousel-track" data-track>
+        <img class="carousel-slide is-active"
+             src="/assets/images/projects/opamp/Main_1.png"
+             alt="Op-amp main schematic">
+
+        <img class="carousel-slide"
+             src="/assets/images/projects/opamp/Topology.png"
+             alt="Op-amp topology">
+
+        <img class="carousel-slide"
+             src="/assets/images/projects/opamp/Small_Signal.png"
+             alt="Op-amp small signal model">
+
+        <img class="carousel-slide"
+             src="/assets/images/projects/opamp/M8-Sizing.png"
+             alt="M8 sizing">
+
+        <img class="carousel-slide"
+             src="/assets/images/projects/opamp/Sizing-of-M1-4-and-M8.png"
+             alt="Sizing of M1–M4 and M8">
+
+        <img class="carousel-slide"
+             src="/assets/images/projects/opamp/M12_M34_Sizing.png"
+             alt="Sizing of M12 and M3/M4">
+
+        <img class="carousel-slide"
+             src="/assets/images/projects/opamp/Final_Circuit.png"
+             alt="Final op-amp circuit">
+      </div>
+
+      <button class="carousel-btn prev" data-prev aria-label="Previous">‹</button>
+      <button class="carousel-btn next" data-next aria-label="Next">›</button>
+      <div class="carousel-dots" data-dots></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- =========================
+     PAGE-LOCAL CSS
+========================== -->
 <style>
-  /* ===== Page-only 2-column layout ===== */
-  .page-grid{
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    gap: 28px;
-    align-items: start;
-  }
-  @media (max-width: 900px){
-    .page-grid{ grid-template-columns: 1fr; }
-  }
+  .proj-media{ margin: 22px 0 30px; }
 
-  /* ===== Author card ===== */
-  .author-card{
-    position: sticky;
-    top: 90px;
+  .carousel{
+    position: relative;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
     border: 1px solid #e5e7eb;
-    border-radius: 14px;
-    padding: 16px;
-    background: #fff;
-  }
-  @media (max-width: 900px){
-    .author-card{ position: static; }
+    background: #ffffff;
   }
 
-  .author-avatar{
-    width: 110px;
-    height: 110px;
-    border-radius: 999px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto 10px auto;
+  .carousel-track{
+    display: flex;
+    width: 100%;
+    will-change: transform;
+    transition: transform 280ms ease;
+    touch-action: pan-y;
   }
-  .author-name{ text-align: center; font-weight: 800; margin: 0; }
-  .author-bio{ text-align: center; color: #6b7280; margin: 6px 0 12px 0; font-size: 0.95rem; }
-  .author-links{ list-style: none; padding: 0; margin: 0; }
-  .author-links li{ margin: 8px 0; }
-  .author-links a{ text-decoration: none; display: inline-flex; gap: 8px; align-items: center; }
+
+  .carousel-slide{
+    flex: 0 0 100%;
+    width: 100%;
+    height: 380px;
+    object-fit: contain;
+    background: #f3f4f6;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  @media (max-width: 900px){
+    .carousel-slide{ height: 300px; }
+  }
+
+  /* Nav buttons */
+  .carousel-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(0,0,0,.08);
+    background: rgba(255,255,255,.95);
+    box-shadow: 0 6px 18px rgba(0,0,0,.12);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    font-size: 26px;
+    z-index: 5;
+  }
+
+  .carousel-btn.prev{ left: 12px; }
+  .carousel-btn.next{ right: 12px; }
+
+  /* Dots */
+  .carousel-dots{
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 5;
+  }
+
+  .carousel-dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(0,0,0,.25);
+    border: none;
+    cursor: pointer;
+  }
+
+  .carousel-dot.is-active{
+    background: rgba(0,0,0,.75);
+  }
+
+  @media (max-width: 520px){
+    .carousel-btn{ display: none; }
+  }
 </style>
 
-<div class="page-grid">
+<!-- =========================
+     PAGE-LOCAL JS (NO DEPENDENCY)
+========================== -->
+<script>
+(function(){
+  function initCarousel(root){
+    const track = root.querySelector("[data-track]");
+    const slides = [...track.children];
+    const prev = root.querySelector("[data-prev]");
+    const next = root.querySelector("[data-next]");
+    const dotsWrap = root.querySelector("[data-dots]");
 
-  <!-- LEFT: manual author profile -->
-  <aside class="author-card">
-    <img class="author-avatar" src="/assets/images/profile.JPG" alt="Md Yekra Rahman">
-    <p class="author-name">Md Yekra Rahman</p>
-    <p class="author-bio">PhD Student, Mizzou</p>
+    let index = 0;
 
-    <ul class="author-links">
-      <li>
-        <a href="mailto:mrvpx@missouri.edu">
-          <i class="fas fa-fw fa-envelope"></i><span>Email</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/MdYekraRahman" target="_blank" rel="noopener">
-          <i class="fab fa-fw fa-github"></i><span>GitHub</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/mdyekrarahman/" target="_blank" rel="noopener">
-          <i class="fab fa-fw fa-linkedin"></i><span>LinkedIn</span>
-        </a>
-      </li>
-    </ul>
-  </aside>
+    function buildDots(){
+      dotsWrap.innerHTML = "";
+      slides.forEach((_, i)=>{
+        const d = document.createElement("button");
+        d.className = "carousel-dot" + (i === 0 ? " is-active" : "");
+        d.addEventListener("click", ()=>go(i));
+        dotsWrap.appendChild(d);
+      });
+    }
 
-  <!-- RIGHT: page content -->
-  <main markdown="1">
+    function update(){
+      track.style.transform = `translateX(${-index * 100}%)`;
+      slides.forEach((s,i)=>s.classList.toggle("is-active", i===index));
+      [...dotsWrap.children].forEach((d,i)=>d.classList.toggle("is-active", i===index));
+    }
 
+    function go(i){
+      index = (i + slides.length) % slides.length;
+      update();
+    }
 
+    prev.onclick = ()=>go(index - 1);
+    next.onclick = ()=>go(index + 1);
 
-## <i class="fas fa-project-diagram"></i> Projects
-<hr class="section-rule"/>
+    /* Touch / swipe */
+    let startX = 0, dx = 0, dragging = false;
 
-<!-- =========================================================
-     PROJECT 1 — ANALOG IC (OP-AMP)
-========================================================= -->
-<div class="proj-card">
+    track.addEventListener("touchstart", e=>{
+      startX = e.touches[0].clientX;
+      dragging = true;
+    }, {passive:true});
 
-  <div class="proj-text">
-    <h3 class="proj-title">
-      Two-Stage Miller-Compensated CMOS Op-Amp (IBM 130 nm)
-    </h3>
+    track.addEventListener("touchmove", e=>{
+      if(!dragging) return;
+      dx = e.touches[0].clientX - startX;
+    }, {passive:true});
 
-    <p class="proj-sub">
-      gm/ID-based sizing, small-signal analysis, and full
-      performance verification using dedicated Cadence testbenches.
-    </p>
+    track.addEventListener("touchend", ()=>{
+      dragging = false;
+      if(dx > 80) go(index - 1);
+      else if(dx < -80) go(index + 1);
+      dx = 0;
+    });
 
-    <ul class="proj-bullets">
-      <li>Designed a two-stage CMOS operational amplifier under single-supply constraints</li>
-      <li>Used gm/ID methodology to size devices for gain, GBW, and phase-margin targets</li>
-      <li>Built testbenches for open-loop gain, GBW/PM, slew rate, output swing, CMRR, and power</li>
-      <li>Verified saturation operation across bias corners and load conditions</li>
-    </ul>
+    buildDots();
+    update();
+  }
 
-    <div class="proj-tags">
-      <span class="tag">Analog IC</span>
-      <span class="tag">gm/ID</span>
-      <span class="tag">IBM 130nm</span>
-      <span class="tag">Cadence</span>
-      <span class="tag">Testbenches</span>
-    </div>
-  </div>
-
-<div class="proj-media">
-  <div class="carousel" data-carousel>
-    <div class="carousel-track" data-track>
-      <img class="carousel-slide is-active" src="/assets/images/projects/opamp/Main_1.png" alt="Op-amp main schematic">
-      <img class="carousel-slide" src="/assets/images/projects/opamp/Topology.png" alt="Op-amp topology">
-      <img class="carousel-slide" src="/assets/images/projects/opamp/Small_Signal.png" alt="Op-amp small signal model">
-      <img class="carousel-slide" src="/assets/images/projects/opamp/M8-Sizing.png" alt="M8 sizing">
-      <img class="carousel-slide" src="/assets/images/projects/opamp/Sizing-of-M1-4-and-M8.png" alt="M1–M4 and M8 sizing">
-      <img class="carousel-slide" src="/assets/images/projects/opamp/M12_M34_Sizing.png" alt="M12 and M3/M4 sizing">
-      <img class="carousel-slide" src="/assets/images/projects/opamp/Final_Circuit.png" alt="Final op-amp circuit">
-    </div>
-    <button class="carousel-btn prev" data-prev aria-label="Previous">‹</button>
-    <button class="carousel-btn next" data-next aria-label="Next">›</button>
-    <div class="carousel-dots" data-dots></div>
-  </div>
-</div>
-
-
-</div>
-
-<!-- =========================================================
-     PROJECT 2 — INTEGRATED BUCK CONVERTER
-========================================================= -->
-<div class="proj-card">
-
-  <div class="proj-text">
-    <h3 class="proj-title">
-      Synchronous Half-Bridge Buck Converter (TSMC 180 nm HV BCD)
-    </h3>
-
-    <p class="proj-sub">
-      High-frequency integrated DC-DC converter with on-chip
-      gate-driver chain, validated in Spectre.
-    </p>
-
-    <ul class="proj-bullets">
-      <li>Designed a 12 V → 3.3 V, 1 A synchronous buck converter operating at multi-MHz</li>
-      <li>Optimized MOSFET widths via parametric sweeps to balance efficiency and loss</li>
-      <li>Implemented gate-driver blocks: level shifters, bootstrap circuit, and dead-time control</li>
-      <li>Validated switching behavior, ripple, and inductor current in ADE/Spectre</li>
-    </ul>
-
-    <div class="proj-tags">
-      <span class="tag">Cadence</span>
-      <span class="tag">Spectre</span>
-      <span class="tag">TSMC 180nm</span>
-      <span class="tag">HV BCD</span>
-      <span class="tag">2 MHz+</span>
-    </div>
-  </div>
-
-  <div class="proj-media">
-    <div class="carousel" data-carousel>
-      <div class="carousel-track" data-track>
-        <img class="carousel-slide is-active" src="/assets/images/projects/buck/1.jpg" alt="Buck schematic">
-        <img class="carousel-slide" src="/assets/images/projects/buck/2.jpg" alt="Gate driver waveforms">
-        <img class="carousel-slide" src="/assets/images/projects/buck/3.jpg" alt="Switching node waveform">
-        <img class="carousel-slide" src="/assets/images/projects/buck/4.jpg" alt="Efficiency sweep">
-      </div>
-      <button class="carousel-btn prev" data-prev aria-label="Previous">‹</button>
-      <button class="carousel-btn next" data-next aria-label="Next">›</button>
-      <div class="carousel-dots" data-dots></div>
-    </div>
-  </div>
-
-</div>
-
-<!-- =========================================================
-     PROJECT 3 — TCAD → SPICE → CIRCUIT
-========================================================= -->
-<div class="proj-card">
-
-  <div class="proj-text">
-    <h3 class="proj-title">
-      TCAD → SPICE Modeling → Circuit-Level Verification
-    </h3>
-
-    <p class="proj-sub">
-      End-to-end device enablement workflow from physics-based
-      simulation to real circuit validation.
-    </p>
-
-    <ul class="proj-bullets">
-      <li>Performed TCAD simulations of power MOSFET structures</li>
-      <li>Extracted compact SPICE models suitable for circuit-level use</li>
-      <li>Integrated custom models into Spectre and verified behavior in real converter blocks</li>
-      <li>Evaluated switching dynamics, losses, and bias sensitivity</li>
-    </ul>
-
-    <div class="proj-tags">
-      <span class="tag">TCAD</span>
-      <span class="tag">SPICE Models</span>
-      <span class="tag">Cadence</span>
-      <span class="tag">Device Enablement</span>
-    </div>
-  </div>
-
-  <div class="proj-media">
-    <div class="carousel" data-carousel>
-      <div class="carousel-track" data-track>
-        <img class="carousel-slide is-active" src="/assets/images/projects/tcad/1.jpg" alt="TCAD structure">
-        <img class="carousel-slide" src="/assets/images/projects/tcad/2.jpg" alt="IV characteristics">
-        <img class="carousel-slide" src="/assets/images/projects/tcad/3.jpg" alt="Circuit simulation">
-      </div>
-      <button class="carousel-btn prev" data-prev aria-label="Previous">‹</button>
-      <button class="carousel-btn next" data-next aria-label="Next">›</button>
-      <div class="carousel-dots" data-dots></div>
-    </div>
-  </div>
-
-</div>
-
-<!-- =========================================================
-     PROJECT 4 — PCB DESIGN
-========================================================= -->
-<div class="proj-card">
-
-  <div class="proj-text">
-    <h3 class="proj-title">
-      Four-Layer Power Converter PCB (Altium Designer)
-    </h3>
-
-    <p class="proj-sub">
-      Complete schematic-to-layout workflow with EMI-aware
-      stackup and power-integrity considerations.
-    </p>
-
-    <ul class="proj-bullets">
-      <li>Designed a four-layer PCB including schematic capture and layout</li>
-      <li>Created custom symbols and footprints for a reusable PCB library</li>
-      <li>Used solid inner GND and power planes for low-impedance return paths</li>
-      <li>Generated manufacturing-ready Gerber and drill files</li>
-    </ul>
-
-    <div class="proj-tags">
-      <span class="tag">Altium</span>
-      <span class="tag">4-Layer PCB</span>
-      <span class="tag">EMI</span>
-      <span class="tag">Power Integrity</span>
-      <span class="tag">Gerbers</span>
-    </div>
-  </div>
-
-  <div class="proj-media">
-    <div class="carousel" data-carousel>
-      <div class="carousel-track" data-track>
-        <img class="carousel-slide is-active" src="/assets/images/projects/pcb/1.jpg" alt="PCB layout">
-        <img class="carousel-slide" src="/assets/images/projects/pcb/2.jpg" alt="Inner layer ground plane">
-        <img class="carousel-slide" src="/assets/images/projects/pcb/3.jpg" alt="Power plane">
-        <img class="carousel-slide" src="/assets/images/projects/pcb/4.jpg" alt="3D PCB view">
-      </div>
-      <button class="carousel-btn prev" data-prev aria-label="Previous">‹</button>
-      <button class="carousel-btn next" data-next aria-label="Next">›</button>
-      <div class="carousel-dots" data-dots></div>
-    </div>
-  </div>
-
-</div>
-
-## <i class="fas fa-file-alt"></i> Publications
-<hr class="section-rule"/>
-
-### Journal Papers
-<p class="muted">Loading.</p>
-
-### Conference Papers
-
-<div class="pub-item">
-  <div class="pub-title">
-    <strong>M. Y. Rahman</strong> and S. M. Mominuzzaman,
-    “Exploring Lead-Free Mixed Halide Double Perovskites Solar Cell,”
-    <em>13th International Conference on Electrical and Computer Engineering (ICECE 2024)</em>,
-    Dhaka, Bangladesh, pp. 165–170.     <a class="btn btn--primary btn--small"
-       href="https://doi.org/10.1109/ICECE64886.2024.11024609"
-       target="_blank" rel="noopener">
-      DOI
-    </a>
-  </div>
-</div>
-
----
-
-  </main>
-
-</div>
-</div>
+  document.addEventListener("DOMContentLoaded", ()=>{
+    document.querySelectorAll("[data-carousel]").forEach(initCarousel);
+  });
+})();
+</script>
