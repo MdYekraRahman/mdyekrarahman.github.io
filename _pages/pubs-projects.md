@@ -75,6 +75,47 @@ classes: wide
     min-width: 0; /* avoid overflow in grid */
   }
 
+  /* =========================================================
+   MODERN PROJECT BULLET STYLE (DROP-IN REPLACEMENT)
+   ========================================================= */
+
+.proj-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.proj-bullets li {
+  position: relative;
+  padding: 12px 14px 12px 44px;
+  background: linear-gradient(180deg, #ffffff, #fafafa);
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #374151;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Accent marker */
+.proj-bullets li::before {
+  content: "▹";
+  position: absolute;
+  left: 16px;
+  top: 12px;
+  font-size: 1.1rem;
+  color: #2563eb; /* subtle blue accent */
+}
+
+/* Hover interaction */
+.proj-bullets li:hover {
+  transform: translateX(4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+
   .carousel{
     position: relative;
     width: 100%;
