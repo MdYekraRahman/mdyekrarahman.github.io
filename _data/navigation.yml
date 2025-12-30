@@ -4,18 +4,21 @@ main:
 
   - title: "Education"
     url: /education/
-
+    
+  - title: "Skills"
+    url: /skills/
+    
   - title: "Professional Experience"
     url: /professional-experience/
+
+
+
+  - title: "Publications/Projects"
+    url: /pubs-projects/
 
   - title: "CV"
     url: /cv/
 
-  - title: "Publications/Projects"
-    url: /pubs-projects/
-    
-  - title: "Skills"
-    url: /skills/
 
   - title: "Contact"
     url: /contact/
