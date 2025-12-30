@@ -6,7 +6,6 @@ author_profile: false
 classes: wide
 ---
 
-
 <div class="wrap" markdown="1">
 
 <style>
@@ -47,6 +46,87 @@ classes: wide
   .author-links{ list-style: none; padding: 0; margin: 0; }
   .author-links li{ margin: 8px 0; }
   .author-links a{ text-decoration: none; display: inline-flex; gap: 8px; align-items: center; }
+
+  /* =========================================================
+     CAROUSEL (page-local, no dependency on global CSS)
+     ========================================================= */
+  .proj-media{ width: 100%; }
+
+  .carousel{
+    position: relative;
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+  }
+
+  /* Flexible “photo box” that doesn’t distort images */
+  .carousel-track{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;     /* change if you want taller/shorter */
+    min-height: 260px;         /* keeps it visible even when images load late */
+    max-height: 520px;
+  }
+
+  .carousel-slide{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;       /* IMPORTANT: no distortion */
+    display: none;
+    background: #fff;
+  }
+  .carousel-slide.is-active{
+    display: block;
+  }
+
+  .carousel-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    border: 1px solid #e5e7eb;
+    background: rgba(255,255,255,0.92);
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 26px;
+    line-height: 1;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+  }
+  .carousel-btn:hover{ background: rgba(255,255,255,1); }
+  .carousel-btn.prev{ left: 10px; }
+  .carousel-btn.next{ right: 10px; }
+
+  .carousel-dots{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 10px;
+  }
+  .carousel-dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    background: rgba(255,255,255,0.8);
+    cursor: pointer;
+  }
+  .carousel-dot.is-active{
+    background: rgba(17,24,39,0.85);
+    border-color: rgba(17,24,39,0.85);
+  }
 </style>
 
 <div class="page-grid">
@@ -78,8 +158,6 @@ classes: wide
 
   <!-- RIGHT: page content -->
   <main markdown="1">
-
-
 
 ## <i class="fas fa-project-diagram"></i> Projects
 <hr class="section-rule"/>
@@ -115,22 +193,21 @@ classes: wide
     </div>
   </div>
 
-<div class="proj-media">
-  <div class="carousel" data-carousel>
-    <div class="carousel-track" data-track>
-      <img class="carousel-slide" src="/assets/images/projects/opamp/Topology.png" alt="Op-amp topology">
-      <img class="carousel-slide" src="/assets/images/projects/opamp/Small_Signal.png" alt="Op-amp small signal model">
-      <img class="carousel-slide" src="/assets/images/projects/opamp/M8-Sizing.png" alt="M8 sizing">
-      <img class="carousel-slide" src="/assets/images/projects/opamp/Sizing-of-M1-4-and-M8.png" alt="M1–M4 and M8 sizing">
-      <img class="carousel-slide" src="/assets/images/projects/opamp/M12_M34_Sizing.png" alt="M12 and M3/M4 sizing">
-      <img class="carousel-slide" src="/assets/images/projects/opamp/Main_1.png" alt="Final op-amp circuit">
+  <div class="proj-media">
+    <div class="carousel" data-carousel>
+      <div class="carousel-track" data-track>
+        <img class="carousel-slide" src="/assets/images/projects/opamp/Topology.png" alt="Op-amp topology">
+        <img class="carousel-slide" src="/assets/images/projects/opamp/Small_Signal.png" alt="Op-amp small signal model">
+        <img class="carousel-slide" src="/assets/images/projects/opamp/M8-Sizing.png" alt="M8 sizing">
+        <img class="carousel-slide" src="/assets/images/projects/opamp/Sizing-of-M1-4-and-M8.png" alt="M1–M4 and M8 sizing">
+        <img class="carousel-slide" src="/assets/images/projects/opamp/M12_M34_Sizing.png" alt="M12 and M3/M4 sizing">
+        <img class="carousel-slide" src="/assets/images/projects/opamp/Main_1.png" alt="Final op-amp circuit">
+      </div>
+      <button class="carousel-btn prev" data-prev aria-label="Previous">‹</button>
+      <button class="carousel-btn next" data-next aria-label="Next">›</button>
+      <div class="carousel-dots" data-dots></div>
     </div>
-    <button class="carousel-btn prev" data-prev aria-label="Previous">‹</button>
-    <button class="carousel-btn next" data-next aria-label="Next">›</button>
-    <div class="carousel-dots" data-dots></div>
   </div>
-</div>
-
 
 </div>
 
@@ -286,7 +363,8 @@ classes: wide
     <strong>M. Y. Rahman</strong> and S. M. Mominuzzaman,
     “Exploring Lead-Free Mixed Halide Double Perovskites Solar Cell,”
     <em>13th International Conference on Electrical and Computer Engineering (ICECE 2024)</em>,
-    Dhaka, Bangladesh, pp. 165–170.     <a class="btn btn--primary btn--small"
+    Dhaka, Bangladesh, pp. 165–170.
+    <a class="btn btn--primary btn--small"
        href="https://doi.org/10.1109/ICECE64886.2024.11024609"
        target="_blank" rel="noopener">
       DOI
@@ -301,79 +379,57 @@ classes: wide
 </div>
 </div>
 
-
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const carousels = document.querySelectorAll('[data-carousel]');
 
   carousels.forEach(carousel => {
     const track = carousel.querySelector('[data-track]');
-    const slides = Array.from(track.children);
+    const slides = Array.from(track.querySelectorAll('.carousel-slide'));
     const nextButton = carousel.querySelector('[data-next]');
     const prevButton = carousel.querySelector('[data-prev]');
     const dotsNav = carousel.querySelector('[data-dots]');
 
-    // 1. Generate Dots automatically based on number of slides
-    slides.forEach((slide, index) => {
+    if (!track || slides.length === 0) return;
+
+    // Ensure exactly one active slide (fixes OPAMP carousel)
+    let activeIndex = slides.findIndex(s => s.classList.contains('is-active'));
+    if (activeIndex < 0) {
+      slides[0].classList.add('is-active');
+      activeIndex = 0;
+    } else {
+      slides.forEach((s, i) => { if (i !== activeIndex) s.classList.remove('is-active'); });
+    }
+
+    // Build dots fresh (avoid duplicates on re-render)
+    if (dotsNav) dotsNav.innerHTML = '';
+    const dots = slides.map((_, i) => {
       const dot = document.createElement('button');
-      dot.classList.add('carousel-dot');
-      if (slide.classList.contains('is-active')) {
-        dot.classList.add('is-active');
-      }
-      dotsNav.appendChild(dot);
-      
-      // Add click listener to dot
-      dot.addEventListener('click', () => {
-        const currentSlide = track.querySelector('.carousel-slide.is-active');
-        const currentDot = dotsNav.querySelector('.carousel-dot.is-active');
-        updateCarousel(currentSlide, slide, currentDot, dot);
-      });
+      dot.type = 'button';
+      dot.className = 'carousel-dot' + (i === activeIndex ? ' is-active' : '');
+      dot.addEventListener('click', () => goTo(i));
+      dotsNav && dotsNav.appendChild(dot);
+      return dot;
     });
 
-    const dots = Array.from(dotsNav.children);
+    function setActive(i){
+      slides[activeIndex].classList.remove('is-active');
+      dots[activeIndex] && dots[activeIndex].classList.remove('is-active');
 
-    // 2. Function to update classes
-    const updateCarousel = (currentSlide, targetSlide, currentDot, targetDot) => {
-      currentSlide.classList.remove('is-active');
-      targetSlide.classList.add('is-active');
-      
-      if(currentDot && targetDot) {
-        currentDot.classList.remove('is-active');
-        targetDot.classList.add('is-active');
-      }
-    };
+      activeIndex = i;
 
-    // 3. Next Button Logic
-    nextButton.addEventListener('click', () => {
-      const currentSlide = track.querySelector('.carousel-slide.is-active');
-      const currentDot = dotsNav.querySelector('.carousel-dot.is-active');
-      let nextSlide = currentSlide.nextElementSibling;
-      let nextDot = currentDot ? currentDot.nextElementSibling : null;
+      slides[activeIndex].classList.add('is-active');
+      dots[activeIndex] && dots[activeIndex].classList.add('is-active');
+    }
 
-      // Loop back to start if at the end
-      if (!nextSlide) {
-        nextSlide = slides[0];
-        nextDot = dots[0];
-      }
+    function goTo(i){
+      const n = slides.length;
+      const wrapped = ((i % n) + n) % n;
+      setActive(wrapped);
+    }
 
-      updateCarousel(currentSlide, nextSlide, currentDot, nextDot);
-    });
-
-    // 4. Previous Button Logic
-    prevButton.addEventListener('click', () => {
-      const currentSlide = track.querySelector('.carousel-slide.is-active');
-      const currentDot = dotsNav.querySelector('.carousel-dot.is-active');
-      let prevSlide = currentSlide.previousElementSibling;
-      let prevDot = currentDot ? currentDot.previousElementSibling : null;
-
-      // Loop to end if at the start
-      if (!prevSlide) {
-        prevSlide = slides[slides.length - 1];
-        prevDot = dots[dots.length - 1];
-      }
-
-      updateCarousel(currentSlide, prevSlide, currentDot, prevDot);
-    });
+    nextButton && nextButton.addEventListener('click', () => goTo(activeIndex + 1));
+    prevButton && prevButton.addEventListener('click', () => goTo(activeIndex - 1));
   });
 });
 </script>
