@@ -444,6 +444,52 @@ classes: wide
 
 </div>
 
+<!-- =========================================================
+     PROJECT 4 — PCB DESIGN
+========================================================= -->
+<div class="proj-card">
+
+  <div class="proj-text">
+    <h3 class="proj-title">
+      Four-Layer Power Converter PCB (Altium Designer)
+    </h3>
+
+    <p class="proj-sub">
+      Four-layer PCB prototype for a compact dual-rail power delivery concept
+      targeting efficient silicon-to-wide-bandgap (Si-to-WBG) interface rails.
+    </p>
+
+    <ul class="proj-bullets">
+      <li>Developed a complete schematic-to-layout workflow in Altium Designer for a research prototype power board</li>
+      <li>Applied EMI-aware stackup and routing practices to support high-frequency switching and clean return paths</li>
+      <li>Designed top and bottom signal/power routing with dedicated internal reference planes for improved signal integrity</li>
+      <li>Prepared manufacturing outputs (Gerbers/drill files) and documentation for prototype fabrication and testing</li>
+    </ul>
+
+    <div class="proj-tags">
+      <span class="tag">Altium</span>
+      <span class="tag">4-Layer PCB</span>
+      <span class="tag">EMI</span>
+      <span class="tag">Power Integrity</span>
+      <span class="tag">Prototype</span>
+    </div>
+  </div>
+
+  <div class="proj-media">
+    <div class="carousel" data-carousel>
+      <div class="carousel-track" data-track>
+        <img class="carousel-slide is-active" src="/assets/images/projects/pcb/Schematic.png" alt="PCB schematic">
+        <img class="carousel-slide" src="/assets/images/projects/pcb/Top-Layer.png" alt="PCB top layer routing">
+        <img class="carousel-slide" src="/assets/images/projects/pcb/Bottom_Layer.png" alt="PCB bottom layer routing">
+      </div>
+      <button class="carousel-btn prev" data-prev aria-label="Previous">‹</button>
+      <button class="carousel-btn next" data-next aria-label="Next">›</button>
+      <div class="carousel-dots" data-dots></div>
+    </div>
+  </div>
+
+</div>
+
 
 <!-- =========================================================
      PROJECT 3 — TCAD → SPICE → CIRCUIT
@@ -490,52 +536,8 @@ classes: wide
 
 </div>
 
-<!-- =========================================================
-     PROJECT 4 — PCB DESIGN
-========================================================= -->
-<div class="proj-card">
 
-  <div class="proj-text">
-    <h3 class="proj-title">
-      Four-Layer Power Converter PCB (Altium Designer)
-    </h3>
 
-    <p class="proj-sub">
-      Complete schematic-to-layout workflow with EMI-aware
-      stackup and power-integrity considerations.
-    </p>
-
-    <ul class="proj-bullets">
-      <li>Designed a four-layer PCB including schematic capture and layout</li>
-      <li>Created custom symbols and footprints for a reusable PCB library</li>
-      <li>Used solid inner GND and power planes for low-impedance return paths</li>
-      <li>Generated manufacturing-ready Gerber and drill files</li>
-    </ul>
-
-    <div class="proj-tags">
-      <span class="tag">Altium</span>
-      <span class="tag">4-Layer PCB</span>
-      <span class="tag">EMI</span>
-      <span class="tag">Power Integrity</span>
-      <span class="tag">Gerbers</span>
-    </div>
-  </div>
-
-  <div class="proj-media">
-    <div class="carousel" data-carousel>
-      <div class="carousel-track" data-track>
-        <img class="carousel-slide is-active" src="/assets/images/projects/pcb/1.jpg" alt="PCB layout">
-        <img class="carousel-slide" src="/assets/images/projects/pcb/2.jpg" alt="Inner layer ground plane">
-        <img class="carousel-slide" src="/assets/images/projects/pcb/3.jpg" alt="Power plane">
-        <img class="carousel-slide" src="/assets/images/projects/pcb/4.jpg" alt="3D PCB view">
-      </div>
-      <button class="carousel-btn prev" data-prev aria-label="Previous">‹</button>
-      <button class="carousel-btn next" data-next aria-label="Next">›</button>
-      <div class="carousel-dots" data-dots></div>
-    </div>
-  </div>
-
-</div>
 
 ## <i class="fas fa-file-alt"></i> Publications
 <hr class="section-rule"/>
