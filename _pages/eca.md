@@ -165,6 +165,7 @@ classes: wide
     <a class="thumb" href="/assets/images/eca/football/2.jpg" data-lightbox="eca"><img src="/assets/images/eca/football/2F_SecB.jpg" alt="Inter-hall football 2"></a>
     <a class="thumb" href="/assets/images/eca/football/3.jpg" data-lightbox="eca"><img src="/assets/images/eca/football/3F.jpg" alt="Inter-hall football 3"></a>
     <a class="thumb" href="/assets/images/eca/football/4.jpg" data-lightbox="eca"><img src="/assets/images/eca/football/4F.jpg" alt="Inter-hall football 4"></a>
+    <a class="thumb" href="/assets/images/eca/football/4.jpg" data-lightbox="eca"><img src="/assets/images/eca/football/5F.jpg" alt="Inter-hall football 4"></a>
   </div>
 </div>
 
