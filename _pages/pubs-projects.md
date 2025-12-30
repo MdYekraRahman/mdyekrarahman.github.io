@@ -67,7 +67,7 @@ classes: wide
     width: 100%;
     aspect-ratio: 16 / 10;     /* change if you want taller/shorter */
     min-height: 260px;         /* keeps it visible even when images load late */
-    max-height: 520px;
+    max-height: 800px;
   }
 
   .carousel-slide{
