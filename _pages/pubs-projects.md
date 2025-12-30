@@ -492,49 +492,49 @@ classes: wide
 
 
 <!-- =========================================================
-     PROJECT 3 — TCAD → SPICE → CIRCUIT
+     PROJECT 3 — TCAD → SPICE → CIRCUIT (WORK IN PROGRESS)
 ========================================================= -->
 <div class="proj-card">
 
   <div class="proj-text">
     <h3 class="proj-title">
-      TCAD → SPICE Modeling → Circuit-Level Verification
+      TCAD → Compact Modeling → Circuit-Level Validation
     </h3>
 
     <p class="proj-sub">
-      End-to-end device enablement workflow from physics-based
-      simulation to real circuit validation.
+      Physics-aware device modeling pipeline bridging TCAD simulations
+      and real circuit behavior — <em>ongoing research effort</em>.
     </p>
 
     <ul class="proj-bullets">
-      <li>Performed TCAD simulations of power MOSFET structures</li>
-      <li>Extracted compact SPICE models suitable for circuit-level use</li>
-      <li>Integrated custom models into Spectre and verified behavior in real converter blocks</li>
-      <li>Evaluated switching dynamics, losses, and bias sensitivity</li>
+      <li>Developed detailed TCAD device structures and physics setups for power and emerging WBG devices</li>
+      <li>Generated DC, AC, and transient datasets tailored for compact model extraction</li>
+      <li>Performed model calibration and consistency checks prior to circuit insertion</li>
+      <li>Integrated extracted models into Spectre for converter- and block-level verification</li>
+      <li>Investigating switching behavior, parasitics, bias dependence, and numerical robustness</li>
     </ul>
 
     <div class="proj-tags">
       <span class="tag">TCAD</span>
-      <span class="tag">SPICE Models</span>
-      <span class="tag">Cadence</span>
-      <span class="tag">Device Enablement</span>
+      <span class="tag">Compact Modeling</span>
+      <span class="tag">SPICE</span>
+      <span class="tag">Spectre</span>
+      <span class="tag">Work in Progress</span>
     </div>
   </div>
 
   <div class="proj-media">
-    <div class="carousel" data-carousel>
-      <div class="carousel-track" data-track>
-        <img class="carousel-slide is-active" src="/assets/images/projects/tcad/1.jpg" alt="TCAD structure">
-        <img class="carousel-slide" src="/assets/images/projects/tcad/2.jpg" alt="IV characteristics">
-        <img class="carousel-slide" src="/assets/images/projects/tcad/3.jpg" alt="Circuit simulation">
+    <div class="proj-placeholder">
+      <img src="/assets/images/projects/tcad/wip.jpg" alt="TCAD to circuit workflow (work in progress)">
+      <div class="proj-overlay">
+        <span>Work in Progress</span>
+        <small>Model extraction & validation ongoing</small>
       </div>
-      <button class="carousel-btn prev" data-prev aria-label="Previous">‹</button>
-      <button class="carousel-btn next" data-next aria-label="Next">›</button>
-      <div class="carousel-dots" data-dots></div>
     </div>
   </div>
 
 </div>
+
 
 
 
