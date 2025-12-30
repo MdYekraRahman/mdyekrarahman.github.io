@@ -596,6 +596,182 @@ classes: wide
 </div>
 
 
+<!-- =========================================================
+     PROJECT — AUTOMATED TRAFFIC CONTROL SYSTEM
+========================================================= -->
+<div class="proj-card">
+
+  <div class="proj-text">
+    <h3 class="proj-title">
+      Automated Traffic Control System (Digital Logic Based)
+    </h3>
+
+    <p class="proj-sub">
+      Fully hardware-based automated traffic control system designed for a
+      real-world five-road intersection (“Chankharpurl More”), implemented
+      without microcontrollers or Arduino, using discrete logic ICs.
+    </p>
+
+    <ul class="proj-bullets">
+      <li>Designed an automated traffic control system for a complex 5-way circular intersection</li>
+      <li>Implemented complete control logic using digital ICs only, avoiding microprocessors and Arduino</li>
+      <li>Developed timing and sequencing logic to manage safe traffic flow across all directions</li>
+      <li>Simulated the full system behavior in Proteus to verify correctness and timing coordination</li>
+      <li>Physically built and tested the system at hardware level using logic gates, counters, and timers</li>
+      <li>Ensured proper signal transitions and fail-safe operation to prevent conflicting green signals</li>
+      <li>Demonstrated a low-cost, reliable solution suitable for small urban intersections</li>
+    </ul>
+
+    <div class="proj-tags">
+      <span class="tag">Digital Logic Design</span>
+      <span class="tag">Traffic Control</span>
+      <span class="tag">Proteus</span>
+      <span class="tag">Hardware Implementation</span>
+      <span class="tag">Logic ICs</span>
+      <span class="tag">Counters</span>
+      <span class="tag">Timers</span>
+      <span class="tag">No Microcontroller</span>
+    </div>
+  </div>
+
+  <div class="proj-media">
+    <div class="carousel" data-carousel>
+      <div class="carousel-track" data-track>
+        <img class="carousel-slide is-active" src="/assets/images/projects/dld/dld1.png" alt="Traffic intersection layout and control concept">
+        <img class="carousel-slide" src="/assets/images/projects/dld/dld2.jpg" alt="Digital logic schematic for traffic sequencing">
+        <img class="carousel-slide" src="/assets/images/projects/dld/dld3.png" alt="Proteus simulation of traffic control logic">
+        <img class="carousel-slide" src="/assets/images/projects/dld/dld4.jpg" alt="Timing and state transition verification">
+        <img class="carousel-slide" src="/assets/images/projects/dld/dld5.jpg" alt="Hardware implementation using logic ICs">
+        <img class="carousel-slide" src="/assets/images/projects/dld/dld6.jpg" alt="Physical prototype testing and validation">
+        <img class="carousel-slide" src="/assets/images/projects/dld/dld7.jpg" alt="Final working demonstration of traffic control system">
+      </div>
+
+      <button class="carousel-btn prev" data-prev aria-label="Previous">‹</button>
+      <button class="carousel-btn next" data-next aria-label="Next">›</button>
+      <div class="carousel-dots" data-dots></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- =========================================================
+     PROJECT — ECG-BASED BIOMETRIC RECOGNITION
+========================================================= -->
+<div class="proj-card">
+
+  <div class="proj-text">
+    <h3 class="proj-title">
+      ECG-Based Biometric Recognition System
+    </h3>
+
+    <p class="proj-sub">
+      Signal-processing and machine-learning–based biometric authentication
+      system using ECG signals, featuring robust preprocessing, feature
+      extraction, and classification with cross-validation.
+    </p>
+
+    <ul class="proj-bullets">
+      <li>Developed a biometric recognition system using electrocardiogram (ECG) signals as unique physiological identifiers</li>
+      <li>Applied Chebyshev low-pass filtering and median filtering to remove noise and baseline wander</li>
+      <li>Performed feature extraction using Maximal Overlap Discrete Wavelet Transform (MODWT)</li>
+      <li>Designed a classification framework using Weighted K-Nearest Neighbors (WKNN) with Euclidean distance</li>
+      <li>Evaluated system performance using 5-fold cross-validation to ensure robustness and generalization</li>
+      <li>Analyzed classification accuracy, sensitivity, and subject discrimination capability</li>
+      <li>Demonstrated feasibility of ECG signals for secure, non-invasive biometric authentication</li>
+    </ul>
+
+    <div class="proj-tags">
+      <span class="tag">ECG</span>
+      <span class="tag">Biomedical Signal Processing</span>
+      <span class="tag">DSP</span>
+      <span class="tag">Wavelet Transform</span>
+      <span class="tag">KNN</span>
+      <span class="tag">Pattern Recognition</span>
+      <span class="tag">MATLAB</span>
+      <span class="tag">Biometrics</span>
+    </div>
+  </div>
+
+  <div class="proj-media">
+    <div class="carousel" data-carousel>
+      <div class="carousel-track" data-track>
+        <img class="carousel-slide is-active" src="/assets/images/projects/ecg/DSP.jpg" alt="Raw ECG signal and acquisition overview">
+        <img class="carousel-slide" src="/assets/images/projects/ecg/DSP2.png" alt="ECG preprocessing and noise filtering">
+        <img class="carousel-slide" src="/assets/images/projects/ecg/DSP3.png" alt="Filtered ECG waveform comparison">
+        <img class="carousel-slide" src="/assets/images/projects/ecg/DSP4.png" alt="Wavelet decomposition using MODWT">
+        <img class="carousel-slide" src="/assets/images/projects/ecg/DSP5.png" alt="Feature extraction from ECG signals">
+        <img class="carousel-slide" src="/assets/images/projects/ecg/DSP6.png" alt="KNN-based classification workflow">
+        <img class="carousel-slide" src="/assets/images/projects/ecg/DSP7.png" alt="Distance metrics and decision boundaries">
+        <img class="carousel-slide" src="/assets/images/projects/ecg/DSP8.png" alt="Cross-validation performance results">
+        <img class="carousel-slide" src="/assets/images/projects/ecg/DSP9.png" alt="Final biometric recognition accuracy and results">
+      </div>
+
+      <button class="carousel-btn prev" data-prev aria-label="Previous">‹</button>
+      <button class="carousel-btn next" data-next aria-label="Next">›</button>
+      <div class="carousel-dots" data-dots></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- =========================================================
+     PROJECT — IEEE 39-BUS HVDC & INDUSTRIAL LOAD IMPACT STUDY
+========================================================= -->
+<div class="proj-card">
+
+  <div class="proj-text">
+    <h3 class="proj-title">
+      Impact of HVDC Connection & Large Industrial Loads on IEEE 39-Bus System
+    </h3>
+
+    <p class="proj-sub">
+      Power system stability and load-flow analysis of the IEEE 39-bus network,
+      investigating voltage stability, line loading, and mitigation strategies
+      under HVDC integration and large industrial loads using PSAF.
+    </p>
+
+    <ul class="proj-bullets">
+      <li>Performed detailed load-flow analysis of the IEEE 39-bus power system using the Newton–Raphson method</li>
+      <li>Modeled and integrated a point-to-point HVDC link between Bus-39 and Bus-9 to study system-level impacts</li>
+      <li>Introduced large industrial loads modeled as induction motors to emulate real-world plant behavior</li>
+      <li>Identified abnormal bus voltages, line overloads, and stability degradation due to heavy loading</li>
+      <li>Designed and placed Static VAR Compensators (SVCs) to improve voltage regulation and system stability</li>
+      <li>Compared pre- and post-mitigation bus reports to validate effectiveness of compensation strategies</li>
+      <li>Demonstrated coordinated use of HVDC and reactive power support for robust grid operation</li>
+    </ul>
+
+    <div class="proj-tags">
+      <span class="tag">Power System Analysis</span>
+      <span class="tag">IEEE 39-Bus</span>
+      <span class="tag">HVDC</span>
+      <span class="tag">Industrial Loads</span>
+      <span class="tag">Induction Motors</span>
+      <span class="tag">SVC</span>
+      <span class="tag">PSAF</span>
+      <span class="tag">Load Flow</span>
+    </div>
+  </div>
+
+  <div class="proj-media">
+    <div class="carousel" data-carousel>
+      <div class="carousel-track" data-track>
+        <img class="carousel-slide is-active" src="/assets/images/projects/psaf/Methodology.png" alt="Overall methodology for IEEE 39-bus HVDC study">
+        <img class="carousel-slide" src="/assets/images/projects/psaf/Addition-of-HVDC-Line.png" alt="HVDC line added between Bus 39 and Bus 9">
+        <img class="carousel-slide" src="/assets/images/projects/psaf/Abnormal-Record-1.png" alt="Abnormal voltage and loading conditions before compensation">
+        <img class="carousel-slide" src="/assets/images/projects/psaf/Report-2.png" alt="Bus report showing system performance under industrial load">
+        <img class="carousel-slide" src="/assets/images/projects/psaf/Report-3.png" alt="Line loading and voltage profile analysis">
+        <img class="carousel-slide" src="/assets/images/projects/psaf/Bus-Report-After-All-SVC-connection.png" alt="Improved bus voltages after SVC integration">
+        <img class="carousel-slide" src="/assets/images/projects/psaf/solution.png" alt="Final stabilized system with HVDC and SVC coordination">
+      </div>
+
+      <button class="carousel-btn prev" data-prev aria-label="Previous">‹</button>
+      <button class="carousel-btn next" data-next aria-label="Next">›</button>
+      <div class="carousel-dots" data-dots></div>
+    </div>
+  </div>
+
+</div>
+
 
 
 ## <i class="fas fa-file-alt"></i> Publications
