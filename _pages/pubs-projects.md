@@ -400,15 +400,18 @@ classes: wide
     </h3>
 
     <p class="proj-sub">
-      High-frequency integrated DC-DC converter with on-chip
-      gate-driver chain, validated in Spectre.
+      12 V → 3.3 V, 1 A, 2 MHz synchronous DC-DC buck converter with
+      on-chip gate-driver chain (level shifters + dead-time + bootstrap),
+      validated in Cadence Spectre.
     </p>
 
     <ul class="proj-bullets">
-      <li>Designed a 12 V → 3.3 V, 1 A synchronous buck converter operating at multi-MHz</li>
-      <li>Optimized MOSFET widths via parametric sweeps to balance efficiency and loss</li>
-      <li>Implemented gate-driver blocks: level shifters, bootstrap circuit, and dead-time control</li>
-      <li>Validated switching behavior, ripple, and inductor current in ADE/Spectre</li>
+      <li>Designed a 12 V-to-3.3 V, 1 A, 2 MHz buck converter power stage with LC output filtering (CCM/DCM-capable)</li>
+      <li>Analyzed key challenges: switching/conduction losses, component selection (inductor/capacitor), and ripple constraints</li>
+      <li>Implemented full gate-driver system: up-level shifter, down-level shifter, dead-time control, and bootstrap circuit</li>
+      <li>Set final driver-stage sizing to achieve ~5 ns rise (high-side), ~2 ns rise (low-side), and ~1 ns fall times; logic gating prevents shoot-through</li>
+      <li>Optimized MOSFET widths via efficiency sweeps; best total widths: 65.6 mm (high-side) and 96.4 mm (low-side), with L = 900 nm</li>
+      <li>Verified waveforms: PWM input, HS/LS VGS, level-shifter I/O, bootstrap voltage; measured ~5.15% Vout ripple and ~198 mA inductor ripple</li>
     </ul>
 
     <div class="proj-tags">
@@ -416,17 +419,22 @@ classes: wide
       <span class="tag">Spectre</span>
       <span class="tag">TSMC 180nm</span>
       <span class="tag">HV BCD</span>
-      <span class="tag">2 MHz+</span>
+      <span class="tag">2 MHz</span>
+      <span class="tag">Gate Driver</span>
+      <span class="tag">Bootstrap</span>
+      <span class="tag">Level Shifters</span>
     </div>
   </div>
 
   <div class="proj-media">
     <div class="carousel" data-carousel>
       <div class="carousel-track" data-track>
-        <img class="carousel-slide is-active" src="/assets/images/projects/buck/1.jpg" alt="Buck schematic">
-        <img class="carousel-slide" src="/assets/images/projects/buck/2.jpg" alt="Gate driver waveforms">
-        <img class="carousel-slide" src="/assets/images/projects/buck/3.jpg" alt="Switching node waveform">
-        <img class="carousel-slide" src="/assets/images/projects/buck/4.jpg" alt="Efficiency sweep">
+        <img class="carousel-slide is-active" src="/assets/images/projects/buck/DC-DC-Buck.png" alt="DC-DC buck converter power stage">
+        <img class="carousel-slide" src="/assets/images/projects/buck/Gate-Driver-Design.png" alt="Gate driver design and shoot-through prevention logic">
+        <img class="carousel-slide" src="/assets/images/projects/buck/Up-Level-Shifter-Design.png" alt="Up-level shifter input and output verification">
+        <img class="carousel-slide" src="/assets/images/projects/buck/Down-Level-Shifter-Design.png" alt="Down-level shifter input and output verification">
+        <img class="carousel-slide" src="/assets/images/projects/buck/Simulation-Result-1.png" alt="Simulation results: PWM input, VGS, bootstrap voltage">
+        <img class="carousel-slide" src="/assets/images/projects/buck/Simulation-Result-2.png" alt="Simulation results: output voltage ripple and inductor current ripple">
       </div>
       <button class="carousel-btn prev" data-prev aria-label="Previous">‹</button>
       <button class="carousel-btn next" data-next aria-label="Next">›</button>
@@ -435,6 +443,7 @@ classes: wide
   </div>
 
 </div>
+
 
 <!-- =========================================================
      PROJECT 3 — TCAD → SPICE → CIRCUIT
