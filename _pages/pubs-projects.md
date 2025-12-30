@@ -406,7 +406,7 @@ classes: wide
     </p>
 
     <ul class="proj-bullets">
-      <li>Designed a 12 V-to-3.3 V, 1 A, 2 MHz buck converter power stage with LC output filtering (CCM/DCM-capable)</li>
+      <li>Designed a 12 V-to-3.3 V, 1 A, 2 MHz buck converter power stage with LC output filtering</li>
       <li>Analyzed key challenges: switching/conduction losses, component selection (inductor/capacitor), and ripple constraints</li>
       <li>Implemented full gate-driver system: up-level shifter, down-level shifter, dead-time control, and bootstrap circuit</li>
       <li>Set final driver-stage sizing to achieve ~5 ns rise (high-side), ~2 ns rise (low-side), and ~1 ns fall times; logic gating prevents shoot-through</li>
@@ -456,7 +456,7 @@ classes: wide
 
     <p class="proj-sub">
       Four-layer PCB prototype for a compact dual-rail power delivery concept
-      targeting efficient silicon-to-wide-bandgap (Si-to-WBG) interface rails.
+      targeting efficient silicon-to-wide-bandgap interface rails.
     </p>
 
     <ul class="proj-bullets">
@@ -503,14 +503,14 @@ classes: wide
 
     <p class="proj-sub">
       Physics-aware device modeling pipeline bridging TCAD simulations
-      and real circuit behavior — <em>ongoing research effort</em>.
+      and real circuit behavior.
     </p>
 
     <ul class="proj-bullets">
       <li>Developed detailed TCAD device structures and physics setups for power and emerging WBG devices</li>
       <li>Generated DC, AC, and transient datasets tailored for compact model extraction</li>
       <li>Performed model calibration and consistency checks prior to circuit insertion</li>
-      <li>Integrated extracted models into Spectre for converter- and block-level verification</li>
+      <li>Integrated extracted models into Spectre for converter and block-level verification</li>
       <li>Investigating switching behavior, parasitics, bias dependence, and numerical robustness</li>
     </ul>
 
@@ -530,7 +530,6 @@ classes: wide
 ========================================================= -->
       <div class="proj-overlay">
         <span>Work in Progress</span>
-        <small>Model extraction & validation ongoing</small>
       </div>
     </div>
   </div>
