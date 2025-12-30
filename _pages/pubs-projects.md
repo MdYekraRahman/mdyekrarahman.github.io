@@ -48,47 +48,26 @@ classes: wide
   .author-links a{ text-decoration: none; display: inline-flex; gap: 8px; align-items: center; }
 
   /* =========================================================
-     PROJECT CARD: force equal height columns so media follows text
-     ========================================================= */
-  .proj-card{
-    display: grid;
-    grid-template-columns: 1fr minmax(320px, 520px);
-    gap: 22px;
-    align-items: stretch; /* KEY: both columns same height */
-  }
-  @media (max-width: 900px){
-    .proj-card{ grid-template-columns: 1fr; }
-  }
-
-  /* =========================================================
      CAROUSEL (page-local, no dependency on global CSS)
-     Goal: height follows text column height + non-distorted images
      ========================================================= */
-  .proj-media{
-    width: 100%;
-    height: 100%;
-    display: flex;        /* allow child to stretch */
-  }
+  .proj-media{ width: 100%; }
 
   .carousel{
     position: relative;
     width: 100%;
-    height: 100%;         /* KEY: fill media column */
     border-radius: 14px;
     overflow: hidden;
     border: 1px solid #e5e7eb;
     background: #fff;
-    display: flex;        /* allow track to stretch */
-    flex-direction: column;
   }
 
-  /* Flexible “photo box” that grows with the card height */
+  /* Flexible “photo box” that doesn’t distort images */
   .carousel-track{
     position: relative;
     width: 100%;
-    flex: 1;              /* KEY: take remaining height */
-    min-height: 260px;    /* don’t collapse if text is short */
-    max-height: none;     /* remove hard cap */
+    aspect-ratio: 16 / 10;
+    min-height: 260px;
+    max-height: 800px;
   }
 
   .carousel-slide{
@@ -96,47 +75,40 @@ classes: wide
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;  /* IMPORTANT: no distortion */
-    object-position: center;
+    object-fit: contain; /* no distortion */
     display: none;
     background: #fff;
+    cursor: zoom-in;     /* indicates click-to-zoom */
   }
   .carousel-slide.is-active{ display: block; }
 
-  /* Visible buttons (not dots) */
   .carousel-btn{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 50; /* stronger */
-    width: 48px;
-    height: 48px;
+    z-index: 2;
+    border: 1px solid #e5e7eb;
+    background: rgba(255,255,255,0.92);
+    width: 44px;
+    height: 44px;
     border-radius: 999px;
-    border: 1px solid rgba(0,0,0,0.15);
-    background: rgba(255,255,255,0.98);
-    color: #111827;
-    font-size: 34px;
-    font-weight: 900;
+    cursor: pointer;
+    font-size: 26px;
     line-height: 1;
     display: grid;
     place-items: center;
-    cursor: pointer;
-    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
-    opacity: 1;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
   }
-  .carousel-btn.prev{ left: 12px; }
-  .carousel-btn.next{ right: 12px; }
-  .carousel-btn:hover{
-    transform: translateY(-50%) scale(1.05);
-    background: #ffffff;
-  }
+  .carousel-btn:hover{ background: rgba(255,255,255,1); }
+  .carousel-btn.prev{ left: 10px; }
+  .carousel-btn.next{ right: 10px; }
 
   .carousel-dots{
     position: absolute;
     left: 0;
     right: 0;
     bottom: 10px;
-    z-index: 40;
+    z-index: 2;
     display: flex;
     justify-content: center;
     gap: 8px;
@@ -153,6 +125,74 @@ classes: wide
   .carousel-dot.is-active{
     background: rgba(17,24,39,0.85);
     border-color: rgba(17,24,39,0.85);
+  }
+
+  /* =========================================================
+     LIGHTBOX (click image -> zoomed modal)
+     ========================================================= */
+  .lightbox{
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+  }
+  .lightbox.is-open{ display: block; }
+
+  .lightbox__backdrop{
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.78);
+  }
+
+  .lightbox__panel{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    padding: 22px;
+  }
+
+  .lightbox__img{
+    max-width: min(1200px, 96vw);
+    max-height: 88vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 14px;
+    background: #0b1220;
+    box-shadow: 0 18px 60px rgba(0,0,0,0.45);
+    cursor: zoom-out;
+  }
+
+  .lightbox__close{
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 2;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.22);
+    background: rgba(17,24,39,0.85);
+    color: #fff;
+    font-size: 22px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+  }
+
+  .lightbox__hint{
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.85);
+    font-size: 0.95rem;
+    background: rgba(17,24,39,0.65);
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.14);
   }
 </style>
 
@@ -241,6 +281,7 @@ classes: wide
   </div>
 
 </div>
+
 
 <!-- =========================================================
      PROJECT 2 — INTEGRATED BUCK CONVERTER
@@ -410,8 +451,21 @@ classes: wide
 </div>
 </div>
 
+<!-- Lightbox DOM (one for the whole page) -->
+<div class="lightbox" data-lightbox>
+  <div class="lightbox__backdrop" data-lightbox-close></div>
+  <div class="lightbox__panel" role="dialog" aria-modal="true" aria-label="Image preview">
+    <button class="lightbox__close" type="button" data-lightbox-close aria-label="Close">✕</button>
+    <img class="lightbox__img" data-lightbox-img alt="">
+    <div class="lightbox__hint">Click outside / press Esc to close · ← → to navigate</div>
+  </div>
+</div>
+
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+  // ---------------------------
+  // Carousel logic (Instagram-like)
+  // ---------------------------
   const carousels = document.querySelectorAll('[data-carousel]');
 
   carousels.forEach(carousel => {
@@ -423,7 +477,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!track || slides.length === 0) return;
 
-    // Ensure exactly one active slide (fixes OPAMP carousel)
+    // Ensure exactly one active slide
     let activeIndex = slides.findIndex(s => s.classList.contains('is-active'));
     if (activeIndex < 0) {
       slides[0].classList.add('is-active');
@@ -432,7 +486,7 @@ document.addEventListener('DOMContentLoaded', () => {
       slides.forEach((s, i) => { if (i !== activeIndex) s.classList.remove('is-active'); });
     }
 
-    // Build dots fresh (avoid duplicates on re-render)
+    // Build dots fresh
     if (dotsNav) dotsNav.innerHTML = '';
     const dots = slides.map((_, i) => {
       const dot = document.createElement('button');
@@ -462,5 +516,94 @@ document.addEventListener('DOMContentLoaded', () => {
     nextButton && nextButton.addEventListener('click', () => goTo(activeIndex + 1));
     prevButton && prevButton.addEventListener('click', () => goTo(activeIndex - 1));
   });
+
+  // ---------------------------
+  // Lightbox logic (click to zoom)
+  // - Click active slide to open
+  // - Esc / backdrop closes
+  // - Arrow keys navigate within that carousel
+  // ---------------------------
+  const lightbox = document.querySelector('[data-lightbox]');
+  const lbImg = document.querySelector('[data-lightbox-img]');
+  const lbCloseEls = document.querySelectorAll('[data-lightbox-close]');
+
+  let currentCarousel = null; // active carousel element
+  let currentSlides = [];
+  let currentIndex = 0;
+
+  function openLightbox(imgEl){
+    // find which carousel this image belongs to
+    currentCarousel = imgEl.closest('[data-carousel]');
+    const track = currentCarousel.querySelector('[data-track]');
+    currentSlides = Array.from(track.querySelectorAll('.carousel-slide'));
+
+    // current index = active in carousel
+    currentIndex = currentSlides.findIndex(s => s.classList.contains('is-active'));
+    if (currentIndex < 0) currentIndex = currentSlides.indexOf(imgEl);
+
+    // set lightbox image
+    lbImg.src = imgEl.src;
+    lbImg.alt = imgEl.alt || 'Image preview';
+
+    lightbox.classList.add('is-open');
+    document.body.style.overflow = 'hidden'; // prevent scroll behind modal
+  }
+
+  function closeLightbox(){
+    lightbox.classList.remove('is-open');
+    lbImg.removeAttribute('src');
+    document.body.style.overflow = '';
+    currentCarousel = null;
+    currentSlides = [];
+    currentIndex = 0;
+  }
+
+  function syncCarouselTo(index){
+    if (!currentCarousel) return;
+    const track = currentCarousel.querySelector('[data-track]');
+    const slides = Array.from(track.querySelectorAll('.carousel-slide'));
+    const dotsNav = currentCarousel.querySelector('[data-dots]');
+    const dots = dotsNav ? Array.from(dotsNav.querySelectorAll('.carousel-dot')) : [];
+
+    // find current active
+    let activeIdx = slides.findIndex(s => s.classList.contains('is-active'));
+    if (activeIdx < 0) activeIdx = 0;
+
+    slides[activeIdx].classList.remove('is-active');
+    dots[activeIdx] && dots[activeIdx].classList.remove('is-active');
+
+    const n = slides.length;
+    const wrapped = ((index % n) + n) % n;
+
+    slides[wrapped].classList.add('is-active');
+    dots[wrapped] && dots[wrapped].classList.add('is-active');
+
+    currentIndex = wrapped;
+    lbImg.src = slides[wrapped].src;
+    lbImg.alt = slides[wrapped].alt || 'Image preview';
+  }
+
+  // Click: open lightbox ONLY when clicking the active slide (so it feels like IG)
+  document.querySelectorAll('[data-carousel] .carousel-slide').forEach(img => {
+    img.addEventListener('click', () => {
+      if (!img.classList.contains('is-active')) return;
+      openLightbox(img);
+    });
+  });
+
+  // Close controls
+  lbCloseEls.forEach(el => el.addEventListener('click', closeLightbox));
+
+  // Keyboard: esc closes, arrows navigate
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('is-open')) return;
+
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') syncCarouselTo(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  syncCarouselTo(currentIndex - 1);
+  });
+
+  // Clicking the big image also closes (nice UX)
+  lbImg.addEventListener('click', closeLightbox);
 });
 </script>
