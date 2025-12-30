@@ -117,13 +117,12 @@ classes: wide
 <div class="proj-media">
   <div class="carousel" data-carousel>
     <div class="carousel-track" data-track>
-      <img class="carousel-slide is-active" src="/assets/images/projects/opamp/Main_1.png" alt="Op-amp main schematic">
       <img class="carousel-slide" src="/assets/images/projects/opamp/Topology.png" alt="Op-amp topology">
       <img class="carousel-slide" src="/assets/images/projects/opamp/Small_Signal.png" alt="Op-amp small signal model">
       <img class="carousel-slide" src="/assets/images/projects/opamp/M8-Sizing.png" alt="M8 sizing">
       <img class="carousel-slide" src="/assets/images/projects/opamp/Sizing-of-M1-4-and-M8.png" alt="M1–M4 and M8 sizing">
       <img class="carousel-slide" src="/assets/images/projects/opamp/M12_M34_Sizing.png" alt="M12 and M3/M4 sizing">
-      <img class="carousel-slide" src="/assets/images/projects/opamp/Final_Circuit.png" alt="Final op-amp circuit">
+      <img class="carousel-slide" src="/assets/images/projects/opamp/Main_1.png" alt="Final op-amp circuit">
     </div>
     <button class="carousel-btn prev" data-prev aria-label="Previous">‹</button>
     <button class="carousel-btn next" data-next aria-label="Next">›</button>
