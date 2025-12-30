@@ -143,12 +143,42 @@ classes: wide
        Put your images inside: /assets/images/eca/badhan/
        Example filenames below. Replace/extend with your real filenames.
   -->
-  <div class="gallery">
-    <a class="thumb" href="/assets/images/eca/badhan/1.jpg" data-lightbox="eca"><img src="/assets/images/eca/badhan/1.jpg" alt="BADHAN activity 1"></a>
-    <a class="thumb" href="/assets/images/eca/badhan/2.jpg" data-lightbox="eca"><img src="/assets/images/eca/badhan/2.jpg" alt="BADHAN activity 2"></a>
-    <a class="thumb" href="/assets/images/eca/badhan/3.jpg" data-lightbox="eca"><img src="/assets/images/eca/badhan/3.jpg" alt="BADHAN activity 3"></a>
-    <a class="thumb" href="/assets/images/eca/badhan/4.jpg" data-lightbox="eca"><img src="/assets/images/eca/badhan/4.jpg" alt="BADHAN activity 4"></a>
+ <div class="media-carousel" data-gallery="eca-badhan">
+
+  <div class="carousel">
+    <div class="carousel-track">
+
+      <!-- Slide 1 -->
+      <div class="carousel-slide is-active">
+        <img src="/assets/images/eca/badhan/1.jpg"
+             alt="BADHAN activity 1"
+             data-lightbox-src="/assets/images/eca/badhan/1.jpg">
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-slide">
+        <img src="/assets/images/eca/badhan/2.jpg"
+             alt="BADHAN activity 2"
+             data-lightbox-src="/assets/images/eca/badhan/2.jpg">
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-slide">
+        <img src="/assets/images/eca/badhan/3.jpg"
+             alt="BADHAN activity 3"
+             data-lightbox-src="/assets/images/eca/badhan/3.jpg">
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-btn prev">‹</button>
+    <button class="carousel-btn next">›</button>
+    <div class="carousel-dots"></div>
   </div>
+
+</div>
+
 
   <p class="muted" style="margin:12px 0 0 0;">
     Add more photos by copying the same <code>&lt;a class="thumb" ...&gt;</code> line and updating the filename.
