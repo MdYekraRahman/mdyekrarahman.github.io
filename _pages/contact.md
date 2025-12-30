@@ -170,7 +170,7 @@ classes: wide
   <div class="center">
     <h2 class="big-title underline">GET IN TOUCH</h2>
     <p class="muted">
-      Academic collaboration, research discussion, industry opportunities, or general inquiries — feel free to reach out.
+      For academic collaboration, research discussion, industry opportunities, or general inquiries, feel free to reach out.
     </p>
 
     <div class="social-row">
