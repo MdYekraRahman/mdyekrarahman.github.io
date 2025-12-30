@@ -9,190 +9,225 @@ classes: wide
 <div class="wrap" markdown="1">
 
 <style>
-/* ===== Layout ===== */
-.page-grid{
-  display:grid;
-  grid-template-columns:260px 1fr;
-  gap:28px;
-  align-items:start;
+/* =========================
+   GET IN TOUCH
+========================== */
+.section--soft{
+  background: linear-gradient(180deg, rgba(243,244,246,.7), rgba(255,255,255,1));
+  border-radius: 18px;
+  padding: 36px 18px;
+  margin-bottom: 32px;
 }
-@media(max-width:900px){
-  .page-grid{grid-template-columns:1fr;}
+.center{text-align:center;}
+.big-title{
+  font-size:2rem;
+  font-weight:800;
+  margin-bottom:8px;
+}
+.underline{
+  display:inline-block;
+  border-bottom:4px solid #2563eb;
+  padding-bottom:6px;
 }
 
-/* ===== Author card ===== */
-.author-card{
-  position:sticky;
-  top:90px;
+/* =========================
+   SOCIAL ICON ROW
+========================== */
+.social-row{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:16px;
+  margin-top:24px;
+}
+.social{
+  width:54px;
+  height:54px;
+  border-radius:50%;
   border:1px solid #e5e7eb;
-  border-radius:14px;
-  padding:16px;
-  background:#fff;
-}
-@media(max-width:900px){
-  .author-card{position:static;}
-}
-.author-avatar{
-  width:110px;height:110px;border-radius:999px;
-  object-fit:cover;display:block;margin:0 auto 10px;
-}
-.author-name{text-align:center;font-weight:800;margin:0;}
-.author-bio{text-align:center;color:#6b7280;margin:6px 0 12px;font-size:.95rem;}
-.author-links{list-style:none;padding:0;margin:0;}
-.author-links li{margin:8px 0;}
-.author-links a{
-  display:inline-flex;
-  gap:8px;
+  display:flex;
   align-items:center;
-  text-decoration:none;
+  justify-content:center;
+  font-size:1.4rem;
+  color:#111827;
+  background:#fff;
+  transition:all .25s ease;
+}
+.social:hover{
+  transform:translateY(-3px);
+  background:#2563eb;
+  color:#fff;
+  border-color:#2563eb;
 }
 
-/* ===== Content cards ===== */
-.section-card{
+/* =========================
+   CONTACT GRID
+========================== */
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+}
+@media(max-width:900px){
+  .contact-grid{grid-template-columns:1fr;}
+}
+
+.card{
   border:1px solid #e5e7eb;
   border-radius:16px;
-  padding:18px;
+  padding:20px;
   background:#fff;
-  margin-bottom:18px;
 }
-.section-title{
+.card h3{
+  margin-top:0;
   display:flex;
+  gap:10px;
   align-items:center;
-  gap:10px;
-  margin:0 0 10px 0;
-}
-.section-title i{opacity:.9;}
-
-.contact-list{
-  list-style:none;
-  padding:0;
-  margin:0;
-}
-.contact-list li{
-  margin:10px 0;
-  display:flex;
-  gap:10px;
-  align-items:flex-start;
-}
-.contact-list i{
-  margin-top:3px;
-  color:#2563eb;
 }
 
-.muted{color:#6b7280;}
-.signature{
-  margin-top:20px;
-  line-height:1.5;
+/* =========================
+   CONTACT FORM
+========================== */
+.form-group{margin-bottom:14px;}
+.form-group label{
+  display:block;
+  font-weight:600;
+  margin-bottom:4px;
 }
+.form-group input,
+.form-group textarea{
+  width:100%;
+  padding:10px 12px;
+  border:1px solid #d1d5db;
+  border-radius:10px;
+  font-size:0.95rem;
+}
+.form-group textarea{min-height:120px;}
+.form-note{
+  font-size:.9rem;
+  color:#6b7280;
+  margin-top:8px;
+}
+.btn{
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:999px;
+  border:none;
+  background:#2563eb;
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+}
+.btn:hover{background:#1e40af;}
 </style>
 
-<div class="page-grid">
+<!-- =========================
+     GET IN TOUCH
+========================== -->
+<section class="section--soft">
+  <div class="center">
+    <h2 class="big-title underline">GET IN TOUCH</h2>
+    <p class="muted">
+      Academic collaboration, research discussion, industry opportunities,
+      or general inquiries — feel free to reach out.
+    </p>
 
-<!-- LEFT: Author profile -->
-<aside class="author-card">
-  <img class="author-avatar" src="/assets/images/profile.JPG" alt="Md Yekra Rahman">
-  <p class="author-name">Md Yekra Rahman</p>
-  <p class="author-bio">Graduate Teaching & Research Assistant<br>University of Missouri–Columbia</p>
-
-  <ul class="author-links">
-    <li>
-      <a href="mailto:mrvpx@missouri.edu">
-        <i class="fas fa-envelope"></i>Email
+    <div class="social-row">
+      <a class="social" href="mailto:mrvpx@missouri.edu" aria-label="Email">
+        <i class="fas fa-envelope"></i>
       </a>
-    </li>
-    <li>
-      <a href="https://github.com/MdYekraRahman" target="_blank" rel="noopener">
-        <i class="fab fa-github"></i>GitHub
+
+      <a class="social" href="https://github.com/MdYekraRahman"
+         target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="fab fa-github"></i>
       </a>
-    </li>
-    <li>
-      <a href="https://www.linkedin.com/in/mdyekrarahman/" target="_blank" rel="noopener">
-        <i class="fab fa-linkedin"></i>LinkedIn
+
+      <a class="social" href="https://www.linkedin.com/in/mdyekrarahman/"
+         target="_blank" rel="noopener" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
       </a>
-    </li>
-  </ul>
-</aside>
 
-<!-- RIGHT: Contact content -->
-<main>
+      <a class="social" href="https://www.facebook.com/yekra184/"
+         target="_blank" rel="noopener" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
 
-<div class="section-card">
-  <h2 class="section-title">
-    <i class="fas fa-address-card"></i> Get in Touch
-  </h2>
+      <a class="social" href="https://x.com/mdyekrarahman"
+         target="_blank" rel="noopener" aria-label="X (Twitter)">
+        <i class="fab fa-x-twitter"></i>
+      </a>
 
-  <p class="muted">
-    I am always open to academic collaboration, research discussion,
-    internship opportunities, and professional networking.
-    The best way to reach me is via email.
-  </p>
-</div>
+      <a class="social" href="https://www.reddit.com/user/tadpolemyxini/"
+         target="_blank" rel="noopener" aria-label="Reddit">
+        <i class="fab fa-reddit-alien"></i>
+      </a>
+    </div>
+  </div>
+</section>
 
-<div class="section-card">
-  <h3 class="section-title">
-    <i class="fas fa-envelope-open-text"></i> Contact Information
-  </h3>
+<!-- =========================
+     CONTACT DETAILS + FORM
+========================== -->
+<div class="contact-grid">
 
-  <ul class="contact-list">
-    <li>
-      <i class="fas fa-envelope"></i>
-      <div>
-        <strong>Email:</strong><br>
-        <a href="mailto:mrvpx@missouri.edu">mrvpx@missouri.edu</a>
+  <!-- CONTACT INFO -->
+  <div class="card">
+    <h3><i class="fas fa-building-columns"></i> Affiliation</h3>
+
+    <p>
+      <strong>Md Yekra Rahman</strong><br>
+      Graduate Teaching & Research Assistant<br>
+      Analog/Mixed Signal VLSI and Devices Laboratory (AVDL)
+    </p>
+
+    <p class="muted">
+      Naka 249<br>
+      411 S 6th St<br>
+      Columbia, MO 65201<br>
+      United States
+    </p>
+
+    <h3><i class="fas fa-map-location-dot"></i> Location</h3>
+
+    <!-- Google Map Embed -->
+    <iframe
+      src="https://www.google.com/maps?q=411%20S%206th%20St,%20Columbia,%20MO%2065201&output=embed"
+      width="100%" height="240"
+      style="border:0;border-radius:12px;"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <!-- CONTACT FORM -->
+  <div class="card">
+    <h3><i class="fas fa-paper-plane"></i> Send a Message</h3>
+
+    <form onsubmit="event.preventDefault(); alert('Thank you! Please email me directly at mrvpx@missouri.edu');">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="Enter your name">
       </div>
-    </li>
 
-    <li>
-      <i class="fab fa-github"></i>
-      <div>
-        <strong>GitHub:</strong><br>
-        <a href="https://github.com/MdYekraRahman" target="_blank" rel="noopener">
-          github.com/MdYekraRahman
-        </a>
+      <div class="form-group">
+        <label>Your Email</label>
+        <input type="email" placeholder="Enter your email">
       </div>
-    </li>
 
-    <li>
-      <i class="fab fa-linkedin"></i>
-      <div>
-        <strong>LinkedIn:</strong><br>
-        <a href="https://www.linkedin.com/in/mdyekrarahman/" target="_blank" rel="noopener">
-          linkedin.com/in/mdyekrarahman
-        </a>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea placeholder="Write your message here"></textarea>
       </div>
-    </li>
-  </ul>
-</div>
 
-<div class="section-card">
-  <h3 class="section-title">
-    <i class="fas fa-building-columns"></i> Affiliation & Address
-  </h3>
+      <button class="btn" type="submit">Send Message</button>
 
-  <p>
-    <strong>Analog/Mixed Signal VLSI and Devices Laboratory (AVDL)</strong><br>
-    Department of Electrical Engineering and Computer Science<br>
-    University of Missouri–Columbia
-  </p>
-
-  <p class="muted">
-    Naka 249<br>
-    411 S 6th St<br>
-    Columbia, MO 65201<br>
-    United States
-  </p>
-</div>
-
-<div class="signature">
-  <p>
-    Best regards,<br>
-    <strong>Md Yekra Rahman</strong><br>
-    Graduate Teaching & Research Assistant<br>
-    Analog/Mixed Signal VLSI and Devices Laboratory (AVDL)
-  </p>
-</div>
-
-</main>
+      <p class="form-note">
+        This site uses GitHub Pages (no backend).  
+        Clicking send will prompt you to email me directly.
+      </p>
+    </form>
+  </div>
 
 </div>
+
 </div>
