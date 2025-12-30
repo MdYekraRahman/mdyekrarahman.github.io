@@ -173,8 +173,32 @@ classes: wide
   <div>
     <p class="skill-title">Altium Designer</p>
     <p class="skill-desc">
-      4-layer PCB design, custom footprints, HV layout rules,
+      4-layer PCB design, custom footprints, layout rules,
       EMI-aware routing, and manufacturing-ready outputs.
+    </p>
+  </div>
+</div>
+
+<div class="skill-row">
+  <!-- Logo -->
+  <div class="skill-logo">
+    <img src="/assets/images/logos/KiCad-Logo.png" alt="KiCad">
+  </div>
+
+  <!-- Skill level -->
+  <div class="skill-barwrap">
+    <div class="skill-bar">
+      <div class="skill-fill" style="width:80%;"></div>
+    </div>
+  </div>
+
+  <!-- Description -->
+  <div class="skill-meta">
+    <p class="title">KiCad EDA</p>
+    <p class="desc">
+      Complete 4-layer PCB workflow, high-voltage design
+      considerations, custom symbol and footprint library management; layer stackup
+      configuration and power-plane generation and fabrication output generation (Gerbers, drill files, BOM).
     </p>
   </div>
 </div>
