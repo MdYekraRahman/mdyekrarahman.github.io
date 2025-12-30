@@ -147,6 +147,7 @@ classes: wide
     <a class="thumb" href="/assets/images/eca/badhan/1.jpg" data-lightbox="eca"><img src="/assets/images/eca/badhan/1.jpg" alt="BADHAN activity 1"></a>
     <a class="thumb" href="/assets/images/eca/badhan/2.jpg" data-lightbox="eca"><img src="/assets/images/eca/badhan/2.jpg" alt="BADHAN activity 2"></a>
     <a class="thumb" href="/assets/images/eca/badhan/3.jpg" data-lightbox="eca"><img src="/assets/images/eca/badhan/3.jpg" alt="BADHAN activity 3"></a>
+    <a class="thumb" href="/assets/images/eca/badhan/3.jpg" data-lightbox="eca"><img src="/assets/images/eca/badhan/4.jpg" alt="BADHAN activity 4"></a>
   </div>
 </div>
 
@@ -177,10 +178,10 @@ classes: wide
        Put your images inside: /assets/images/eca/others/
   -->
   <div class="gallery">
-    <a class="thumb" href="/assets/images/eca/others/1.jpg" data-lightbox="eca"><img src="/assets/images/eca/others/1.jpg" alt="Activity 1"></a>
-    <a class="thumb" href="/assets/images/eca/others/2.jpg" data-lightbox="eca"><img src="/assets/images/eca/others/2.jpg" alt="Activity 2"></a>
-    <a class="thumb" href="/assets/images/eca/others/3.jpg" data-lightbox="eca"><img src="/assets/images/eca/others/3.jpg" alt="Activity 3"></a>
-    <a class="thumb" href="/assets/images/eca/others/4.jpg" data-lightbox="eca"><img src="/assets/images/eca/others/4.jpg" alt="Activity 4"></a>
+    <a class="thumb" href="/assets/images/eca/others/1.jpg" data-lightbox="eca"><img src="/assets/images/eca/others/1O.jpg" alt="Activity 1"></a>
+    <a class="thumb" href="/assets/images/eca/others/2.jpg" data-lightbox="eca"><img src="/assets/images/eca/others/2O.jpg" alt="Activity 2"></a>
+    <a class="thumb" href="/assets/images/eca/others/3.jpg" data-lightbox="eca"><img src="/assets/images/eca/others/3O.jpg" alt="Activity 3"></a>
+    <a class="thumb" href="/assets/images/eca/others/4.jpg" data-lightbox="eca"><img src="/assets/images/eca/others/4O.jpg" alt="Activity 4"></a>
   </div>
 </div>
 
