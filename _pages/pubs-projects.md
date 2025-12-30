@@ -300,3 +300,80 @@ classes: wide
 
 </div>
 </div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const carousels = document.querySelectorAll('[data-carousel]');
+
+  carousels.forEach(carousel => {
+    const track = carousel.querySelector('[data-track]');
+    const slides = Array.from(track.children);
+    const nextButton = carousel.querySelector('[data-next]');
+    const prevButton = carousel.querySelector('[data-prev]');
+    const dotsNav = carousel.querySelector('[data-dots]');
+
+    // 1. Generate Dots automatically based on number of slides
+    slides.forEach((slide, index) => {
+      const dot = document.createElement('button');
+      dot.classList.add('carousel-dot');
+      if (slide.classList.contains('is-active')) {
+        dot.classList.add('is-active');
+      }
+      dotsNav.appendChild(dot);
+      
+      // Add click listener to dot
+      dot.addEventListener('click', () => {
+        const currentSlide = track.querySelector('.carousel-slide.is-active');
+        const currentDot = dotsNav.querySelector('.carousel-dot.is-active');
+        updateCarousel(currentSlide, slide, currentDot, dot);
+      });
+    });
+
+    const dots = Array.from(dotsNav.children);
+
+    // 2. Function to update classes
+    const updateCarousel = (currentSlide, targetSlide, currentDot, targetDot) => {
+      currentSlide.classList.remove('is-active');
+      targetSlide.classList.add('is-active');
+      
+      if(currentDot && targetDot) {
+        currentDot.classList.remove('is-active');
+        targetDot.classList.add('is-active');
+      }
+    };
+
+    // 3. Next Button Logic
+    nextButton.addEventListener('click', () => {
+      const currentSlide = track.querySelector('.carousel-slide.is-active');
+      const currentDot = dotsNav.querySelector('.carousel-dot.is-active');
+      let nextSlide = currentSlide.nextElementSibling;
+      let nextDot = currentDot ? currentDot.nextElementSibling : null;
+
+      // Loop back to start if at the end
+      if (!nextSlide) {
+        nextSlide = slides[0];
+        nextDot = dots[0];
+      }
+
+      updateCarousel(currentSlide, nextSlide, currentDot, nextDot);
+    });
+
+    // 4. Previous Button Logic
+    prevButton.addEventListener('click', () => {
+      const currentSlide = track.querySelector('.carousel-slide.is-active');
+      const currentDot = dotsNav.querySelector('.carousel-dot.is-active');
+      let prevSlide = currentSlide.previousElementSibling;
+      let prevDot = currentDot ? currentDot.previousElementSibling : null;
+
+      // Loop to end if at the start
+      if (!prevSlide) {
+        prevSlide = slides[slides.length - 1];
+        prevDot = dots[dots.length - 1];
+      }
+
+      updateCarousel(currentSlide, prevSlide, currentDot, prevDot);
+    });
+  });
+});
+</script>
