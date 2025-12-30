@@ -505,6 +505,7 @@ p.muted {
 .carousel {
   position: relative;
   width: 100%;
+  height:100%;
   max-width: 600px; /* Adjust as needed */
   margin: 0 auto;
   overflow: hidden;
@@ -518,18 +519,20 @@ p.muted {
 .carousel-slide {
   display: none; /* Hide all slides by default */
   width: 100%;
+  height:100%;
   border-radius: 8px; /* Optional styling */
+  object-fit: contain;
 }
 
 /* Only show the slide that has the 'is-active' class */
 .carousel-slide.is-active {
   display: block;
-  animation: fadeEffect 0.5s; /* Optional smooth fade */
+  animation: fadeEffect 1s; /* Optional smooth fade */
 }
 
 /* Optional: Fade animation */
 @keyframes fadeEffect {
-  from {opacity: 0.4;} 
+  from {opacity: 0.1;} 
   to {opacity: 1;}
 }
 
