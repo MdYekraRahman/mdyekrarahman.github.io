@@ -525,7 +525,9 @@ classes: wide
 
   <div class="proj-media">
     <div class="proj-placeholder">
-      <img src="/assets/images/projects/tcad/wip.jpg" alt="TCAD to circuit workflow (work in progress)">
+      <!-- =========================================================
+    <img src="/assets/images/projects/tcad/wip.jpg" alt="TCAD to circuit workflow (work in progress)"> 
+========================================================= -->
       <div class="proj-overlay">
         <span>Work in Progress</span>
         <small>Model extraction & validation ongoing</small>
