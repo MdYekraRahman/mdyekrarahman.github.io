@@ -55,7 +55,7 @@ classes: wide
   }
   .thumb img{
     width:100%;
-    height:210px;
+    height:100%;
     object-fit:cover;
     display:block;
     transition: transform .25s ease;
