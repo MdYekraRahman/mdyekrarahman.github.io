@@ -194,11 +194,9 @@ classes: wide
 
   <!-- Description -->
   <div class="skill-meta">
-    <p class="title">KiCad EDA</p>
-    <p class="desc">
-      Complete 4-layer PCB workflow, high-voltage design
-      considerations, custom symbol and footprint library management; layer stackup
-      configuration and power-plane generation and fabrication output generation (Gerbers, drill files, BOM).
+    <p class="skill-title">KiCAD</p>
+    <p class="skill-desc">
+      Complete 4-layer PCB workflow with HV design considerationsa and from custom symbol and footprint library management to fabrication output generation.
     </p>
   </div>
 </div>
