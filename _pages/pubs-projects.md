@@ -173,23 +173,27 @@ classes: wide
     </h3>
 
     <p class="proj-sub">
-      gm/ID-based sizing, small-signal analysis, and full
-      performance verification using dedicated Cadence testbenches.
+      Single-supply two-stage operational amplifier designed to meet
+      stringent gain, bandwidth, stability, and power constraints
+      using analytical small-signal modeling and transistor-level design.
     </p>
 
     <ul class="proj-bullets">
-      <li>Designed a two-stage CMOS operational amplifier under single-supply constraints</li>
-      <li>Used gm/ID methodology to size devices for gain, GBW, and phase-margin targets</li>
-      <li>Built testbenches for open-loop gain, GBW/PM, slew rate, output swing, CMRR, and power</li>
-      <li>Verified saturation operation across bias corners and load conditions</li>
+      <li>Designed a classical two-stage Miller-compensated CMOS operational amplifier using 0.13 µm CMOS technology</li>
+      <li>Performed detailed small-signal analysis to determine transconductance, output resistance, gain, and frequency response</li>
+      <li>Achieved ≥ 70 dB differential gain, ≥ 5 MHz unity-gain bandwidth, and ≥ 60° phase margin under a 2 pF load</li>
+      <li>Sized devices to satisfy ≥ 4 V/µs average slew rate and ≥ 1.2 V output swing using a single 1.5 V supply</li>
+      <li>Met strict power and topology constraints including ≤ 0.1 mW total power dissipation and only one ideal current source</li>
+      <li>Verified open-loop gain, phase margin, slew rate, output swing, and CMRR using Cadence ADE simulations</li>
     </ul>
 
     <div class="proj-tags">
       <span class="tag">Analog IC</span>
-      <span class="tag">gm/ID</span>
+      <span class="tag">CMOS Op-Amp</span>
       <span class="tag">IBM 130nm</span>
+      <span class="tag">Miller Compensation</span>
+      <span class="tag">Small-Signal Analysis</span>
       <span class="tag">Cadence</span>
-      <span class="tag">Testbenches</span>
     </div>
   </div>
 
@@ -210,6 +214,7 @@ classes: wide
   </div>
 
 </div>
+
 
 <!-- =========================================================
      PROJECT 2 — INTEGRATED BUCK CONVERTER
