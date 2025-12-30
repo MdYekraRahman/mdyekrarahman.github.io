@@ -147,13 +147,7 @@ classes: wide
     <a class="thumb" href="/assets/images/eca/badhan/1.jpg" data-lightbox="eca"><img src="/assets/images/eca/badhan/1.jpg" alt="BADHAN activity 1"></a>
     <a class="thumb" href="/assets/images/eca/badhan/2.jpg" data-lightbox="eca"><img src="/assets/images/eca/badhan/2.jpg" alt="BADHAN activity 2"></a>
     <a class="thumb" href="/assets/images/eca/badhan/3.jpg" data-lightbox="eca"><img src="/assets/images/eca/badhan/3.jpg" alt="BADHAN activity 3"></a>
-    <a class="thumb" href="/assets/images/eca/badhan/4.jpg" data-lightbox="eca"><img src="/assets/images/eca/badhan/4.jpg" alt="BADHAN activity 4"></a>
   </div>
-
-
-  <p class="muted" style="margin:12px 0 0 0;">
-    Add more photos by copying the same <code>&lt;a class="thumb" ...&gt;</code> line and updating the filename.
-  </p>
 </div>
 
 <div class="eca-card" markdown="1">
@@ -166,15 +160,11 @@ classes: wide
        Put your images inside: /assets/images/eca/football/
   -->
   <div class="gallery">
-    <a class="thumb" href="/assets/images/eca/football/1.jpg" data-lightbox="eca"><img src="/assets/images/eca/football/1.jpg" alt="Inter-hall football 1"></a>
-    <a class="thumb" href="/assets/images/eca/football/2.jpg" data-lightbox="eca"><img src="/assets/images/eca/football/2.jpg" alt="Inter-hall football 2"></a>
-    <a class="thumb" href="/assets/images/eca/football/3.jpg" data-lightbox="eca"><img src="/assets/images/eca/football/3.jpg" alt="Inter-hall football 3"></a>
-    <a class="thumb" href="/assets/images/eca/football/4.jpg" data-lightbox="eca"><img src="/assets/images/eca/football/4.jpg" alt="Inter-hall football 4"></a>
+    <a class="thumb" href="/assets/images/eca/football/1.jpg" data-lightbox="eca"><img src="/assets/images/eca/football/1F.jpg" alt="Inter-hall football 1"></a>
+    <a class="thumb" href="/assets/images/eca/football/2.jpg" data-lightbox="eca"><img src="/assets/images/eca/football/2F.jpg" alt="Inter-hall football 2"></a>
+    <a class="thumb" href="/assets/images/eca/football/3.jpg" data-lightbox="eca"><img src="/assets/images/eca/football/3F.jpg" alt="Inter-hall football 3"></a>
+    <a class="thumb" href="/assets/images/eca/football/4.jpg" data-lightbox="eca"><img src="/assets/images/eca/football/4F.jpg" alt="Inter-hall football 4"></a>
   </div>
-
-  <p class="muted" style="margin:12px 0 0 0;">
-    If you have fewer photos, delete extra tiles. If you have more, add more tiles.
-  </p>
 </div>
 
 <div class="eca-card" markdown="1">
