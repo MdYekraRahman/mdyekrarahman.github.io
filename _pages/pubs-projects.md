@@ -536,6 +536,64 @@ classes: wide
 
 </div>
 
+<!-- =========================================================
+     PROJECT — PHASE-LOCKED LOOP (PLL)
+========================================================= -->
+<div class="proj-card">
+
+  <div class="proj-text">
+    <h3 class="proj-title">
+      Phase-Locked Loop (PLL) — Transistor-Level Design
+    </h3>
+
+    <p class="proj-sub">
+      Fully custom phase-locked loop designed from scratch in Cadence Virtuoso,
+      including PFD, charge pump, current-starved VCO, and frequency divider,
+      validated through transient and steady-state simulations.
+    </p>
+
+    <ul class="proj-bullets">
+      <li>Designed a complete PLL architecture using Cadence analog libraries with full transistor-level implementation</li>
+      <li>Implemented a Phase Frequency Detector (PFD) with reset logic to eliminate dead-zone effects</li>
+      <li>Designed a low-leakage charge pump ensuring matched up/down currents for minimal static phase error</li>
+      <li>Developed a current-starved VCO with controllable oscillation frequency via control voltage tuning</li>
+      <li>Integrated a frequency divider to enable frequency synthesis and feedback stabilization</li>
+      <li>Validated lock acquisition, steady-state phase tracking, and frequency stability through transient simulations</li>
+      <li>Analyzed loop behavior including tuning range, lock time, and control-voltage dynamics</li>
+    </ul>
+
+    <div class="proj-tags">
+      <span class="tag">Cadence Virtuoso</span>
+      <span class="tag">PLL</span>
+      <span class="tag">PFD</span>
+      <span class="tag">Charge Pump</span>
+      <span class="tag">VCO</span>
+      <span class="tag">Frequency Divider</span>
+      <span class="tag">Analog IC Design</span>
+      <span class="tag">Transient Simulation</span>
+    </div>
+  </div>
+
+  <div class="proj-media">
+    <div class="carousel" data-carousel>
+      <div class="carousel-track" data-track>
+        <img class="carousel-slide is-active" src="/assets/images/projects/pll/PLL0.png" alt="PLL top-level architecture">
+        <img class="carousel-slide" src="/assets/images/projects/pll/PLL1.png" alt="Phase Frequency Detector (PFD) schematic">
+        <img class="carousel-slide" src="/assets/images/projects/pll/PLL2.png" alt="Charge pump circuit implementation">
+        <img class="carousel-slide" src="/assets/images/projects/pll/PLL3.png" alt="Current-starved VCO schematic">
+        <img class="carousel-slide" src="/assets/images/projects/pll/PLL4.png" alt="Frequency divider block">
+        <img class="carousel-slide" src="/assets/images/projects/pll/PLL5.png" alt="PLL transient response and lock behavior">
+        <img class="carousel-slide" src="/assets/images/projects/pll/PLL6.png" alt="Control voltage and VCO frequency tuning">
+        <img class="carousel-slide" src="/assets/images/projects/pll/PLL7.png" alt="Locked steady-state waveform verification">
+      </div>
+
+      <button class="carousel-btn prev" data-prev aria-label="Previous">‹</button>
+      <button class="carousel-btn next" data-next aria-label="Next">›</button>
+      <div class="carousel-dots" data-dots></div>
+    </div>
+  </div>
+
+</div>
 
 
 
