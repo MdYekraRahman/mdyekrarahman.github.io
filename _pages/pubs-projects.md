@@ -48,26 +48,47 @@ classes: wide
   .author-links a{ text-decoration: none; display: inline-flex; gap: 8px; align-items: center; }
 
   /* =========================================================
-     CAROUSEL (page-local, no dependency on global CSS)
+     PROJECT CARD: force equal height columns so media follows text
      ========================================================= */
-  .proj-media{ width: 100%; }
+  .proj-card{
+    display: grid;
+    grid-template-columns: 1fr minmax(320px, 520px);
+    gap: 22px;
+    align-items: stretch; /* KEY: both columns same height */
+  }
+  @media (max-width: 900px){
+    .proj-card{ grid-template-columns: 1fr; }
+  }
+
+  /* =========================================================
+     CAROUSEL (page-local, no dependency on global CSS)
+     Goal: height follows text column height + non-distorted images
+     ========================================================= */
+  .proj-media{
+    width: 100%;
+    height: 100%;
+    display: flex;        /* allow child to stretch */
+  }
 
   .carousel{
     position: relative;
     width: 100%;
+    height: 100%;         /* KEY: fill media column */
     border-radius: 14px;
     overflow: hidden;
     border: 1px solid #e5e7eb;
     background: #fff;
+    display: flex;        /* allow track to stretch */
+    flex-direction: column;
   }
 
-  /* Flexible “photo box” that doesn’t distort images */
+  /* Flexible “photo box” that grows with the card height */
   .carousel-track{
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 10;     /* change if you want taller/shorter */
-    min-height: 260px;         /* keeps it visible even when images load late */
-    max-height: 800px;
+    flex: 1;              /* KEY: take remaining height */
+    min-height: 260px;    /* don’t collapse if text is short */
+    max-height: none;     /* remove hard cap */
   }
 
   .carousel-slide{
@@ -75,41 +96,47 @@ classes: wide
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;       /* IMPORTANT: no distortion */
+    object-fit: contain;  /* IMPORTANT: no distortion */
+    object-position: center;
     display: none;
     background: #fff;
   }
-  .carousel-slide.is-active{
-    display: block;
-  }
+  .carousel-slide.is-active{ display: block; }
 
+  /* Visible buttons (not dots) */
   .carousel-btn{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 2;
-    border: 1px solid #e5e7eb;
-    background: rgba(255,255,255,0.92);
-    width: 44px;
-    height: 44px;
+    z-index: 50; /* stronger */
+    width: 48px;
+    height: 48px;
     border-radius: 999px;
-    cursor: pointer;
-    font-size: 26px;
+    border: 1px solid rgba(0,0,0,0.15);
+    background: rgba(255,255,255,0.98);
+    color: #111827;
+    font-size: 34px;
+    font-weight: 900;
     line-height: 1;
     display: grid;
     place-items: center;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+    opacity: 1;
   }
-  .carousel-btn:hover{ background: rgba(255,255,255,1); }
-  .carousel-btn.prev{ left: 10px; }
-  .carousel-btn.next{ right: 10px; }
+  .carousel-btn.prev{ left: 12px; }
+  .carousel-btn.next{ right: 12px; }
+  .carousel-btn:hover{
+    transform: translateY(-50%) scale(1.05);
+    background: #ffffff;
+  }
 
   .carousel-dots{
     position: absolute;
     left: 0;
     right: 0;
     bottom: 10px;
-    z-index: 2;
+    z-index: 40;
     display: flex;
     justify-content: center;
     gap: 8px;
@@ -214,7 +241,6 @@ classes: wide
   </div>
 
 </div>
-
 
 <!-- =========================================================
      PROJECT 2 — INTEGRATED BUCK CONVERTER
