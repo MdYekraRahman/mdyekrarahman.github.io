@@ -533,6 +533,66 @@ classes: wide
 
 
 <!-- =========================================================
+     PROJECT — HIGH-VOLTAGE BUCK CONVERTER PCB DESIGN (KiCad)
+========================================================= -->
+<div class="proj-card">
+
+  <div class="proj-text">
+    <h3 class="proj-title">
+      High-Voltage Buck Converter PCB Design (KiCad)
+    </h3>
+
+    <p class="proj-sub">
+      Complete schematic-to-layout workflow for a high-voltage synchronous
+      buck converter, including custom footprint design, 4-layer PCB layout,
+      and EMI-aware power routing using KiCad.
+    </p>
+
+    <ul class="proj-bullets">
+      <li>Designed a synchronous half-bridge buck converter schematic in KiCad based on analytical CCM design calculations</li>
+      <li>Selected and integrated 650 V SiC MOSFETs, high-side gate driver, bootstrap network, and passive components</li>
+      <li>Manually created a custom PCB footprint for a non-standard SiC MOSFET package using datasheet dimensions</li>
+      <li>Developed a complete 4-layer PCB stackup: Front (signals & switching), Inner GND, Inner POWER, and Back layer</li>
+      <li>Applied EMI-aware layout practices to minimize high di/dt loop area and gate-drive parasitics</li>
+      <li>Ensured tight gate-loop routing with individual gate resistors and close driver–MOSFET placement</li>
+      <li>Implemented solid ground and power planes to reduce impedance, noise coupling, and voltage drop</li>
+      <li>Validated mechanical clearances, footprint accuracy, and assembly feasibility using 3D PCB rendering</li>
+    </ul>
+
+    <div class="proj-tags">
+      <span class="tag">KiCad</span>
+      <span class="tag">PCB Design</span>
+      <span class="tag">4-Layer Board</span>
+      <span class="tag">High Voltage</span>
+      <span class="tag">SiC MOSFET</span>
+      <span class="tag">Gate Driver</span>
+      <span class="tag">EMI-Aware Layout</span>
+      <span class="tag">3D PCB</span>
+    </div>
+  </div>
+
+  <div class="proj-media">
+    <div class="carousel" data-carousel>
+      <div class="carousel-track" data-track>
+        <img class="carousel-slide is-active" src="/assets/images/projects/kikad/Schematic_v2.png" alt="KiCad schematic of synchronous buck converter">
+        <img class="carousel-slide" src="/assets/images/projects/kikad/Front_Layer.png" alt="Front copper layer showing switching and gate-drive routing">
+        <img class="carousel-slide" src="/assets/images/projects/kikad/Inner_Layer_GND.png" alt="Inner ground plane for low-impedance return paths">
+        <img class="carousel-slide" src="/assets/images/projects/kikad/Inner_Layer_POWER.png" alt="Inner power plane with wide copper pours">
+        <img class="carousel-slide" src="/assets/images/projects/kikad/Back_Layer.png" alt="Back copper layer for auxiliary routing and stitching">
+        <img class="carousel-slide" src="/assets/images/projects/kikad/PCB_3D.png" alt="3D rendered view of the complete PCB assembly">
+      </div>
+
+      <button class="carousel-btn prev" data-prev aria-label="Previous">‹</button>
+      <button class="carousel-btn next" data-next aria-label="Next">›</button>
+      <div class="carousel-dots" data-dots></div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<!-- =========================================================
      PROJECT 3 — TCAD → SPICE → CIRCUIT (WORK IN PROGRESS)
 ========================================================= -->
 <div class="proj-card">
