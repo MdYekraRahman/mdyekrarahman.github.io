@@ -1,21 +1,24 @@
 years:
   - year: 2026
     items:
-      - date: "2026"
-        text: "Actively seeking internship opportunities in Analog / Mixed-Signal and Power IC Design."
+      - date: "Sep 2026"
+        text: "Accepted a returning internship offer from Texas Instruments for Summer 2027."
 
-  - year: 2025
-    items:
+      - date: "May–Aug 2026"
+        text: "Completed a Summer Internship at Texas Instruments, working on analog and power-management IC design with a focus on charge-pump circuits."
+
       - date: "Aug 2025"
         text: "Started PhD in Electrical Engineering at the University of Missouri–Columbia; serving as Graduate Research and Teaching Assistant."
 
   - year: 2024
     items:
       - date: "Dec 2024"
-        text: "Published first first authored IEEE ICECE 2024 conference paper on lead-free mixed halide double perovskite solar cells from undergraduate thesis."
+        text: "Published first first-authored IEEE ICECE 2024 conference paper on lead-free mixed halide double perovskite solar cells from undergraduate thesis."
         link: "https://doi.org/10.1109/ICECE64886.2024.11024609"
+
       - date: "Aug 2024"
         text: "Started working in TxACE (Texas Analog Center of Excellence) at UT Dallas and served as Graduate Teaching Assistant."
+
       - date: "Aug 2024"
         text: "Took leave for graduate studies from Eastern University."
 
