@@ -1,3 +1,4 @@
+```html
 ---
 layout: default
 permalink: /
@@ -5,7 +6,7 @@ title: "Home"
 ---
 
 <!-- =========================
-     HERO (background image + left photo + centered text)
+     HERO
 ========================== -->
 <section class="hero hero--split">
   <div class="hero__overlay">
@@ -18,19 +19,24 @@ title: "Home"
 
       <!-- RIGHT: Centered Text -->
       <div class="hero__text">
-        <h1 class="hero__title">HI, I'M <span class="hero__name">YEKRA</span> (iq-ra)</h1>
+        <h1 class="hero__title">
+          HI, I'M <span class="hero__name">YEKRA</span> (iq-ra)
+        </h1>
+
         <div class="hero__rule"></div>
 
         <h2 class="hero__subtitle">
-          Designing Robust Analog ICs and Efficient Power Converters
+          Analog IC Design, Power Management, and Emerging Power Devices
         </h2>
       </div>
 
     </div>
   </div>
 </section>
+
+
 <!-- =========================
-     HELLO SECTION (photo + text)
+     HELLO SECTION
 ========================== -->
 <section class="section section--white">
   <div class="wrap center-col">
@@ -38,52 +44,83 @@ title: "Home"
     <h2 class="section__heading">HELLO.</h2>
 
     <p>
-      I am Md Yekra Rahman, a PhD student in Electrical Engineering at the
-      University of Missouri–Columbia (M-I-Z!), specializing in
-      analog and power integrated circuit (IC) design. I am currently
-      actively seeking <strong>Summer 2026 internship opportunities</strong> where I can contribute
-      to the design, verification, and validation of high-performance analog and power ICs.
+      I am <strong>Md Yekra Rahman</strong>, a PhD student in Electrical Engineering at the
+      <strong>University of Missouri–Columbia (M-I-Z!)</strong>, specializing in
+      <strong>analog/mixed-signal and power integrated circuit design</strong>.
+      My work focuses on transistor-level circuit design, power-management ICs,
+      reliability-aware analog systems, and the integration of emerging semiconductor
+      technologies into practical power-conversion architectures.
     </p>
 
     <p>
-      My technical focus spans the complete spectrum of analog/mixed-signal IC design
-      and power management. I have hands-on experience designing and verifying
-      op-amps, LDOs, PLLs, and gate-driver circuits, as well as developing
-      power management IC (PMIC) architectures for both conventional CMOS technologies
-      and emerging wide-bandgap (SiC/GaN/Ga2O3) devices. My design workflow is grounded in
-      <em>Cadence Virtuoso</em> and <em>Spectre</em>.
+      In <strong>Summer 2026</strong>, I completed an internship at
+      <strong>Texas Instruments</strong>, where I worked on
+      <strong>analog power-management IC design with a focus on charge-pump circuits</strong>.
+      I have also accepted a <strong>returning internship offer for Summer 2027</strong>.
+      This industry experience complements my academic work in analog IC design and
+      has strengthened my interest in developing robust, efficient, and
+      manufacturable power-management circuits.
     </p>
 
     <p>
-      Beyond circuit-level design, I have experience across the full IC development flow.
-      This includes device-level TCAD simulation of power MOSFETs, extraction and
-      generation of SPICE-compatible compact models, and integration of these models
-      into Cadence environments to evaluate system-level performance. I have also designed the
-      <em>necessary auxiliary and peripheral circuits</em> to enable reliable operation of newly developed devices
-      within complete PMIC and power-conversion systems.
+      My circuit-design experience includes
+      <strong>op-amps, LDOs, charge pumps, high-frequency DC–DC converters,
+      gate drivers, level shifters, and supporting analog circuits</strong>.
+      I primarily work with <em>Cadence Virtuoso</em> and <em>Spectre</em>,
+      using transistor-level simulation, gm/ID-based design methodologies,
+      PVT analysis, stability analysis, transient verification, and
+      layout-aware design practices.
     </p>
 
     <p>
-      Complementing simulation, I value <em>practical validation and reproducible workflows</em>.
-      My experience extends from layout-aware simulation to PCB-level implementation and
-      laboratory measurement, with an attention to <em>EMI-aware design</em>. As a
-      <em>Graduate Teaching Assistant</em>, I regularly mentor students in CMOS IC design and
-      simulation.
+      My current research also extends beyond conventional circuit design.
+      I am investigating <strong>radiation effects and radiation-hardening techniques
+      for analog integrated circuits</strong>, including single-event transient
+      analysis and reliability-aware circuit evaluation. In parallel, I work on
+      <strong>wide-bandgap semiconductor devices</strong>, particularly
+      <strong>β-Ga₂O₃</strong>, using TCAD simulation and machine-learning-based
+      approaches for device-parameter extraction and inverse modeling.
     </p>
 
+    <p>
+      I am particularly interested in connecting
+      <strong>device, circuit, and system-level design</strong>.
+      My broader experience includes wide-bandgap power devices
+      (<strong>SiC, GaN, and β-Ga₂O₃</strong>), EMI-aware power converter and PCB design,
+      computational semiconductor modeling, and the development of auxiliary circuits
+      required to integrate new device technologies into practical power-management systems.
+    </p>
+
+    <p>
+      Complementing research and simulation, I value
+      <em>practical validation and reproducible engineering workflows</em>.
+      My experience spans transistor-level simulation, layout-aware verification,
+      PCB implementation, laboratory measurements, computational modeling,
+      and technical documentation. As a
+      <em>Graduate Teaching Assistant</em>, I also mentor students in CMOS IC design,
+      circuit simulation, and power electronics.
+    </p>
+
+
+    <!-- =========================
+         BUTTONS
+    ========================== -->
     <div class="btn-row">
 
-      <a class="btn btn--primary" href="/cv/">View CV</a>
-     <a class="btn btn--primary"
-     href="/assets/pdf/Md_Yekra_Rahman_Resume_Single_Page_NA.pdf"
-     download>
-     Download CV (PDF)
-  </a>
+      <a class="btn btn--primary" href="/cv/">
+        View CV
+      </a>
+
+      <a class="btn btn--primary"
+         href="/assets/pdf/Md_Yekra_Rahman_Resume_Single_Page_NA.pdf"
+         download>
+        Download CV (PDF)
+      </a>
+
     </div>
 
   </div>
 </section>
-
 
 
 
@@ -92,44 +129,73 @@ title: "Home"
 ========================== -->
 <section class="section section--soft">
   <div class="wrap center">
+
     <h2 class="big-title">RESEARCH INTERESTS</h2>
+
     <div class="keywords">
       {% for item in site.data.interests.items %}
         <span class="kw">{{ item }}</span>
       {% endfor %}
     </div>
+
   </div>
 </section>
 
+
+
 <!-- =========================
-     UPDATES (timeline)
+     NEWS AND UPDATES
 ========================== -->
 <section class="section section--white">
   <div class="wrap">
+
     <h2 class="big-title">News and Updates</h2>
 
     <div class="timeline-scroll">
       <div class="timeline">
+
         {% for year in site.data.updates.years %}
+
           <div class="timeline__year">
-            <div class="timeline__year-label">{{ year.year }}</div>
+
+            <div class="timeline__year-label">
+              {{ year.year }}
+            </div>
 
             <div class="timeline__items">
+
               {% for u in year.items %}
+
                 <div class="timeline__item">
-                  <div class="timeline__date">{{ u.date }}</div>
-                  <div class="timeline__text">
-                    {{ u.text }}
-                    {% if u.link %}
-                      <a href="{{ u.link }}" target="_blank" rel="noopener">Link</a>
-                    {% endif %}
+
+                  <div class="timeline__date">
+                    {{ u.date }}
                   </div>
+
+                  <div class="timeline__text">
+
+                    {{ u.text }}
+
+                    {% if u.link %}
+                      <a href="{{ u.link }}"
+                         target="_blank"
+                         rel="noopener">
+                        Link
+                      </a>
+                    {% endif %}
+
+                  </div>
+
                 </div>
+
               {% endfor %}
+
             </div>
 
           </div>
+
         {% endfor %}
+
       </div>
     </div>
 
@@ -137,52 +203,71 @@ title: "Home"
 </section>
 
 
+
 <!-- =========================
      GET IN TOUCH
 ========================== -->
 <section class="section section--soft">
   <div class="wrap center">
+
     <h2 class="big-title underline">GET IN TOUCH</h2>
 
     <div class="social-row">
+
       <!-- Email -->
-      <a class="social" href="mailto:mrvpx@missouri.edu" aria-label="Email">
+      <a class="social"
+         href="mailto:mrvpx@missouri.edu"
+         aria-label="Email">
         <i class="fas fa-envelope"></i>
       </a>
 
       <!-- GitHub -->
-      <a class="social" href="https://github.com/MdYekraRahman"
-         target="_blank" rel="noopener" aria-label="GitHub">
+      <a class="social"
+         href="https://github.com/MdYekraRahman"
+         target="_blank"
+         rel="noopener"
+         aria-label="GitHub">
         <i class="fab fa-github"></i>
       </a>
 
       <!-- LinkedIn -->
-      <a class="social" href="https://www.linkedin.com/in/mdyekrarahman/"
-         target="_blank" rel="noopener" aria-label="LinkedIn">
+      <a class="social"
+         href="https://www.linkedin.com/in/mdyekrarahman/"
+         target="_blank"
+         rel="noopener"
+         aria-label="LinkedIn">
         <i class="fab fa-linkedin-in"></i>
       </a>
 
       <!-- Facebook -->
-      <a class="social" href="https://www.facebook.com/yekra184/"
-         target="_blank" rel="noopener" aria-label="Facebook">
+      <a class="social"
+         href="https://www.facebook.com/yekra184/"
+         target="_blank"
+         rel="noopener"
+         aria-label="Facebook">
         <i class="fab fa-facebook-f"></i>
       </a>
 
-      <!-- X (Twitter) -->
-      <a class="social" href="https://x.com/mdyekrarahman"
-         target="_blank" rel="noopener" aria-label="X (Twitter)">
+      <!-- X / Twitter -->
+      <a class="social"
+         href="https://x.com/mdyekrarahman"
+         target="_blank"
+         rel="noopener"
+         aria-label="X (Twitter)">
         <i class="fab fa-x-twitter"></i>
       </a>
 
       <!-- Reddit -->
-      <a class="social" href="https://www.reddit.com/user/tadpolemyxini/"
-         target="_blank" rel="noopener" aria-label="Reddit">
+      <a class="social"
+         href="https://www.reddit.com/user/tadpolemyxini/"
+         target="_blank"
+         rel="noopener"
+         aria-label="Reddit">
         <i class="fab fa-reddit-alien"></i>
       </a>
+
     </div>
+
   </div>
 </section>
-
-
-
-
+```
