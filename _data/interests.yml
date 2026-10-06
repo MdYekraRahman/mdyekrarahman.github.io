@@ -1,9 +1,11 @@
 items:
-  - Analog and mixed-signal IC design
-  - Power management ICs (PMICs)
-  - High-frequency DC–DC converters
-  - Gate-driver and level-shifter circuits
-  - Wide-bandgap power devices (SiC/GaN/Ga2O3)
-  - EMI-aware power converter design
-  - Transistor-level design and verification
-  - Device-to-system co-design
+  - Analog and mixed-signal integrated circuit design
+  - Power management ICs (LDOs, charge pumps, and DC–DC converters)
+  - High-voltage and high-frequency power IC design
+  - Gate-driver, level-shifter, and bootstrap circuits
+  - Radiation-hardened and reliability-aware analog IC design
+  - Wide-bandgap power devices and circuits (SiC, GaN, and β-Ga₂O₃)
+  - TCAD and machine-learning-based semiconductor device modeling
+  - Transistor-level circuit design, simulation, and verification
+  - EMI-aware power converter and PCB design
+  - Device–circuit–system co-design
